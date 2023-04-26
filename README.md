@@ -1,7 +1,16 @@
 # arc-export
 Automatic building of a Docker container for exporting ARCs to Arc.json
 
-## local use
+## local build
+```shell
+docker build . -t arc-export
 
-docker build . -t inv
-docker run -v C:\Users\HLWei\OneDrive\NFDI\ISAConverterDSL\Invenio:/arc -it 13810bfaf675 dotnet fsi /invenioConverter.fsx -p /arc/InvenioArc
+docker run -v C:\Repos\ArcRepo:/arc -p arc
+```
+
+## download container first
+```shell
+docker pull ghcr.io/nfdi4plants/arc-export:main
+
+docker run -v C:\Repos\ArcRepo:/arc -p arc
+```
