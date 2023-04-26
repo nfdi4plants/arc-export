@@ -83,3 +83,26 @@ let prereleaseDocs =  BuildTask.create "PrereleaseDocs" [buildDocsPrerelease] {
         Git.Branches.push "temp/gh-pages"
     else failwith "aborted"
 }
+
+let publishBinariesLinux = BuildTask.create "PublishBinariesLinux" [clean; build] {
+    let outputPath = sprintf "%s/linux-x64" publishDir
+    "src/arc-export"
+    |> DotNet.publish (fun p ->
+        let standardParams = Fake.DotNet.MSBuild.CliArguments.Create ()
+        {
+            p with
+                Runtime = Some "linux-x64"
+                //Configuration = DotNet.BuildConfiguration.fromString configuration
+                OutputPath = Some outputPath
+                MSBuildParams = {
+                    standardParams with
+                        Properties = [
+                            "Version", stableVersionTag
+                            //"Platform", "x64"
+                            "PublishSingleFile", "true"
+                        ]
+                }
+        }
+    )
+    printfn "Beware that assemblyName differs from projectName!"
+}

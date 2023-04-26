@@ -21,6 +21,8 @@ let projectRepo = $"https://github.com/{gitOwner}/{project}"
 
 let pkgDir = "pkg"
 
+let publishDir = "publish"
+
 // Create RELEASE_NOTES.md if not existing. Or "release" would throw an error.
 Fake.Extensions.Release.ReleaseNotes.ensure()
 

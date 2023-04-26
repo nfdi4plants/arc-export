@@ -18,6 +18,7 @@ let setPrereleaseTag = BuildTask.create "SetPrereleaseTag" [] {
 let clean = BuildTask.create "Clean" [] {
     !! "src/**/bin"
     ++ "src/**/obj"
+    ++ "publish/"
     ++ "tests/**/bin"
     ++ "tests/**/obj"
     ++ "pkg"

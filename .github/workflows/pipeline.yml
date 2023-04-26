@@ -29,23 +29,9 @@ jobs:
       working-directory: ./
       run: ./build.sh runtests
 
-  build-and-test-windows:
-    
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.x.x
-    - name: Build and test
-      working-directory: ./
-      run: ./build.cmd runtests
-
   build-and-push-image:
 # only publish docker images when tests succeed
-    needs: [build-and-test-linux, build-and-test-windows]
+    needs: [build-and-test-linux]
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -54,6 +40,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.x.x
+      - name: make script executable
+        run: chmod u+x build.sh
+      - name: Build and test
+        working-directory: ./
+        run: ./build.sh publishbinarieslinux
 
       - name: Log in to the Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9

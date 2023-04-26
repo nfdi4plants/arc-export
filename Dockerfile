@@ -1,3 +1,6 @@
-FROM mcr.microsoft.com/dotnet/sdk:7.0
+FROM mcr.microsoft.com/dotnet/sdk:6.0
 
-COPY ./invenioConverter.fsx /
+
+COPY publish/linux-x64/arc-export .
+
+ENTRYPOINT ["/arc-export"]
