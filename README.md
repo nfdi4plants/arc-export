@@ -5,12 +5,12 @@ Automatic building of a Docker container for exporting ARCs to Arc.json
 ```shell
 docker build . -t arc-export
 
-docker run -v C:\Repos\ArcRepo:/arc -p arc
+docker run -v C:\Repos\ArcRepo:/arc arc-export -p arc
 ```
 
 ## download container first
 ```shell
 docker pull ghcr.io/nfdi4plants/arc-export:main
 
-docker run -v C:\Repos\ArcRepo:/arc -p arc
+docker run -v C:\Repos\ArcRepo:/arc ghcr.io/nfdi4plants/arc-export:main -p arc
 ```
