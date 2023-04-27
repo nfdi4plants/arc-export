@@ -1,4 +1,5 @@
 ﻿open System.IO
+open ISADotNet
 open arcIO.NET
 open Argu
 
@@ -13,7 +14,15 @@ try
 
     let outFile = Path.Combine(outPath,"arc.json")
 
-    Investigation.fromArcFolder arcPath
+    try Investigation.fromArcFolder arcPath
+    with
+    | _ -> 
+        try Investigation.read arcPath
+        with
+        | err -> 
+            let comment1 = Comment.fromString "Status" "Could not parse ARC"
+            let comment2 = Comment.fromString "ErrorMessage" $"Could not parse ARC:\n{err.Message}"
+            Investigation.create(Comments = [comment1;comment2])
     |> ISADotNet.Json.Investigation.toFile outFile
 
 with
