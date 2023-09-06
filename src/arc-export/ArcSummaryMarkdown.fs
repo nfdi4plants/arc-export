@@ -56,9 +56,14 @@ type ARCtrl.FileSystem.FileSystemTree with
 
         tree
         |> FileSystemTree.filterNodes( 
-            fun item -> 
-                let predicate = not (item.StartsWith("."))
-                predicate
+            fun item ->
+                let exclusions = [
+                    "git"
+                    "gitkeep"
+                    "gitattributes"
+                ]
+                not (item.StartsWith(".")) || (exclusions |> List.contains item)
+
         )
         |> Option.get
         |> loop 0 []
