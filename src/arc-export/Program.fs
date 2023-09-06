@@ -14,17 +14,27 @@ try
 
     let outFile = Path.Combine(outPath,"arc.json")
 
-    try Investigation.fromArcFolder arcPath
-    with
-    | _ -> 
-        printfn "Could not read full arc, try reading investigation."
-        try Investigation.read arcPath
+    let mdfile = Path.Combine(outPath,"arc-summary.md")
+
+    let inv =
+        try 
+            Investigation.fromArcFolder arcPath
         with
-        | err -> 
-            printfn "Could not read investigation, writing empty arc json."
-            let comment1 = Comment.fromString "Status" "Could not parse ARC"
-            let comment2 = Comment.fromString "ErrorMessage" $"Could not parse ARC:\n{err.Message}"
-            Investigation.create(Comments = [comment1;comment2])
+        | _ -> 
+            printfn "Could not read full arc, try reading investigation."
+            try Investigation.read arcPath
+            with
+            | err -> 
+                printfn "Could not read investigation, writing empty arc json."
+                let comment1 = Comment.fromString "Status" "Could not parse ARC"
+                let comment2 = Comment.fromString "ErrorMessage" $"Could not parse ARC:\n{err.Message}"
+                Investigation.create(Comments = [comment1;comment2])
+    
+    let mdHeader = $"""# {inv.Title |> Option.defaultValue "Investigation without title"}"""
+
+    File.WriteAllText(mdfile, mdHeader)
+
+    inv
     |> ISADotNet.Json.Investigation.toFile outFile
 
 with
