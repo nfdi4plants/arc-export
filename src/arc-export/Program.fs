@@ -37,7 +37,7 @@ try
             .Replace("[[FILE_TREE]]", createARCMarkdownTree arcPath)
 
 
-    File.WriteAllText(mdfile, mdHeader)
+    File.WriteAllText(mdfile, mdContent)
 
     inv
     |> ISADotNet.Json.Investigation.toFile outFile
