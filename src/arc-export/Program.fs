@@ -34,7 +34,7 @@ try
     let mdContent = 
         MARKDOWN_TEMPLATE
             .Replace("[[ARC_TITLE]]", inv.Title |> Option.defaultValue "Untitled ARC")
-            .Replace("[[FILE_TREE]]", createARCMarkdownTree arcPath)
+            .Replace("[[FILE_TREE]]", "file content coming soon" )
 
 
     File.WriteAllText(mdfile, mdContent)
