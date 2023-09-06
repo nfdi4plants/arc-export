@@ -2,6 +2,7 @@
 open ISADotNet
 open arcIO.NET
 open Argu
+open ArcSummaryMarkdown
 
 try
     let args = CLIArgs.cliArgParser.ParseCommandLine()
@@ -30,7 +31,11 @@ try
                 let comment2 = Comment.fromString "ErrorMessage" $"Could not parse ARC:\n{err.Message}"
                 Investigation.create(Comments = [comment1;comment2])
     
-    let mdHeader = $"""# {inv.Title |> Option.defaultValue "Investigation without title"}"""
+    let mdContent = 
+        MARKDOWN_TEMPLATE
+            .Replace("[[ARC_TITLE]]", inv.Title |> Option.defaultValue "Untitled ARC")
+            .Replace("[[FILE_TREE]]", createARCMarkdownTree arcPath)
+
 
     File.WriteAllText(mdfile, mdHeader)
 
