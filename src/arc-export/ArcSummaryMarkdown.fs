@@ -4,9 +4,9 @@ open ARCtrl
 open ARCtrl.FileSystem
 open ARCtrl.NET
 
-let [<Literal>] MARKDOWN_TEMPLATE = """# [[ARC_TITLE]]
+let [<Literal>] MARKDOWN_TEMPLATE = """## [Data set] [[ARC_TITLE]]
 
-## File contents:
+### File contents:
 
 [[FILE_TREE]]
 """
