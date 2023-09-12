@@ -4,6 +4,8 @@ open ARCtrl.FileSystem
 open ARCtrl.ISA
 open ARCtrl.NET
 open Argu
+open FileSystemTreeExtension
+open ARCExtension
 open ArcSummaryMarkdown
 open ARCtrl.NET.Contract
 
@@ -48,10 +50,12 @@ try
     let jsonFile = Path.Combine(outPath,"arc.json")
 
     let mdfile = Path.Combine(outPath,"arc-summary.md")
+        
 
     let inv, mdContent = 
         try 
             let arc = loadARCCustom arcPath
+            let registeredPayload = arc.GetRegisteredPayload(IgnoreHidden = true)
             let inv = arc.ISA |> Option.get
 
             getAllFilePaths arcPath |> Seq.iter (printfn "%s")
@@ -59,7 +63,7 @@ try
             inv,
             MARKDOWN_TEMPLATE
                 .Replace("[[ARC_TITLE]]", inv.Title |> Option.defaultValue "Untitled ARC")
-                .Replace("[[FILE_TREE]]", FileSystemTree.toMarkdownTOC arc.FileSystem.Tree)
+                .Replace("[[FILE_TREE]]", FileSystemTree.toMarkdownTOC registeredPayload)
         with 
         | err ->
             printfn "Could not read investigation, writing empty arc json."
