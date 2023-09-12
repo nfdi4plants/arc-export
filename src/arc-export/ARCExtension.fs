@@ -42,11 +42,12 @@ type ARC with
                     yield $"{studyFoldername}/README.md"
 
                     //just allow any constructed path from cell values. there may be occasions where this includes wrong files, but its good enough for now.
-                    for (kv) in s.Tables[0].Values do
-                        let textValue = kv.Value.ToFreeTextCell().AsFreeText
-                        yield textValue// from arc root
-                        yield $"{studyFoldername}/resources/{textValue}" // from study root > resources
-                        yield $"{studyFoldername}/protocols/{textValue}" // from study root > protocols
+                    for table in s.Tables do
+                        for kv in table.Values do
+                            let textValue = kv.Value.ToFreeTextCell().AsFreeText
+                            yield textValue// from arc root
+                            yield $"{studyFoldername}/resources/{textValue}" // from study root > resources
+                            yield $"{studyFoldername}/protocols/{textValue}" // from study root > protocols
                 ]
             )
             |> Set.unionMany
@@ -61,11 +62,12 @@ type ARC with
                     yield $"{assayFoldername}/README.md"
 
                     //just allow any constructed path from cell values. there may be occasions where this includes wrong files, but its good enough for now.
-                    for (kv) in a.Tables[0].Values do
-                        let textValue = kv.Value.ToFreeTextCell().AsFreeText
-                        yield textValue // from arc root
-                        yield $"{assayFoldername}/dataset/{textValue}" // from assay root > dataset
-                        yield $"{assayFoldername}/protocols/{textValue}" // from assay root > protocols
+                    for table in a.Tables do
+                        for kv in table.Values do
+                            let textValue = kv.Value.ToFreeTextCell().AsFreeText
+                            yield textValue // from arc root
+                            yield $"{assayFoldername}/dataset/{textValue}" // from assay root > dataset
+                            yield $"{assayFoldername}/protocols/{textValue}" // from assay root > protocols
                 ]
             )
             |> Set.unionMany
