@@ -60,6 +60,7 @@ try
                     arc.GetRegisteredPayload(IgnoreHidden = true)
                 with err ->
                     printfn "Could not get payload content, defaulting to all filesystem entries."
+                    printfn "error: %s" err.Message
                     arc.FileSystem.Tree
 
             let inv = arc.ISA |> Option.get
@@ -76,7 +77,7 @@ try
             let comment1 = Comment.fromString "Status" "Could not parse ARC"
             let comment2 = Comment.fromString "ErrorMessage" $"Could not parse ARC:\n{err.Message}"
             ArcInvestigation(Identifier.createMissingIdentifier() , comments = [|comment1;comment2|]),
-            ""
+            "Could not read investigation, unable to display registered file content."
     
 
     File.WriteAllText(mdfile, mdContent)
