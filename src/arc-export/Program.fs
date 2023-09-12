@@ -55,7 +55,13 @@ try
     let inv, mdContent = 
         try 
             let arc = loadARCCustom arcPath
-            let registeredPayload = arc.GetRegisteredPayload(IgnoreHidden = true)
+            let registeredPayload = 
+                try 
+                    arc.GetRegisteredPayload(IgnoreHidden = true)
+                with err ->
+                    printfn "Could not get payload content, defaulting to all filesystem entries."
+                    arc.FileSystem.Tree
+
             let inv = arc.ISA |> Option.get
 
             getAllFilePaths arcPath |> Seq.iter (printfn "%s")
