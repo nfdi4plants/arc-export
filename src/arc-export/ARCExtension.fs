@@ -43,9 +43,10 @@ type ARC with
 
                     //just allow any constructed path from cell values. there may be occasions where this includes wrong files, but its good enough for now.
                     for (kv) in s.Tables[0].Values do
-                        yield kv.Value.AsFreeText // from arc root
-                        yield $"{studyFoldername}/resources/{kv.Value.AsFreeText}" // from study root > resources
-                        yield $"{studyFoldername}/protocols/{kv.Value.AsFreeText}" // from study root > protocols
+                        let textValue = kv.Value.ToFreeTextCell().AsFreeText
+                        yield textValue// from arc root
+                        yield $"{studyFoldername}/resources/{textValue}" // from study root > resources
+                        yield $"{studyFoldername}/protocols/{textValue}" // from study root > protocols
                 ]
             )
             |> Set.unionMany
@@ -61,9 +62,10 @@ type ARC with
 
                     //just allow any constructed path from cell values. there may be occasions where this includes wrong files, but its good enough for now.
                     for (kv) in a.Tables[0].Values do
-                        yield kv.Value.AsFreeText // from arc root
-                        yield $"{assayFoldername}/dataset/{kv.Value.AsFreeText}" // from assay root > dataset
-                        yield $"{assayFoldername}/protocols/{kv.Value.AsFreeText}" // from assay root > protocols
+                        let textValue = kv.Value.ToFreeTextCell().AsFreeText
+                        yield textValue // from arc root
+                        yield $"{assayFoldername}/dataset/{textValue}" // from assay root > dataset
+                        yield $"{assayFoldername}/protocols/{textValue}" // from assay root > protocols
                 ]
             )
             |> Set.unionMany
