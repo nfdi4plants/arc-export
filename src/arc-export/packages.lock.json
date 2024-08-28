@@ -4,12 +4,12 @@
     "net6.0": {
       "ARCtrl.NET": {
         "type": "Direct",
-        "requested": "[2.0.0-beta.1, )",
-        "resolved": "2.0.0-beta.1",
-        "contentHash": "MyiAEsiv8+Okm//GA48hEALbjUFNCr9SZZsV+DHjRgqu7+lDoXnJGTc48sg/nS+22eSJok8HVjL2g4LLte7A7A==",
+        "requested": "[2.0.0, )",
+        "resolved": "2.0.0",
+        "contentHash": "vzP3c1KVedENmTMhJF7FH0Wdo+qNyVYyKTN3zBZxjOxduRhaLyBj9l1uWBfBV0oLjTYSFKAtlEfGp7sroHH2SQ==",
         "dependencies": {
-          "ARCtrl": "2.0.0-beta.2",
-          "FSharp.Core": "7.0.401",
+          "ARCtrl": "2.0.0",
+          "FSharp.Core": "8.0.400",
           "FsSpreadsheet": "6.2.0",
           "FsSpreadsheet.Net": "6.2.0",
           "JsonDSL": "0.0.5",
@@ -29,9 +29,9 @@
       },
       "FSharp.Core": {
         "type": "Direct",
-        "requested": "[7.*, )",
-        "resolved": "7.0.403",
-        "contentHash": "QYCYEhAj3GccfPdK6EDZu3Yz7I8p75nVHmNnV/9duxTAcqmstbG87waXDC4LBz0/8Jb0teb0ry/xLM2pjk/UAw=="
+        "requested": "[8.*, )",
+        "resolved": "8.0.400",
+        "contentHash": "kHMdDDmlZl98tujgHCmL8/HNH9VKbxsRMC9s7wbwr4noR40SSa5D4d00yF8cMK52s8jabVuiLLcrUw9r+PkKDQ=="
       },
       "JsonDSL": {
         "type": "Direct",
@@ -45,63 +45,64 @@
       },
       "ARCtrl": {
         "type": "Transitive",
-        "resolved": "2.0.0-beta.2",
-        "contentHash": "AvkHPFMEMxA2aNxSxJZ+ijYyADmj+xg80uA9P4tGj3OfT73mzyuuf2D5xDkO+ghV8+RnxWpIdFeWdTehXXUaQQ==",
+        "resolved": "2.0.0",
+        "contentHash": "xW2vSEdlB9sbD5bO+PttejE1insq9IBWLEoy2+l0bMtfUsFD9+xZyy4lOvrBZ2XmFEisGA2WlbOcPwFy1D14Iw==",
         "dependencies": {
-          "ARCtrl.CWL": "2.0.0-beta.2",
-          "ARCtrl.Contract": "2.0.0-beta.2",
-          "ARCtrl.FileSystem": "2.0.0-beta.2",
-          "ARCtrl.Json": "2.0.0-beta.2",
-          "ARCtrl.Spreadsheet": "2.0.0-beta.2",
-          "FSharp.Core": "7.0.401",
+          "ARCtrl.CWL": "2.0.0",
+          "ARCtrl.Contract": "2.0.0",
+          "ARCtrl.FileSystem": "2.0.0",
+          "ARCtrl.Json": "2.0.0",
+          "ARCtrl.Spreadsheet": "2.0.0",
+          "FSharp.Core": "8.0.301",
           "Fable.SimpleHttp": "3.5.0"
         }
       },
       "ARCtrl.Contract": {
         "type": "Transitive",
-        "resolved": "2.0.0-beta.2",
-        "contentHash": "+cZ4xDTfo3dpHCWAn4eC6QLTGRWQSHRP1JPcLesIR41NKhLfZEAeTRZXh7werZiYIAKBpQgD4PYvaCaz+BhZTg==",
+        "resolved": "2.0.0",
+        "contentHash": "msxaJxXULV7fdnGEmO3sIkMeuIJWP01sVWc3ATASV84le2y8Qe5g0OM6YzqTCirKLFG0ag/m521VK0uPlzHsQw==",
         "dependencies": {
-          "ARCtrl.Core": "2.0.0-beta.2",
-          "ARCtrl.Json": "2.0.0-beta.2",
-          "ARCtrl.Spreadsheet": "2.0.0-beta.2",
-          "FSharp.Core": "7.0.401"
+          "ARCtrl.Core": "2.0.0",
+          "ARCtrl.Json": "2.0.0",
+          "ARCtrl.Spreadsheet": "2.0.0",
+          "ARCtrl.Yaml": "2.0.0",
+          "FSharp.Core": "8.0.301"
         }
       },
       "ARCtrl.Core": {
         "type": "Transitive",
-        "resolved": "2.0.0-beta.2",
-        "contentHash": "XAahj3iUiqhXcusdCohaRBkQj2wRuKkqr6cKbxInIGN62EmyXmgDO6YWASKIpdRpbp9Xd4NhSo9hvouiyvNfuQ==",
+        "resolved": "2.0.0",
+        "contentHash": "sn4oVQ6g7LIBkFH1cXw3ZDWOeQlCHPZv7ipnl34OJ60skZXI57n85zT18Xfx5F8roi7TmnYv9dC7SGK+UHtx6g==",
         "dependencies": {
-          "ARCtrl.CWL": "2.0.0-beta.2",
-          "ARCtrl.FileSystem": "2.0.0-beta.2",
-          "FSharp.Core": "7.0.401"
+          "ARCtrl.CWL": "2.0.0",
+          "ARCtrl.FileSystem": "2.0.0",
+          "FSharp.Core": "8.0.301"
         }
       },
       "ARCtrl.CWL": {
         "type": "Transitive",
-        "resolved": "2.0.0-beta.2",
-        "contentHash": "twgtNTL3P1SJKnmxlixJnejtrHF1iL9OGtkBTztNLNf7MOIzi3+aa1kx/Q0enCDqI6KbbKbhdgPXKlaezTibww==",
+        "resolved": "2.0.0",
+        "contentHash": "5sUZCISiLEPEcih8pxWgy7gLRWAmshHiD+qJmv0IEBpwzSv8PaFpU4T3hl7VaeLpDlbdAy70TFfBXcJ0eEco1A==",
         "dependencies": {
-          "FSharp.Core": "6.0.7"
+          "FSharp.Core": "8.0.301"
         }
       },
       "ARCtrl.FileSystem": {
         "type": "Transitive",
-        "resolved": "2.0.0-beta.2",
-        "contentHash": "cC8e/TwSo2+KmSbcUjAD4wSPnEYuEDjztRfqaF0sk9kR8RaSBwAZ0p/aQIlmv74MBo01bk5GB8TbrtrBG7WtcA==",
+        "resolved": "2.0.0",
+        "contentHash": "YJrj2ygxYQdkkRJq+ksqwMNBmzbWK/J+8MnoRjLThS8H/StJYlv6VRQRyLSAMuxme7DYtliuRQvARyqU8oGUMQ==",
         "dependencies": {
-          "FSharp.Core": "6.0.7",
+          "FSharp.Core": "8.0.301",
           "Fable.Core": "4.2.0"
         }
       },
       "ARCtrl.Json": {
         "type": "Transitive",
-        "resolved": "2.0.0-beta.2",
-        "contentHash": "jwm9JqX36a2Z2d+xx+IJkRKN93/Tqpl02GuUDYtvLWkO1Bgwwt1EyY1JsxtVDII9YUPv2AAagrk64JY+odt2Yw==",
+        "resolved": "2.0.0",
+        "contentHash": "fn1UjNELPL0+gs1qV/fUjmyk7z+xd6DnSmSgswnbgUZNmUE5q0KpekEtoZ9t77+Eh8d9+26qeO3WJ5O7/hY6TQ==",
         "dependencies": {
-          "ARCtrl.Core": "2.0.0-beta.2",
-          "FSharp.Core": "7.0.401",
+          "ARCtrl.Core": "2.0.0",
+          "FSharp.Core": "8.0.301",
           "NJsonSchema": "10.8.0",
           "Thoth.Json.Core": "0.2.1",
           "Thoth.Json.Newtonsoft": "0.1.0"
@@ -109,13 +110,33 @@
       },
       "ARCtrl.Spreadsheet": {
         "type": "Transitive",
-        "resolved": "2.0.0-beta.2",
-        "contentHash": "nZnp5SxbqH2IEXN5LagYL1FdovXRcN8KwRX0PCu9221+0IEkYSViagFwuP7Jp5tk6NAmKj3zYPtFGgxdZy1j6g==",
+        "resolved": "2.0.0",
+        "contentHash": "q5p7ZN/DIgJfVRsSglTt5C97/HpN7/Jiy384DoOo2FjcTj082KTKj4efFJPXqyYnytKbgqzjsjw0c/X8Xjv/0A==",
         "dependencies": {
-          "ARCtrl.Core": "2.0.0-beta.2",
-          "ARCtrl.FileSystem": "2.0.0-beta.2",
-          "FSharp.Core": "7.0.401",
+          "ARCtrl.Core": "2.0.0",
+          "ARCtrl.FileSystem": "2.0.0",
+          "FSharp.Core": "8.0.301",
           "FsSpreadsheet": "6.2.0"
+        }
+      },
+      "ARCtrl.ValidationPackages": {
+        "type": "Transitive",
+        "resolved": "2.0.0",
+        "contentHash": "BDmdZfgqKIjR+AQmiD6DtJIYXaoWawrVEMRR1ndj2c6NYrGUOskim1dvA6ZWZbb1UVQ7r5hOnFCe2vJhDzGlsw==",
+        "dependencies": {
+          "ARCtrl.Core": "2.0.0",
+          "FSharp.Core": "8.0.301"
+        }
+      },
+      "ARCtrl.Yaml": {
+        "type": "Transitive",
+        "resolved": "2.0.0",
+        "contentHash": "NWJpJ5OR60rsLzUgXgAYlvZHHMjX5P2RRohgGcMGpdk6oynXbiaiSyQewx7YCz+r6kFmrGLc7fk8PubgHXNaUw==",
+        "dependencies": {
+          "ARCtrl.Core": "2.0.0",
+          "ARCtrl.ValidationPackages": "2.0.0",
+          "FSharp.Core": "8.0.301",
+          "YAMLicious": "0.0.1"
         }
       },
       "DocumentFormat.OpenXml": {
@@ -179,8 +200,8 @@
       },
       "Fable.Core": {
         "type": "Transitive",
-        "resolved": "4.2.0",
-        "contentHash": "ikacgHRLZpNVS33oBzl4uDHXZJDH660SaNPYCDGvFb7Hhm4WCXq0qTik8bpPJAhCnLDVrXLCAIoGKsKQ5pfx2A=="
+        "resolved": "4.3.0",
+        "contentHash": "sbK+hYs7H7I3b3sbgttI4GlvQfNPcIqSz1qPSagF3QbVA46KJ/pWSXC/Dwv0s9M6AeRGmoqcIeD7GUaLn41zkA=="
       },
       "Fable.SimpleHttp": {
         "type": "Transitive",
@@ -608,6 +629,15 @@
           "Fable.Core": "4.1.0",
           "Newtonsoft.Json": "13.0.1",
           "Thoth.Json.Core": "0.1.0"
+        }
+      },
+      "YAMLicious": {
+        "type": "Transitive",
+        "resolved": "0.0.1",
+        "contentHash": "3QQH1VxkTdtU/RZgrzZwNNLAt8zg2Di65wh1dgS2OB1IT3NqFGyjhU+A60siB1+8rxXUe4Ou5nOVGvgDtydYug==",
+        "dependencies": {
+          "FSharp.Core": "8.0.300",
+          "Fable.Core": "4.3.0"
         }
       }
     }
