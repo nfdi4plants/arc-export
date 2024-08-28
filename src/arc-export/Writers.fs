@@ -22,7 +22,7 @@ let write_ro_crate_metadata (outDir: string) (arc: ARC) =
 
 let write_isa_json (outDir: string) (arc: ARC) =
     let inv = arc.ISA |> Option.get
-    let isa_json = inv.ToROCrateJsonString(2)
+    let isa_json = inv.ToISAJsonString(2)
     let isa_json_path = Path.Combine(outDir, isa_json_filename)
     File.WriteAllText(isa_json_path, isa_json)
 
