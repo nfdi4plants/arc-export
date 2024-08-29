@@ -6,6 +6,7 @@ on:
     paths:
 # this ensures that docker image is only published when source code or Dockerfile is changed
       - 'src/**'
+      - 'tests/**'
       - 'Dockerfile'
 
 env:
@@ -18,11 +19,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 6.x.x
+        dotnet-version: 8.x.x
     - name: make script executable
       run: chmod u+x build.sh
     - name: Build and test
@@ -39,11 +40,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 6.x.x
+          dotnet-version: 8.x.x
       - name: make script executable
         run: chmod u+x build.sh
       - name: Build and test

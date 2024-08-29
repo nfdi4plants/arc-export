@@ -1,20 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
     <GenerateProgramFile>false</GenerateProgramFile>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Main.fs" />
+    <None Include="fixtures\**" CopyToOutputDirectory="Always" />
+    <Compile Include="TestUtils.fs" />
+    <Compile Include="ReferenceObjects.fs" />
+    <Compile Include="TestObjects.fs" />
+    <Compile Include="GitSubmoduleTests.fs" />
+    <Compile Include="Tests.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Expecto" Version="9.*" />
-    <PackageReference Include="YoloDev.Expecto.TestSdk" Version="0.*" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
-    <ProjectReference Include="..\src\arc-export\arc-export.fsproj" />
-    <PackageReference Update="FSharp.Core" Version="7.*" />
+    <PackageReference Include="Fake.Core.Process" Version="6.0.0" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
   </ItemGroup>
+
 </Project>
