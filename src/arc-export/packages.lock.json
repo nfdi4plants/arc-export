@@ -4,11 +4,11 @@
     "net8.0": {
       "ARCtrl.NET": {
         "type": "Direct",
-        "requested": "[2.0.0, )",
-        "resolved": "2.0.0",
-        "contentHash": "vzP3c1KVedENmTMhJF7FH0Wdo+qNyVYyKTN3zBZxjOxduRhaLyBj9l1uWBfBV0oLjTYSFKAtlEfGp7sroHH2SQ==",
+        "requested": "[2.0.1, 2.0.1]",
+        "resolved": "2.0.1",
+        "contentHash": "6ciC5xCNDAdFStBHiHYgrqaBoG6yrQWX+AB5OUj3AncWShZq7GYGZC00AbRnURU1BObtt0Qh8XlteVJYO4pOXA==",
         "dependencies": {
-          "ARCtrl": "2.0.0",
+          "ARCtrl": "2.0.1",
           "FSharp.Core": "8.0.400",
           "FsSpreadsheet": "6.2.0",
           "FsSpreadsheet.Net": "6.2.0",
@@ -45,52 +45,52 @@
       },
       "ARCtrl": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "xW2vSEdlB9sbD5bO+PttejE1insq9IBWLEoy2+l0bMtfUsFD9+xZyy4lOvrBZ2XmFEisGA2WlbOcPwFy1D14Iw==",
+        "resolved": "2.0.1",
+        "contentHash": "+yojtFyKIFNQmwcmZca3++ZPHXFFMGyaAjJzbb20S9k4NOAYeEkZv8abDl9lUNbcGY/+7ys2071AWDkaD2G4zg==",
         "dependencies": {
-          "ARCtrl.CWL": "2.0.0",
-          "ARCtrl.Contract": "2.0.0",
-          "ARCtrl.FileSystem": "2.0.0",
-          "ARCtrl.Json": "2.0.0",
-          "ARCtrl.Spreadsheet": "2.0.0",
+          "ARCtrl.CWL": "2.0.1",
+          "ARCtrl.Contract": "2.0.1",
+          "ARCtrl.FileSystem": "2.0.1",
+          "ARCtrl.Json": "2.0.1",
+          "ARCtrl.Spreadsheet": "2.0.1",
           "FSharp.Core": "8.0.301",
           "Fable.SimpleHttp": "3.5.0"
         }
       },
       "ARCtrl.Contract": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "msxaJxXULV7fdnGEmO3sIkMeuIJWP01sVWc3ATASV84le2y8Qe5g0OM6YzqTCirKLFG0ag/m521VK0uPlzHsQw==",
+        "resolved": "2.0.1",
+        "contentHash": "+4gZc2uY/zb9xCF8uG7hPxm6cR42V5/rwHWdcjLgC/8TgEpeWyNSR6dxAMBdGNrwXXjumWhvIi9N3QFGD7yCkQ==",
         "dependencies": {
-          "ARCtrl.Core": "2.0.0",
-          "ARCtrl.Json": "2.0.0",
-          "ARCtrl.Spreadsheet": "2.0.0",
-          "ARCtrl.Yaml": "2.0.0",
+          "ARCtrl.Core": "2.0.1",
+          "ARCtrl.Json": "2.0.1",
+          "ARCtrl.Spreadsheet": "2.0.1",
+          "ARCtrl.Yaml": "2.0.1",
           "FSharp.Core": "8.0.301"
         }
       },
       "ARCtrl.Core": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "sn4oVQ6g7LIBkFH1cXw3ZDWOeQlCHPZv7ipnl34OJ60skZXI57n85zT18Xfx5F8roi7TmnYv9dC7SGK+UHtx6g==",
+        "resolved": "2.0.1",
+        "contentHash": "ivKRFwuel+v4gU0M5TA59fRh2k4s4CnjPYDfUqEV/2XjYEj+UQrRFb8oixj4IYX6lNBGUUs5ip2daTpzemgTAQ==",
         "dependencies": {
-          "ARCtrl.CWL": "2.0.0",
-          "ARCtrl.FileSystem": "2.0.0",
+          "ARCtrl.CWL": "2.0.1",
+          "ARCtrl.FileSystem": "2.0.1",
           "FSharp.Core": "8.0.301"
         }
       },
       "ARCtrl.CWL": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "5sUZCISiLEPEcih8pxWgy7gLRWAmshHiD+qJmv0IEBpwzSv8PaFpU4T3hl7VaeLpDlbdAy70TFfBXcJ0eEco1A==",
+        "resolved": "2.0.1",
+        "contentHash": "Htpuoq+/eKawpwEQJSxngYx6G0IlgXhJ4+4yrfERl//IS6g4/X5gfarekeeQWT+yUuWn1ZN6HwBwSSw4UY5iVQ==",
         "dependencies": {
           "FSharp.Core": "8.0.301"
         }
       },
       "ARCtrl.FileSystem": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "YJrj2ygxYQdkkRJq+ksqwMNBmzbWK/J+8MnoRjLThS8H/StJYlv6VRQRyLSAMuxme7DYtliuRQvARyqU8oGUMQ==",
+        "resolved": "2.0.1",
+        "contentHash": "dFU+i15sYJQ21XsGCEwyBRnegKv1q3nZ3qu6cMfb/cNz/l7tbBWIYlsBvK4NfDUQY479ubDLGRG36oq2F2g1ug==",
         "dependencies": {
           "FSharp.Core": "8.0.301",
           "Fable.Core": "4.2.0"
@@ -98,10 +98,10 @@
       },
       "ARCtrl.Json": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "fn1UjNELPL0+gs1qV/fUjmyk7z+xd6DnSmSgswnbgUZNmUE5q0KpekEtoZ9t77+Eh8d9+26qeO3WJ5O7/hY6TQ==",
+        "resolved": "2.0.1",
+        "contentHash": "e2AZbwW218PPXwIbNYh637/byxny/U0+nTDkDB+dMbtbMnmh5qqwL/yl9gspO4ex6IPVxuKukbkqQ9p0vei46Q==",
         "dependencies": {
-          "ARCtrl.Core": "2.0.0",
+          "ARCtrl.Core": "2.0.1",
           "FSharp.Core": "8.0.301",
           "NJsonSchema": "10.8.0",
           "Thoth.Json.Core": "0.2.1",
@@ -110,31 +110,31 @@
       },
       "ARCtrl.Spreadsheet": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "q5p7ZN/DIgJfVRsSglTt5C97/HpN7/Jiy384DoOo2FjcTj082KTKj4efFJPXqyYnytKbgqzjsjw0c/X8Xjv/0A==",
+        "resolved": "2.0.1",
+        "contentHash": "mHE41ZVxWzR7I/Na9sf4zqf0OhbjDLxppBOL1f7cDgcDvFQLUTRw1U1dcaBgZBEFQ97kV/2lYfoFCpfvhaWp7A==",
         "dependencies": {
-          "ARCtrl.Core": "2.0.0",
-          "ARCtrl.FileSystem": "2.0.0",
+          "ARCtrl.Core": "2.0.1",
+          "ARCtrl.FileSystem": "2.0.1",
           "FSharp.Core": "8.0.301",
           "FsSpreadsheet": "6.2.0"
         }
       },
       "ARCtrl.ValidationPackages": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "BDmdZfgqKIjR+AQmiD6DtJIYXaoWawrVEMRR1ndj2c6NYrGUOskim1dvA6ZWZbb1UVQ7r5hOnFCe2vJhDzGlsw==",
+        "resolved": "2.0.1",
+        "contentHash": "k8x4mrb77A4VpSw4c841MRo209nl6wIbbUsFXJTQhWn4CkeE7Qi7HC0/IBqW2Z9V3OO8QsfuDXS0fHeEZWpdbw==",
         "dependencies": {
-          "ARCtrl.Core": "2.0.0",
+          "ARCtrl.Core": "2.0.1",
           "FSharp.Core": "8.0.301"
         }
       },
       "ARCtrl.Yaml": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "NWJpJ5OR60rsLzUgXgAYlvZHHMjX5P2RRohgGcMGpdk6oynXbiaiSyQewx7YCz+r6kFmrGLc7fk8PubgHXNaUw==",
+        "resolved": "2.0.1",
+        "contentHash": "jkVKuf7i1RWiRijESAkA+fOYaYaC00o1y1MVCQdbBHXHUMCjXZSYL/RcA4vnuy5iICtcJPXSytT5xwLncsVCVw==",
         "dependencies": {
-          "ARCtrl.Core": "2.0.0",
-          "ARCtrl.ValidationPackages": "2.0.0",
+          "ARCtrl.Core": "2.0.1",
+          "ARCtrl.ValidationPackages": "2.0.1",
           "FSharp.Core": "8.0.301",
           "YAMLicious": "0.0.1"
         }
