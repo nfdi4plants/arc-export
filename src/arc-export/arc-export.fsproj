@@ -2,14 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Include="Defaults.fs" />
     <Compile Include="CLIArgs.fs" />
-    <Compile Include="FileSystemTreeExtension.fs" />
     <Compile Include="ArcSummaryMarkdown.fs" />
     <Compile Include="Writers.fs" />
     <Compile Include="Program.fs" />
@@ -19,7 +18,6 @@
     <PackageReference Include="ARCtrl.NET" Version="2.0.0" />
     <PackageReference Include="Argu" Version="6.2.4" />
     <PackageReference Include="JsonDSL" Version="[0.1.0]" />
-    <PackageReference Update="FSharp.Core" Version="8.*" />
   </ItemGroup>
 
 </Project>

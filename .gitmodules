@@ -1,0 +1,3 @@
+[submodule "ArcPrototype"]
+	path = tests/fixtures/ArcPrototype
+	url = https://git.nfdi4plants.org/muehlhaus/ArcPrototype.git

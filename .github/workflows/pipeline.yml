@@ -1,57 +1,111 @@
-name: Build, Test, and publish Docker image
+name: "pipeline"
 
 on:
   push:
     branches: ['main']
-    paths:
-# this ensures that docker image is only published when source code or Dockerfile is changed
-      - 'src/**'
-      - 'Dockerfile'
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  pull_request:
+    branches: ['main']
 
-jobs:
-  build-and-test-linux:
 
+jobs:   
+  setup:
     runs-on: ubuntu-latest
+    outputs: 
+
+      # changed files output, might be relevant for other jobs
+      global_any_modified: ${{ steps.changed-files-yaml.outputs.global_any_modified }}
+      global_all_modified_files: ${{ steps.changed-files-yaml.outputs.global_all_modified_files }}
+
+      tests_all_modified_files: ${{ steps.changed-files-yaml.outputs.tests_all_modified_files }}
+      tests_any_modified: ${{ steps.changed-files-yaml.outputs.tests_any_modified }}
+
+      src_all_modified_files: ${{ steps.changed-files-yaml.outputs.src_all_modified_files }}
+      src_any_modified: ${{ steps.changed-files-yaml.outputs.src_any_modified }}
+      
+      dockerfile_modified: ${{ steps.changed-files-yaml.outputs.dockerfile_any_modified }}
+
+      # trigger other jobs
+      trigger-build-and-test: ${{steps.set-triggers.outputs.trigger-build-and-test}}
+      trigger-release-docker: ${{steps.set-triggers.outputs.trigger-release-docker}}
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.x.x
-    - name: make script executable
-      run: chmod u+x build.sh
-    - name: Build and test
-      working-directory: ./
-      run: ./build.sh runtests
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+          submodules: true
+      - name: Get all relevant file changes
+        id: changed-files-yaml
+        uses: tj-actions/changed-files@v42
+        with:
+          files_yaml: |
+            global:
+              - '**'
+            tests:
+              - tests/**
+            src:
+              - src/**
+            dockerfile:
+              - Dockerfile
 
-  build-and-push-image:
-# only publish docker images when tests succeed
-    needs: [build-and-test-linux]
+      - name: set triggers
+        id: set-triggers
+        run: |
+          echo "trigger-build-and-test=${{ steps.changed-files-yaml.outputs.tests_any_modified == 'true' || steps.changed-files-yaml.outputs.src_any_modified  == 'true' }}" >> $GITHUB_OUTPUT
+          echo "trigger-release-docker=${{ github.event_name == 'push' && (steps.changed-files-yaml.outputs.tests_any_modified == 'true' || steps.changed-files-yaml.outputs.src_any_modified  == 'true' || steps.changed-files-yaml.outputs.dockerfile_modified  == 'true') }}" >> $GITHUB_OUTPUT
+
+          echo "$GITHUB_OUTPUT"
+
+      - name: list outputs
+        run: |
+          echo "global:"
+          echo "- any: ${{ steps.changed-files-yaml.outputs.global_any_modified }}"
+          echo "- all: ${{ steps.changed-files-yaml.outputs.global_all_modified_files }}"
+          echo "tests:"
+          echo "- any: ${{ steps.changed-files-yaml.outputs.tests_any_modified }}"
+          echo "- all: ${{ steps.changed-files-yaml.outputs.tests_all_modified_files }}"
+          echo "src:"
+          echo "- any: ${{ steps.changed-files-yaml.outputs.src_any_modified }}"
+          echo "- all: ${{ steps.changed-files-yaml.outputs.src_all_modified_files }}"
+          echo "dockerfile: ${{ steps.changed-files-yaml.outputs.dockerfile_modified }}"
+          echo "computed outputs:"
+          echo "trigger build-and-test: ${{steps.set-triggers.outputs.trigger-build-and-test}}"
+          echo "trigger docker release: ${{steps.set-triggers.outputs.trigger-release-docker}}"
+
+      - name: list triggered jobs
+        run: |
+          echo "this should trigger the following jobs:"
+          echo "build-and-test-projects: ${{steps.set-triggers.outputs.trigger-build-and-test}}"
+          echo "release-docker-image: ${{steps.set-triggers.outputs.trigger-release-docker}}"
+
+  build-and-test:
+    name: "Build and test"
+    needs: setup
+    # https://github.com/actions/runner/issues/1173
+    if: needs.setup.outputs.trigger-build-and-test == 'true'
+    uses: nfdi4plants/actions-workflows/.github/workflows/build-and-test-solution.yml@main
+    with:
+      solution: ./arc-export.sln
+      checkout-submodules: true
+      configuration: Release
+
+  release-docker-image:
+    name: "Release Docker image"
+    needs: [setup, build-and-test]
+    if: needs.setup.outputs.trigger-release-docker == 'true'
     runs-on: ubuntu-latest
+    env:
+      REGISTRY: ghcr.io
+      IMAGE_NAME: nfdi4plants/arc-export
     permissions:
       contents: read
       packages: write
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: 6.x.x
-      - name: make script executable
-        run: chmod u+x build.sh
-      - name: Build and test
-        working-directory: ./
-        run: ./build.sh publishbinarieslinux
+        uses: actions/checkout@v4
 
       - name: Log in to the Container registry
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        uses: docker/login-action@v3.0.0
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
@@ -59,14 +113,15 @@ jobs:
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        uses: docker/metadata-action@v5.5.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        uses: docker/build-push-action@v5.1.0
         with:
           context: .
+          file: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
