@@ -1,7 +1,5 @@
 ﻿module ArcSummaryMarkdown
 
-open FileSystemTreeExtension
-
 open ARCtrl
 open ARCtrl.FileSystem
 open ARCtrl.NET

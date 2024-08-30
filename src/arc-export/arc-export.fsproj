@@ -9,7 +9,6 @@
   <ItemGroup>
     <Compile Include="Defaults.fs" />
     <Compile Include="CLIArgs.fs" />
-    <Compile Include="FileSystemTreeExtension.fs" />
     <Compile Include="ArcSummaryMarkdown.fs" />
     <Compile Include="Writers.fs" />
     <Compile Include="Program.fs" />
