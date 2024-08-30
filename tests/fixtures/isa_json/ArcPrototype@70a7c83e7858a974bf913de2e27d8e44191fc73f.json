@@ -1,0 +1,1772 @@
+{
+  "@id": "./",
+  "filename": "isa.investigation.xlsx",
+  "identifier": "ArcPrototype",
+  "title": "ArcPrototype",
+  "description": "A prototypic ARC that implements all specification standards accordingly",
+  "people": [
+    {
+      "@id": "http://orcid.org/0000-0003-3925-6778",
+      "firstName": "Timo",
+      "lastName": "Mühlhaus",
+      "email": "timo.muehlhaus@rptu.de",
+      "phone": "0 49 (0)631 205 4657",
+      "address": "RPTU University of Kaiserslautern, Paul-Ehrlich-Str. 23 , 67663 Kaiserslautern",
+      "affiliation": "RPTU University of Kaiserslautern",
+      "roles": [
+        {
+          "annotationValue": "principal investigator",
+          "termSource": "scoro",
+          "termAccession": "http://purl.org/spar/scoro/principal-investigator"
+        }
+      ],
+      "comments": [
+        {
+          "name": "ORCID",
+          "value": "http://orcid.org/0000-0003-3925-6778"
+        }
+      ]
+    },
+    {
+      "@id": "garth@rptu.de",
+      "firstName": "Christoph",
+      "lastName": "Garth",
+      "email": "garth@rptu.de",
+      "affiliation": "RPTU University of Kaiserslautern",
+      "roles": [
+        {
+          "annotationValue": "principal investigator",
+          "termSource": "scoro",
+          "termAccession": "http://purl.org/spar/scoro/principal-investigator"
+        }
+      ]
+    },
+    {
+      "@id": "0000-0002-8241-5300",
+      "firstName": "Oliver",
+      "lastName": "Maus",
+      "email": "maus@nfdi4plants.org",
+      "address": "RPTU University of Kaiserslautern, Erwin-Schrödinger-Str. 56 , 67663 Kaiserslautern",
+      "affiliation": "RPTU University of Kaiserslautern",
+      "roles": [
+        {
+          "annotationValue": "research assistant",
+          "termSource": "scoro",
+          "termAccession": "http://purl.org/spar/scoro/research-assistant"
+        }
+      ],
+      "comments": [
+        {
+          "name": "ORCID",
+          "value": "0000-0002-8241-5300"
+        }
+      ]
+    }
+  ],
+  "studies": [
+    {
+      "@id": "#study/experiment1_material",
+      "filename": "studies/experiment1_material/isa.study.xlsx",
+      "identifier": "experiment1_material",
+      "title": "Prototype for experimental data",
+      "description": "In this a devised study to have an exemplary experimental material description.",
+      "people": [
+        {
+          "@id": "mailto:maus@nfdi4plants.org",
+          "firstName": "Oliver",
+          "lastName": "Maus",
+          "email": "mailto:maus@nfdi4plants.org",
+          "affiliation": "RPTU University of Kaiserslautern",
+          "roles": [
+            {
+              "annotationValue": "research assistant",
+              "termSource": "scoro",
+              "termAccession": "http://purl.org/spar/scoro/research-assistant"
+            }
+          ],
+          "comments": [
+            {
+              "name": "Worksheet"
+            },
+            {
+              "name": "performer (ARC:00000168) measurement1",
+              "value": "measurement1"
+            }
+          ]
+        },
+        {
+          "@id": "#EmptyPerson",
+          "comments": [
+            {
+              "name": "Worksheet"
+            },
+            {
+              "name": "performer (ARC:00000168) measurement2",
+              "value": "measurement2"
+            }
+          ]
+        }
+      ],
+      "protocols": [
+        {
+          "@id": "#EmptyProtocol",
+          "protocolType": {
+            "@id": "http://purl.obolibrary.org/obo/EFO_0003789",
+            "annotationValue": "growth protocol",
+            "termSource": "EFO",
+            "termAccession": "http://purl.obolibrary.org/obo/EFO_0003789"
+          }
+        }
+      ],
+      "materials": {
+        "sources": [
+          {
+            "@id": "#Source_RealObject1",
+            "name": "RealObject1",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                "category": {
+                  "@id": "#MaterialAttribute/OBI:0100026",
+                  "characteristicType": {
+                    "@id": "OBI:0100026",
+                    "annotationValue": "organism",
+                    "termSource": "OBI",
+                    "termAccession": "OBI:0100026"
+                  }
+                },
+                "value": {
+                  "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                  "annotationValue": "Arabidopsis thaliana",
+                  "termSource": "NCBITaxon",
+                  "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                }
+              },
+              {
+                "@id": "#MaterialAttributeValue/biological replicate=1",
+                "category": {
+                  "@id": "#MaterialAttribute/DPBO:0000042",
+                  "characteristicType": {
+                    "@id": "DPBO:0000042",
+                    "annotationValue": "biological replicate",
+                    "termSource": "DPBO",
+                    "termAccession": "DPBO:0000042"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "1",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Source_RealObject2",
+            "name": "RealObject2",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                "category": {
+                  "@id": "#MaterialAttribute/OBI:0100026",
+                  "characteristicType": {
+                    "@id": "OBI:0100026",
+                    "annotationValue": "organism",
+                    "termSource": "OBI",
+                    "termAccession": "OBI:0100026"
+                  }
+                },
+                "value": {
+                  "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                  "annotationValue": "Arabidopsis thaliana",
+                  "termSource": "NCBITaxon",
+                  "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                }
+              },
+              {
+                "@id": "#MaterialAttributeValue/biological replicate=1",
+                "category": {
+                  "@id": "#MaterialAttribute/DPBO:0000042",
+                  "characteristicType": {
+                    "@id": "DPBO:0000042",
+                    "annotationValue": "biological replicate",
+                    "termSource": "DPBO",
+                    "termAccession": "DPBO:0000042"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "1",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Source_RealObject3",
+            "name": "RealObject3",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                "category": {
+                  "@id": "#MaterialAttribute/OBI:0100026",
+                  "characteristicType": {
+                    "@id": "OBI:0100026",
+                    "annotationValue": "organism",
+                    "termSource": "OBI",
+                    "termAccession": "OBI:0100026"
+                  }
+                },
+                "value": {
+                  "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                  "annotationValue": "Arabidopsis thaliana",
+                  "termSource": "NCBITaxon",
+                  "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                }
+              },
+              {
+                "@id": "#MaterialAttributeValue/biological replicate=1",
+                "category": {
+                  "@id": "#MaterialAttribute/DPBO:0000042",
+                  "characteristicType": {
+                    "@id": "DPBO:0000042",
+                    "annotationValue": "biological replicate",
+                    "termSource": "DPBO",
+                    "termAccession": "DPBO:0000042"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "1",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Source_RealObject4",
+            "name": "RealObject4",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                "category": {
+                  "@id": "#MaterialAttribute/OBI:0100026",
+                  "characteristicType": {
+                    "@id": "OBI:0100026",
+                    "annotationValue": "organism",
+                    "termSource": "OBI",
+                    "termAccession": "OBI:0100026"
+                  }
+                },
+                "value": {
+                  "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                  "annotationValue": "Arabidopsis thaliana",
+                  "termSource": "NCBITaxon",
+                  "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                }
+              },
+              {
+                "@id": "#MaterialAttributeValue/biological replicate=2",
+                "category": {
+                  "@id": "#MaterialAttribute/DPBO:0000042",
+                  "characteristicType": {
+                    "@id": "DPBO:0000042",
+                    "annotationValue": "biological replicate",
+                    "termSource": "DPBO",
+                    "termAccession": "DPBO:0000042"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "2",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Source_RealObject5",
+            "name": "RealObject5",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                "category": {
+                  "@id": "#MaterialAttribute/OBI:0100026",
+                  "characteristicType": {
+                    "@id": "OBI:0100026",
+                    "annotationValue": "organism",
+                    "termSource": "OBI",
+                    "termAccession": "OBI:0100026"
+                  }
+                },
+                "value": {
+                  "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                  "annotationValue": "Arabidopsis thaliana",
+                  "termSource": "NCBITaxon",
+                  "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                }
+              },
+              {
+                "@id": "#MaterialAttributeValue/biological replicate=2",
+                "category": {
+                  "@id": "#MaterialAttribute/DPBO:0000042",
+                  "characteristicType": {
+                    "@id": "DPBO:0000042",
+                    "annotationValue": "biological replicate",
+                    "termSource": "DPBO",
+                    "termAccession": "DPBO:0000042"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "2",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Source_RealObject6",
+            "name": "RealObject6",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                "category": {
+                  "@id": "#MaterialAttribute/OBI:0100026",
+                  "characteristicType": {
+                    "@id": "OBI:0100026",
+                    "annotationValue": "organism",
+                    "termSource": "OBI",
+                    "termAccession": "OBI:0100026"
+                  }
+                },
+                "value": {
+                  "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                  "annotationValue": "Arabidopsis thaliana",
+                  "termSource": "NCBITaxon",
+                  "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                }
+              },
+              {
+                "@id": "#MaterialAttributeValue/biological replicate=2",
+                "category": {
+                  "@id": "#MaterialAttribute/DPBO:0000042",
+                  "characteristicType": {
+                    "@id": "DPBO:0000042",
+                    "annotationValue": "biological replicate",
+                    "termSource": "DPBO",
+                    "termAccession": "DPBO:0000042"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "2",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "@id": "#Sample_Sample1",
+            "name": "Sample1"
+          },
+          {
+            "@id": "#Sample_Sample2",
+            "name": "Sample2"
+          },
+          {
+            "@id": "#Sample_Sample3",
+            "name": "Sample3"
+          },
+          {
+            "@id": "#Sample_Sample4",
+            "name": "Sample4"
+          },
+          {
+            "@id": "#Sample_Sample5",
+            "name": "Sample5"
+          },
+          {
+            "@id": "#Sample_Sample6",
+            "name": "Sample6"
+          },
+          {
+            "@id": "#Sample_Sample1",
+            "name": "Sample1",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=e36ca6b8-19ba-4504-aa82-d4781765873d",
+                "category": {
+                  "@id": "#MaterialAttribute/NCIT:C69261",
+                  "characteristicType": {
+                    "@id": "NCIT:C69261",
+                    "annotationValue": "Performed Procedure Step SOP Instance UID",
+                    "termSource": "NCIT",
+                    "termAccession": "NCIT:C69261"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "e36ca6b8-19ba-4504-aa82-d4781765873d",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Sample_Sample2",
+            "name": "Sample2",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=714ca2b7-22b7-4f69-b83d-9165f624da25",
+                "category": {
+                  "@id": "#MaterialAttribute/NCIT:C69261",
+                  "characteristicType": {
+                    "@id": "NCIT:C69261",
+                    "annotationValue": "Performed Procedure Step SOP Instance UID",
+                    "termSource": "NCIT",
+                    "termAccession": "NCIT:C69261"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "714ca2b7-22b7-4f69-b83d-9165f624da25",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Sample_Sample3",
+            "name": "Sample3",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=66fac760-acc7-4ed4-ba21-2cb67fa36e4d",
+                "category": {
+                  "@id": "#MaterialAttribute/NCIT:C69261",
+                  "characteristicType": {
+                    "@id": "NCIT:C69261",
+                    "annotationValue": "Performed Procedure Step SOP Instance UID",
+                    "termSource": "NCIT",
+                    "termAccession": "NCIT:C69261"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "66fac760-acc7-4ed4-ba21-2cb67fa36e4d",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Sample_Sample4",
+            "name": "Sample4",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=cba5f40c-fc05-44d6-a589-b0e3dafaeefe",
+                "category": {
+                  "@id": "#MaterialAttribute/NCIT:C69261",
+                  "characteristicType": {
+                    "@id": "NCIT:C69261",
+                    "annotationValue": "Performed Procedure Step SOP Instance UID",
+                    "termSource": "NCIT",
+                    "termAccession": "NCIT:C69261"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "cba5f40c-fc05-44d6-a589-b0e3dafaeefe",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Sample_Sample5",
+            "name": "Sample5",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=84c37b60-2342-4226-a36c-4b8dfe84ebe9",
+                "category": {
+                  "@id": "#MaterialAttribute/NCIT:C69261",
+                  "characteristicType": {
+                    "@id": "NCIT:C69261",
+                    "annotationValue": "Performed Procedure Step SOP Instance UID",
+                    "termSource": "NCIT",
+                    "termAccession": "NCIT:C69261"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "84c37b60-2342-4226-a36c-4b8dfe84ebe9",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Sample_Sample6",
+            "name": "Sample6",
+            "characteristics": [
+              {
+                "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=208df064-4b1c-4da0-a1f8-6412e1fb2284",
+                "category": {
+                  "@id": "#MaterialAttribute/NCIT:C69261",
+                  "characteristicType": {
+                    "@id": "NCIT:C69261",
+                    "annotationValue": "Performed Procedure Step SOP Instance UID",
+                    "termSource": "NCIT",
+                    "termAccession": "NCIT:C69261"
+                  }
+                },
+                "value": {
+                  "@id": "",
+                  "annotationValue": "208df064-4b1c-4da0-a1f8-6412e1fb2284",
+                  "termSource": "",
+                  "termAccession": ""
+                }
+              }
+            ]
+          },
+          {
+            "@id": "#Sample_Cultivation_Flask",
+            "name": "Cultivation Flask"
+          }
+        ]
+      },
+      "processSequence": [
+        {
+          "@id": "#Process_process_1",
+          "name": "process_1",
+          "inputs": [
+            {
+              "@id": "#Source_RealObject1",
+              "name": "RealObject1",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                  "category": {
+                    "@id": "#MaterialAttribute/OBI:0100026",
+                    "characteristicType": {
+                      "@id": "OBI:0100026",
+                      "annotationValue": "organism",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0100026"
+                    }
+                  },
+                  "value": {
+                    "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "annotationValue": "Arabidopsis thaliana",
+                    "termSource": "NCBITaxon",
+                    "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                  }
+                },
+                {
+                  "@id": "#MaterialAttributeValue/biological replicate=1",
+                  "category": {
+                    "@id": "#MaterialAttribute/DPBO:0000042",
+                    "characteristicType": {
+                      "@id": "DPBO:0000042",
+                      "annotationValue": "biological replicate",
+                      "termSource": "DPBO",
+                      "termAccession": "DPBO:0000042"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "1",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Source_RealObject2",
+              "name": "RealObject2",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                  "category": {
+                    "@id": "#MaterialAttribute/OBI:0100026",
+                    "characteristicType": {
+                      "@id": "OBI:0100026",
+                      "annotationValue": "organism",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0100026"
+                    }
+                  },
+                  "value": {
+                    "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "annotationValue": "Arabidopsis thaliana",
+                    "termSource": "NCBITaxon",
+                    "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                  }
+                },
+                {
+                  "@id": "#MaterialAttributeValue/biological replicate=1",
+                  "category": {
+                    "@id": "#MaterialAttribute/DPBO:0000042",
+                    "characteristicType": {
+                      "@id": "DPBO:0000042",
+                      "annotationValue": "biological replicate",
+                      "termSource": "DPBO",
+                      "termAccession": "DPBO:0000042"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "1",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Source_RealObject3",
+              "name": "RealObject3",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                  "category": {
+                    "@id": "#MaterialAttribute/OBI:0100026",
+                    "characteristicType": {
+                      "@id": "OBI:0100026",
+                      "annotationValue": "organism",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0100026"
+                    }
+                  },
+                  "value": {
+                    "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "annotationValue": "Arabidopsis thaliana",
+                    "termSource": "NCBITaxon",
+                    "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                  }
+                },
+                {
+                  "@id": "#MaterialAttributeValue/biological replicate=1",
+                  "category": {
+                    "@id": "#MaterialAttribute/DPBO:0000042",
+                    "characteristicType": {
+                      "@id": "DPBO:0000042",
+                      "annotationValue": "biological replicate",
+                      "termSource": "DPBO",
+                      "termAccession": "DPBO:0000042"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "1",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Source_RealObject4",
+              "name": "RealObject4",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                  "category": {
+                    "@id": "#MaterialAttribute/OBI:0100026",
+                    "characteristicType": {
+                      "@id": "OBI:0100026",
+                      "annotationValue": "organism",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0100026"
+                    }
+                  },
+                  "value": {
+                    "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "annotationValue": "Arabidopsis thaliana",
+                    "termSource": "NCBITaxon",
+                    "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                  }
+                },
+                {
+                  "@id": "#MaterialAttributeValue/biological replicate=2",
+                  "category": {
+                    "@id": "#MaterialAttribute/DPBO:0000042",
+                    "characteristicType": {
+                      "@id": "DPBO:0000042",
+                      "annotationValue": "biological replicate",
+                      "termSource": "DPBO",
+                      "termAccession": "DPBO:0000042"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "2",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Source_RealObject5",
+              "name": "RealObject5",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                  "category": {
+                    "@id": "#MaterialAttribute/OBI:0100026",
+                    "characteristicType": {
+                      "@id": "OBI:0100026",
+                      "annotationValue": "organism",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0100026"
+                    }
+                  },
+                  "value": {
+                    "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "annotationValue": "Arabidopsis thaliana",
+                    "termSource": "NCBITaxon",
+                    "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                  }
+                },
+                {
+                  "@id": "#MaterialAttributeValue/biological replicate=2",
+                  "category": {
+                    "@id": "#MaterialAttribute/DPBO:0000042",
+                    "characteristicType": {
+                      "@id": "DPBO:0000042",
+                      "annotationValue": "biological replicate",
+                      "termSource": "DPBO",
+                      "termAccession": "DPBO:0000042"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "2",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Source_RealObject6",
+              "name": "RealObject6",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
+                  "category": {
+                    "@id": "#MaterialAttribute/OBI:0100026",
+                    "characteristicType": {
+                      "@id": "OBI:0100026",
+                      "annotationValue": "organism",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0100026"
+                    }
+                  },
+                  "value": {
+                    "@id": "http://purl.obolibrary.org/obo/NCBITaxon_3702",
+                    "annotationValue": "Arabidopsis thaliana",
+                    "termSource": "NCBITaxon",
+                    "termAccession": "http://purl.obolibrary.org/obo/NCBITaxon_3702"
+                  }
+                },
+                {
+                  "@id": "#MaterialAttributeValue/biological replicate=2",
+                  "category": {
+                    "@id": "#MaterialAttribute/DPBO:0000042",
+                    "characteristicType": {
+                      "@id": "DPBO:0000042",
+                      "annotationValue": "biological replicate",
+                      "termSource": "DPBO",
+                      "termAccession": "DPBO:0000042"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "2",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "@id": "#Sample_Sample1",
+              "name": "Sample1"
+            },
+            {
+              "@id": "#Sample_Sample2",
+              "name": "Sample2"
+            },
+            {
+              "@id": "#Sample_Sample3",
+              "name": "Sample3"
+            },
+            {
+              "@id": "#Sample_Sample4",
+              "name": "Sample4"
+            },
+            {
+              "@id": "#Sample_Sample5",
+              "name": "Sample5"
+            },
+            {
+              "@id": "#Sample_Sample6",
+              "name": "Sample6"
+            }
+          ]
+        },
+        {
+          "@id": "#Process_process_2",
+          "name": "process_2",
+          "inputs": [
+            {
+              "@id": "#Sample_Sample1",
+              "name": "Sample1",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=e36ca6b8-19ba-4504-aa82-d4781765873d",
+                  "category": {
+                    "@id": "#MaterialAttribute/NCIT:C69261",
+                    "characteristicType": {
+                      "@id": "NCIT:C69261",
+                      "annotationValue": "Performed Procedure Step SOP Instance UID",
+                      "termSource": "NCIT",
+                      "termAccession": "NCIT:C69261"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "e36ca6b8-19ba-4504-aa82-d4781765873d",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Sample_Sample2",
+              "name": "Sample2",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=714ca2b7-22b7-4f69-b83d-9165f624da25",
+                  "category": {
+                    "@id": "#MaterialAttribute/NCIT:C69261",
+                    "characteristicType": {
+                      "@id": "NCIT:C69261",
+                      "annotationValue": "Performed Procedure Step SOP Instance UID",
+                      "termSource": "NCIT",
+                      "termAccession": "NCIT:C69261"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "714ca2b7-22b7-4f69-b83d-9165f624da25",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Sample_Sample3",
+              "name": "Sample3",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=66fac760-acc7-4ed4-ba21-2cb67fa36e4d",
+                  "category": {
+                    "@id": "#MaterialAttribute/NCIT:C69261",
+                    "characteristicType": {
+                      "@id": "NCIT:C69261",
+                      "annotationValue": "Performed Procedure Step SOP Instance UID",
+                      "termSource": "NCIT",
+                      "termAccession": "NCIT:C69261"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "66fac760-acc7-4ed4-ba21-2cb67fa36e4d",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Sample_Sample4",
+              "name": "Sample4",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=cba5f40c-fc05-44d6-a589-b0e3dafaeefe",
+                  "category": {
+                    "@id": "#MaterialAttribute/NCIT:C69261",
+                    "characteristicType": {
+                      "@id": "NCIT:C69261",
+                      "annotationValue": "Performed Procedure Step SOP Instance UID",
+                      "termSource": "NCIT",
+                      "termAccession": "NCIT:C69261"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "cba5f40c-fc05-44d6-a589-b0e3dafaeefe",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Sample_Sample5",
+              "name": "Sample5",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=84c37b60-2342-4226-a36c-4b8dfe84ebe9",
+                  "category": {
+                    "@id": "#MaterialAttribute/NCIT:C69261",
+                    "characteristicType": {
+                      "@id": "NCIT:C69261",
+                      "annotationValue": "Performed Procedure Step SOP Instance UID",
+                      "termSource": "NCIT",
+                      "termAccession": "NCIT:C69261"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "84c37b60-2342-4226-a36c-4b8dfe84ebe9",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#Sample_Sample6",
+              "name": "Sample6",
+              "characteristics": [
+                {
+                  "@id": "#MaterialAttributeValue/Performed Procedure Step SOP Instance UID=208df064-4b1c-4da0-a1f8-6412e1fb2284",
+                  "category": {
+                    "@id": "#MaterialAttribute/NCIT:C69261",
+                    "characteristicType": {
+                      "@id": "NCIT:C69261",
+                      "annotationValue": "Performed Procedure Step SOP Instance UID",
+                      "termSource": "NCIT",
+                      "termAccession": "NCIT:C69261"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "208df064-4b1c-4da0-a1f8-6412e1fb2284",
+                    "termSource": "",
+                    "termAccession": ""
+                  }
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "@id": "Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
+              "name": "Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
+              "name": "Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
+              "name": "Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
+              "name": "Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
+              "name": "Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
+              "name": "Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
+              "type": "Raw Data File"
+            }
+          ]
+        },
+        {
+          "@id": "#Process_Cell_Cultivation",
+          "name": "Cell Cultivation",
+          "executesProtocol": {
+            "@id": "#Protocol_experiment1_material_Cell_Cultivation",
+            "protocolType": {
+              "@id": "http://purl.obolibrary.org/obo/EFO_0003789",
+              "annotationValue": "growth protocol",
+              "termSource": "EFO",
+              "termAccession": "http://purl.obolibrary.org/obo/EFO_0003789"
+            }
+          },
+          "inputs": [
+            {
+              "@id": "#Sample_Sample1",
+              "name": "Sample1"
+            },
+            {
+              "@id": "#Sample_Sample2",
+              "name": "Sample2"
+            },
+            {
+              "@id": "#Sample_Sample3",
+              "name": "Sample3"
+            },
+            {
+              "@id": "#Sample_Sample4",
+              "name": "Sample4"
+            },
+            {
+              "@id": "#Sample_Sample5",
+              "name": "Sample5"
+            },
+            {
+              "@id": "#Sample_Sample6",
+              "name": "Sample6"
+            }
+          ],
+          "outputs": [
+            {
+              "@id": "#Sample_Cultivation_Flask",
+              "name": "Cultivation Flask"
+            },
+            {
+              "@id": "#Sample_Cultivation_Flask",
+              "name": "Cultivation Flask"
+            },
+            {
+              "@id": "#Sample_Cultivation_Flask",
+              "name": "Cultivation Flask"
+            },
+            {
+              "@id": "#Sample_Cultivation_Flask",
+              "name": "Cultivation Flask"
+            },
+            {
+              "@id": "#Sample_Cultivation_Flask",
+              "name": "Cultivation Flask"
+            },
+            {
+              "@id": "#Sample_Cultivation_Flask",
+              "name": "Cultivation Flask"
+            }
+          ]
+        }
+      ],
+      "assays": [
+        {
+          "filename": "assays/measurement1/isa.assay.xlsx",
+          "@id": "#assay/measurement1",
+          "dataFiles": [
+            {
+              "@id": "sample1.raw",
+              "name": "sample1.raw",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "sample2.raw",
+              "name": "sample2.raw",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "sample3.raw",
+              "name": "sample3.raw",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "sample4.raw",
+              "name": "sample4.raw",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "sample5.raw",
+              "name": "sample5.raw",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "sample6.raw",
+              "name": "sample6.raw",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "sample1.raw#",
+              "name": "sample1.raw#",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=1",
+              "name": "proteomics_result.csv#col=1",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=2",
+              "name": "proteomics_result.csv#col=2",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=3",
+              "name": "proteomics_result.csv#col=3",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=4",
+              "name": "proteomics_result.csv#col=4",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=5",
+              "name": "proteomics_result.csv#col=5",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=6",
+              "name": "proteomics_result.csv#col=6",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=7",
+              "name": "proteomics_result.csv#col=7",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=8",
+              "name": "proteomics_result.csv#col=8",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=9",
+              "name": "proteomics_result.csv#col=9",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=10",
+              "name": "proteomics_result.csv#col=10",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=11",
+              "name": "proteomics_result.csv#col=11",
+              "type": "Raw Data File"
+            },
+            {
+              "@id": "proteomics_result.csv#col=12",
+              "name": "proteomics_result.csv#col=12",
+              "type": "Raw Data File"
+            }
+          ],
+          "materials": {
+            "samples": [
+              {
+                "@id": "#Sample_Cultivation_flask",
+                "name": "Cultivation flask"
+              },
+              {
+                "@id": "#Sample_sample_eppi_1",
+                "name": "sample eppi 1"
+              },
+              {
+                "@id": "#Sample_sample_eppi_2",
+                "name": "sample eppi 2"
+              },
+              {
+                "@id": "#Sample_sample_eppi_3",
+                "name": "sample eppi 3"
+              },
+              {
+                "@id": "#Sample_sample_eppi_4",
+                "name": "sample eppi 4"
+              },
+              {
+                "@id": "#Sample_sample_eppi_5",
+                "name": "sample eppi 5"
+              },
+              {
+                "@id": "#Sample_sample_eppi_6",
+                "name": "sample eppi 6"
+              },
+              {
+                "@id": "#Sample_sample_eppi_extracted_1",
+                "name": "sample eppi extracted 1"
+              },
+              {
+                "@id": "#Sample_sample_eppi_extracted_2",
+                "name": "sample eppi extracted 2"
+              },
+              {
+                "@id": "#Sample_sample_eppi_extracted_3",
+                "name": "sample eppi extracted 3"
+              },
+              {
+                "@id": "#Sample_sample_eppi_extracted_4",
+                "name": "sample eppi extracted 4"
+              },
+              {
+                "@id": "#Sample_sample_eppi_extracted_5",
+                "name": "sample eppi extracted 5"
+              },
+              {
+                "@id": "#Sample_sample_eppi_extracted_6",
+                "name": "sample eppi extracted 6"
+              }
+            ]
+          },
+          "unitCategories": [
+            {
+              "@id": "",
+              "annotationValue": "g unit",
+              "termSource": "user-specific",
+              "termAccession": ""
+            }
+          ],
+          "processSequence": [
+            {
+              "@id": "#Process_Cell_Lysis",
+              "name": "Cell Lysis",
+              "executesProtocol": {
+                "@id": "#Protocol_experiment1_material_measurement1_Cell_Lysis",
+                "parameters": [
+                  {
+                    "@id": "#ProtocolParameter/OBI:0302894",
+                    "parameterName": {
+                      "@id": "OBI:0302894",
+                      "annotationValue": "cell lysis",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0302894"
+                    }
+                  },
+                  {
+                    "@id": "#ProtocolParameter/OBI:0302886",
+                    "parameterName": {
+                      "@id": "OBI:0302886",
+                      "annotationValue": "centrifugation",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0302886"
+                    }
+                  }
+                ],
+                "components": [
+                  {
+                    "componentName": "Fisherbrand™ Model 705 Sonic Dismembrator ()",
+                    "componentType": {
+                      "@id": "OBI:0400114",
+                      "annotationValue": "sonicator",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0400114"
+                    }
+                  },
+                  {
+                    "componentName": "Eppendorf™ Centrifuge 5420 ()",
+                    "componentType": {
+                      "@id": "OBI:0400106",
+                      "annotationValue": "centrifuge",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0400106"
+                    }
+                  }
+                ]
+              },
+              "parameterValues": [
+                {
+                  "category": {
+                    "@id": "#ProtocolParameter/OBI:0302894",
+                    "parameterName": {
+                      "@id": "OBI:0302894",
+                      "annotationValue": "cell lysis",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0302894"
+                    }
+                  },
+                  "value": {
+                    "@id": "https://bioregistry.io/NCIT:C81871",
+                    "annotationValue": "Sonication",
+                    "termSource": "NCIT",
+                    "termAccession": "https://bioregistry.io/NCIT:C81871"
+                  }
+                },
+                {
+                  "category": {
+                    "@id": "#ProtocolParameter/OBI:0302886",
+                    "parameterName": {
+                      "@id": "OBI:0302886",
+                      "annotationValue": "centrifugation",
+                      "termSource": "OBI",
+                      "termAccession": "OBI:0302886"
+                    }
+                  },
+                  "value": 10,
+                  "unit": {
+                    "@id": "",
+                    "annotationValue": "g unit",
+                    "termSource": "user-specific",
+                    "termAccession": ""
+                  }
+                }
+              ],
+              "inputs": [
+                {
+                  "@id": "#Sample_Cultivation_flask",
+                  "name": "Cultivation flask"
+                },
+                {
+                  "@id": "#Sample_Cultivation_flask",
+                  "name": "Cultivation flask"
+                },
+                {
+                  "@id": "#Sample_Cultivation_flask",
+                  "name": "Cultivation flask"
+                },
+                {
+                  "@id": "#Sample_Cultivation_flask",
+                  "name": "Cultivation flask"
+                },
+                {
+                  "@id": "#Sample_Cultivation_flask",
+                  "name": "Cultivation flask"
+                },
+                {
+                  "@id": "#Sample_Cultivation_flask",
+                  "name": "Cultivation flask"
+                }
+              ],
+              "outputs": [
+                {
+                  "@id": "#Sample_sample_eppi_1",
+                  "name": "sample eppi 1"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_2",
+                  "name": "sample eppi 2"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_3",
+                  "name": "sample eppi 3"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_4",
+                  "name": "sample eppi 4"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_5",
+                  "name": "sample eppi 5"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_6",
+                  "name": "sample eppi 6"
+                }
+              ]
+            },
+            {
+              "@id": "#Process_Protein_Extraction",
+              "name": "Protein Extraction",
+              "executesProtocol": {
+                "@id": "#Protocol_extractionProtocol.txt",
+                "name": "extractionProtocol.txt"
+              },
+              "inputs": [
+                {
+                  "@id": "#Sample_sample_eppi_1",
+                  "name": "sample eppi 1"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_2",
+                  "name": "sample eppi 2"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_3",
+                  "name": "sample eppi 3"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_4",
+                  "name": "sample eppi 4"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_5",
+                  "name": "sample eppi 5"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_6",
+                  "name": "sample eppi 6"
+                }
+              ],
+              "outputs": [
+                {
+                  "@id": "#Sample_sample_eppi_extracted_1",
+                  "name": "sample eppi extracted 1"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_2",
+                  "name": "sample eppi extracted 2"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_3",
+                  "name": "sample eppi extracted 3"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_4",
+                  "name": "sample eppi extracted 4"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_5",
+                  "name": "sample eppi extracted 5"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_6",
+                  "name": "sample eppi extracted 6"
+                }
+              ]
+            },
+            {
+              "@id": "#Process_Protein_Measurement",
+              "name": "Protein Measurement",
+              "executesProtocol": {
+                "@id": "#Protocol_experiment1_material_measurement1_Protein_Measurement",
+                "components": [
+                  {
+                    "componentName": "Trypsin (MS:1001251)",
+                    "componentType": {
+                      "@id": "MS:1001045",
+                      "annotationValue": "cleavage agent name",
+                      "termSource": "MS",
+                      "termAccession": "MS:1001045"
+                    }
+                  },
+                  {
+                    "componentName": "TripleTOF 5600+ (MS:1002584)",
+                    "componentType": {
+                      "@id": "MS:1000031",
+                      "annotationValue": "instrument model",
+                      "termSource": "MS",
+                      "termAccession": "MS:1000031"
+                    }
+                  }
+                ]
+              },
+              "inputs": [
+                {
+                  "@id": "#Sample_sample_eppi_extracted_1",
+                  "name": "sample eppi extracted 1"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_2",
+                  "name": "sample eppi extracted 2"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_3",
+                  "name": "sample eppi extracted 3"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_4",
+                  "name": "sample eppi extracted 4"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_5",
+                  "name": "sample eppi extracted 5"
+                },
+                {
+                  "@id": "#Sample_sample_eppi_extracted_6",
+                  "name": "sample eppi extracted 6"
+                }
+              ],
+              "outputs": [
+                {
+                  "@id": "sample1.raw",
+                  "name": "sample1.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample2.raw",
+                  "name": "sample2.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample3.raw",
+                  "name": "sample3.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample4.raw",
+                  "name": "sample4.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample5.raw",
+                  "name": "sample5.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample6.raw",
+                  "name": "sample6.raw",
+                  "type": "Raw Data File"
+                }
+              ]
+            },
+            {
+              "@id": "#Process_Computational_Proteome_Analysis",
+              "name": "Computational Proteome Analysis",
+              "parameterValues": [
+                {
+                  "category": {
+                    "@id": "#ProtocolParameter/MS:1000531",
+                    "parameterName": {
+                      "@id": "MS:1000531",
+                      "annotationValue": "software",
+                      "termSource": "MS",
+                      "termAccession": "MS:1000531"
+                    }
+                  },
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "ProteomIqon",
+                    "termSource": "user-specific",
+                    "termAccession": ""
+                  }
+                }
+              ],
+              "inputs": [
+                {
+                  "@id": "sample1.raw#",
+                  "name": "sample1.raw#",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample1.raw",
+                  "name": "sample1.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample2.raw",
+                  "name": "sample2.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample2.raw",
+                  "name": "sample2.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample3.raw",
+                  "name": "sample3.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample3.raw",
+                  "name": "sample3.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample4.raw",
+                  "name": "sample4.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample4.raw",
+                  "name": "sample4.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample5.raw",
+                  "name": "sample5.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample5.raw",
+                  "name": "sample5.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample6.raw",
+                  "name": "sample6.raw",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "sample6.raw",
+                  "name": "sample6.raw",
+                  "type": "Raw Data File"
+                }
+              ],
+              "outputs": [
+                {
+                  "@id": "proteomics_result.csv#col=1",
+                  "name": "proteomics_result.csv#col=1",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=2",
+                  "name": "proteomics_result.csv#col=2",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=3",
+                  "name": "proteomics_result.csv#col=3",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=4",
+                  "name": "proteomics_result.csv#col=4",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=5",
+                  "name": "proteomics_result.csv#col=5",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=6",
+                  "name": "proteomics_result.csv#col=6",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=7",
+                  "name": "proteomics_result.csv#col=7",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=8",
+                  "name": "proteomics_result.csv#col=8",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=9",
+                  "name": "proteomics_result.csv#col=9",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=10",
+                  "name": "proteomics_result.csv#col=10",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=11",
+                  "name": "proteomics_result.csv#col=11",
+                  "type": "Raw Data File"
+                },
+                {
+                  "@id": "proteomics_result.csv#col=12",
+                  "name": "proteomics_result.csv#col=12",
+                  "type": "Raw Data File"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "filename": "assays/measurement2/isa.assay.xlsx",
+          "@id": "#assay/measurement2"
+        }
+      ],
+      "characteristicCategories": [
+        {
+          "@id": "#MaterialAttribute/OBI:0100026",
+          "characteristicType": {
+            "@id": "OBI:0100026",
+            "annotationValue": "organism",
+            "termSource": "OBI",
+            "termAccession": "OBI:0100026"
+          }
+        },
+        {
+          "@id": "#MaterialAttribute/DPBO:0000042",
+          "characteristicType": {
+            "@id": "DPBO:0000042",
+            "annotationValue": "biological replicate",
+            "termSource": "DPBO",
+            "termAccession": "DPBO:0000042"
+          }
+        },
+        {
+          "@id": "#MaterialAttribute/NCIT:C69261",
+          "characteristicType": {
+            "@id": "NCIT:C69261",
+            "annotationValue": "Performed Procedure Step SOP Instance UID",
+            "termSource": "NCIT",
+            "termAccession": "NCIT:C69261"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "#study/experiment2",
+      "filename": "studies/experiment2/isa.study.xlsx",
+      "identifier": "experiment2",
+      "materials": {
+        "sources": [
+          {
+            "@id": "#Source_Input_[MyStudyObject]",
+            "name": "Input [MyStudyObject]"
+          }
+        ],
+        "samples": [
+          {
+            "@id": "#Sample_MyGel",
+            "name": "MyGel"
+          }
+        ]
+      },
+      "processSequence": [
+        {
+          "@id": "#Process_experiment2",
+          "name": "experiment2",
+          "parameterValues": [
+            {
+              "category": {
+                "@id": "#ProtocolParameter/EFO:0001458",
+                "parameterName": {
+                  "@id": "EFO:0001458",
+                  "annotationValue": "protein assay",
+                  "termSource": "EFO",
+                  "termAccession": "EFO:0001458"
+                }
+              },
+              "value": {
+                "@id": "http://purl.obolibrary.org/obo/EFO_0010936",
+                "annotationValue": "SDS-PAGE",
+                "termSource": "EFO",
+                "termAccession": "http://purl.obolibrary.org/obo/EFO_0010936"
+              }
+            }
+          ],
+          "inputs": [
+            {
+              "@id": "#Source_Input_[MyStudyObject]",
+              "name": "Input [MyStudyObject]"
+            }
+          ],
+          "outputs": [
+            {
+              "@id": "#Sample_MyGel",
+              "name": "MyGel"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

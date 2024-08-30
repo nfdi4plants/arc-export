@@ -14,7 +14,7 @@
     <Compile Include="ReferenceObjects.fs" />
     <Compile Include="TestObjects.fs" />
     <Compile Include="GitSubmoduleTests.fs" />
-    <Compile Include="Tests.fs" />
+    <Compile Include="CLITests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
@@ -24,6 +24,10 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\arc-export\arc-export.fsproj" />
   </ItemGroup>
 
 </Project>
