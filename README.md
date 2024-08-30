@@ -1,9 +1,13 @@
 # arc-export
 Automatic building of a Docker container for exporting ARCs to Arc.json
 
+# Develop
+
+use VS or VSCode tooling or run `dotnet build` or `dotnet test` from the command line.
+
 # Setup
 
-## local build
+## local docker build
 ```shell
 docker build . -t arc-export
 
