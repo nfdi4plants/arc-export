@@ -85,6 +85,7 @@ jobs:
     if: needs.setup.outputs.trigger-build-and-test == 'true'
     uses: nfdi4plants/actions-workflows/.github/workflows/build-and-test-solution.yml@main
     with:
+      macos: false
       solution: ./arc-export.sln
       checkout-submodules: true
       configuration: Release

@@ -11,23 +11,34 @@ let ``Can execute compiled tool`` () =
     let res = runTool "arc-export" [|"--help"|] "."
     Assert.Equal(0, res.ExitCode)
 
-[<Fact>]
-let ``Compiled tool returns correct isa json for ArcPrototype`` () =
-    let res = runTool "arc-export" [|"-p"; "./fixtures/ArcPrototype"; "-f"; "isa-json"; "-o"; "."|] "."
-    Assert.Equal(0, res.ExitCode)
-    let file = File.ReadAllText "./arc-isa.json" |> fun f -> f.ReplaceLineEndings("\n")
-    Assert.Equal(ReferenceObjects.ArcPrototype.isa_json, file)
 
-[<Fact>]
-let ``Compiled tool returns correct arc summary for ArcPrototype`` () =
-    let res = runTool "arc-export" [|"-p"; "./fixtures/ArcPrototype"; "-f"; "summary-markdown"; "-o"; "."|] "."
-    Assert.Equal(0, res.ExitCode)
-    let file = File.ReadAllText "./arc-summary.md" |> fun f -> f.ReplaceLineEndings("\n")
-    Assert.Equal(ReferenceObjects.ArcPrototype.arc_summary, file)
+type ARCPrototypeFixture() = inherit ARCTestFixture("ArcPrototype")
 
-[<Fact>]
-let ``Compiled tool returns correct ro crate metadata json for ArcPrototype`` () =
-    let res = runTool "arc-export" [|"-p"; "./fixtures/ArcPrototype"; "-f"; "rocrate-metadata"; "-o"; "."|] "."
-    Assert.Equal(0, res.ExitCode)
-    let file = File.ReadAllText "./arc-ro-crate-metadata.json" |> fun f -> f.ReplaceLineEndings("\n")
-    Assert.Equal(ReferenceObjects.ArcPrototype.arc_ro_crate_metadata, file)
+type ArcPrototype() =
+
+    let tool_fixture = new ARCPrototypeFixture()
+
+    interface IClassFixture<ARCPrototypeFixture>
+
+    member this.Fixture with get() = tool_fixture
+
+    [<Fact>]
+    member this.``isa json is correct`` () =
+        Assert.Equal(0,this.Fixture.ISAJsonProcessResult.ExitCode)
+        match this.Fixture.ISAJson with
+        | Ok isa -> Assert.Equal(ReferenceObjects.ArcPrototype.isa_json, isa)
+        | Error e -> Assert.True(false, e)
+        
+    [<Fact>]
+    member this.``summary markdown is correct`` () =
+        Assert.Equal(0,this.Fixture.ArcSummaryProcessResult.ExitCode)
+        match this.Fixture.ArcSummary with
+        | Ok s -> Assert.Equal(ReferenceObjects.ArcPrototype.arc_summary, s)
+        | Error e -> Assert.True(false, e)
+        
+    [<Fact>]
+    member this.``ro-crate metadata is correct`` () =
+        Assert.Equal(0,this.Fixture.ROCrateMetadataProcessResult.ExitCode)
+        match this.Fixture.ROCrateMetadata with
+        | Ok roc -> Assert.Equal(ReferenceObjects.ArcPrototype.arc_ro_crate_metadata, roc)
+        | Error e -> Assert.True(false, e)

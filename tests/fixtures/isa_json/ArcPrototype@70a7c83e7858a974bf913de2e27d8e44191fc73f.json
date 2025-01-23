@@ -154,10 +154,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "1",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_1",
+                  "annotationValue": "1"
                 }
               }
             ]
@@ -196,10 +194,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "1",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_1",
+                  "annotationValue": "1"
                 }
               }
             ]
@@ -238,10 +234,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "1",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_1",
+                  "annotationValue": "1"
                 }
               }
             ]
@@ -280,10 +274,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "2",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_2",
+                  "annotationValue": "2"
                 }
               }
             ]
@@ -322,10 +314,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "2",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_2",
+                  "annotationValue": "2"
                 }
               }
             ]
@@ -364,10 +354,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "2",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_2",
+                  "annotationValue": "2"
                 }
               }
             ]
@@ -414,10 +402,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "e36ca6b8-19ba-4504-aa82-d4781765873d",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_e36ca6b8-19ba-4504-aa82-d4781765873d",
+                  "annotationValue": "e36ca6b8-19ba-4504-aa82-d4781765873d"
                 }
               }
             ]
@@ -438,10 +424,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "714ca2b7-22b7-4f69-b83d-9165f624da25",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_714ca2b7-22b7-4f69-b83d-9165f624da25",
+                  "annotationValue": "714ca2b7-22b7-4f69-b83d-9165f624da25"
                 }
               }
             ]
@@ -462,10 +446,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "66fac760-acc7-4ed4-ba21-2cb67fa36e4d",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_66fac760-acc7-4ed4-ba21-2cb67fa36e4d",
+                  "annotationValue": "66fac760-acc7-4ed4-ba21-2cb67fa36e4d"
                 }
               }
             ]
@@ -486,10 +468,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "cba5f40c-fc05-44d6-a589-b0e3dafaeefe",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_cba5f40c-fc05-44d6-a589-b0e3dafaeefe",
+                  "annotationValue": "cba5f40c-fc05-44d6-a589-b0e3dafaeefe"
                 }
               }
             ]
@@ -510,10 +490,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "84c37b60-2342-4226-a36c-4b8dfe84ebe9",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_84c37b60-2342-4226-a36c-4b8dfe84ebe9",
+                  "annotationValue": "84c37b60-2342-4226-a36c-4b8dfe84ebe9"
                 }
               }
             ]
@@ -534,10 +512,8 @@
                   }
                 },
                 "value": {
-                  "@id": "",
-                  "annotationValue": "208df064-4b1c-4da0-a1f8-6412e1fb2284",
-                  "termSource": "",
-                  "termAccession": ""
+                  "@id": "#UserTerm_208df064-4b1c-4da0-a1f8-6412e1fb2284",
+                  "annotationValue": "208df064-4b1c-4da0-a1f8-6412e1fb2284"
                 }
               }
             ]
@@ -587,10 +563,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "1",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_1",
+                    "annotationValue": "1"
                   }
                 }
               ]
@@ -629,10 +603,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "1",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_1",
+                    "annotationValue": "1"
                   }
                 }
               ]
@@ -671,10 +643,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "1",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_1",
+                    "annotationValue": "1"
                   }
                 }
               ]
@@ -713,10 +683,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "2",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_2",
+                    "annotationValue": "2"
                   }
                 }
               ]
@@ -755,10 +723,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "2",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_2",
+                    "annotationValue": "2"
                   }
                 }
               ]
@@ -797,10 +763,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "2",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_2",
+                    "annotationValue": "2"
                   }
                 }
               ]
@@ -853,10 +817,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "e36ca6b8-19ba-4504-aa82-d4781765873d",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_e36ca6b8-19ba-4504-aa82-d4781765873d",
+                    "annotationValue": "e36ca6b8-19ba-4504-aa82-d4781765873d"
                   }
                 }
               ]
@@ -877,10 +839,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "714ca2b7-22b7-4f69-b83d-9165f624da25",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_714ca2b7-22b7-4f69-b83d-9165f624da25",
+                    "annotationValue": "714ca2b7-22b7-4f69-b83d-9165f624da25"
                   }
                 }
               ]
@@ -901,10 +861,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "66fac760-acc7-4ed4-ba21-2cb67fa36e4d",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_66fac760-acc7-4ed4-ba21-2cb67fa36e4d",
+                    "annotationValue": "66fac760-acc7-4ed4-ba21-2cb67fa36e4d"
                   }
                 }
               ]
@@ -925,10 +883,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "cba5f40c-fc05-44d6-a589-b0e3dafaeefe",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_cba5f40c-fc05-44d6-a589-b0e3dafaeefe",
+                    "annotationValue": "cba5f40c-fc05-44d6-a589-b0e3dafaeefe"
                   }
                 }
               ]
@@ -949,10 +905,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "84c37b60-2342-4226-a36c-4b8dfe84ebe9",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_84c37b60-2342-4226-a36c-4b8dfe84ebe9",
+                    "annotationValue": "84c37b60-2342-4226-a36c-4b8dfe84ebe9"
                   }
                 }
               ]
@@ -973,10 +927,8 @@
                     }
                   },
                   "value": {
-                    "@id": "",
-                    "annotationValue": "208df064-4b1c-4da0-a1f8-6412e1fb2284",
-                    "termSource": "",
-                    "termAccession": ""
+                    "@id": "#UserTerm_208df064-4b1c-4da0-a1f8-6412e1fb2284",
+                    "annotationValue": "208df064-4b1c-4da0-a1f8-6412e1fb2284"
                   }
                 }
               ]
@@ -1240,10 +1192,9 @@
           },
           "unitCategories": [
             {
-              "@id": "",
+              "@id": "#user-specific",
               "annotationValue": "g unit",
-              "termSource": "user-specific",
-              "termAccession": ""
+              "termSource": "user-specific"
             }
           ],
           "processSequence": [
@@ -1323,10 +1274,9 @@
                   },
                   "value": 10,
                   "unit": {
-                    "@id": "",
+                    "@id": "#user-specific",
                     "annotationValue": "g unit",
-                    "termSource": "user-specific",
-                    "termAccession": ""
+                    "termSource": "user-specific"
                   }
                 }
               ],
@@ -1543,10 +1493,9 @@
                     }
                   },
                   "value": {
-                    "@id": "",
+                    "@id": "#user-specific",
                     "annotationValue": "ProteomIqon",
-                    "termSource": "user-specific",
-                    "termAccession": ""
+                    "termSource": "user-specific"
                   }
                 }
               ],
