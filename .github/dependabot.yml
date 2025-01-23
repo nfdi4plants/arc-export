@@ -17,20 +17,14 @@ updates:
           - "ARCValidationPackages*"
           - "AVPRClient*"
           - "AVPRIndex*"
-        labels:
-          - "Dependency: DataPLANT"
       Tests:
         patterns:
           - "xunit*"
           - "Expecto*"
           - "Fable.Pyxpecto*"
-        labels:
-          - "Dependency: Tests"
       Fable:
         patterns:
           - "Fable*"
-        labels:
-          - "Dependency: Fable"
       Other:
         exclude-patterns:
           - "ARCtrl*"
@@ -45,13 +39,10 @@ updates:
           - "xunit*"
           - "Expecto*"
           - "Fable.Pyxpecto*"
-        labels:
-          - "Dependency: Other"
+
   
   # Weekly updates for GitHub Actions
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: weekly
-    labels:
-      - "Dependency: github actions"
