@@ -51,8 +51,8 @@ jobs:
       - name: set triggers
         id: set-triggers
         run: |
-          echo "trigger-build-and-test=${{ steps.changed-files-yaml.outputs.tests_any_modified == 'true' || steps.changed-files-yaml.outputs.src_any_modified  == 'true' }}" >> $GITHUB_OUTPUT
-          echo "trigger-release-docker=${{ github.event_name == 'push' && (steps.changed-files-yaml.outputs.tests_any_modified == 'true' || steps.changed-files-yaml.outputs.src_any_modified  == 'true' || steps.changed-files-yaml.outputs.dockerfile_modified  == 'true') }}" >> $GITHUB_OUTPUT
+          echo "trigger-build-and-test=${{ steps.changed-files-yaml.outputs.tests_any_modified == 'true' || steps.changed-files-yaml.outputs.src_any_modified  == 'true' || steps.changed-files-yaml.outputs.dockerfile_any_modified  == 'true'}}" >> $GITHUB_OUTPUT
+          echo "trigger-release-docker=${{ github.event_name == 'push' && (steps.changed-files-yaml.outputs.tests_any_modified == 'true' || steps.changed-files-yaml.outputs.src_any_modified  == 'true' || steps.changed-files-yaml.outputs.dockerfile_any_modified  == 'true') }}" >> $GITHUB_OUTPUT
 
           echo "$GITHUB_OUTPUT"
 
@@ -67,7 +67,7 @@ jobs:
           echo "src:"
           echo "- any: ${{ steps.changed-files-yaml.outputs.src_any_modified }}"
           echo "- all: ${{ steps.changed-files-yaml.outputs.src_all_modified_files }}"
-          echo "dockerfile: ${{ steps.changed-files-yaml.outputs.dockerfile_modified }}"
+          echo "dockerfile: ${{ steps.changed-files-yaml.outputs.dockerfile_any_modified }}"
           echo "computed outputs:"
           echo "trigger build-and-test: ${{steps.set-triggers.outputs.trigger-build-and-test}}"
           echo "trigger docker release: ${{steps.set-triggers.outputs.trigger-release-docker}}"
