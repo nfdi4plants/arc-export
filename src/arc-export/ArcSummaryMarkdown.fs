@@ -2,7 +2,6 @@
 
 open ARCtrl
 open ARCtrl.FileSystem
-open ARCtrl.NET
 
 let [<Literal>] MARKDOWN_TEMPLATE = """## [Data set] [[ARC_TITLE]]
 

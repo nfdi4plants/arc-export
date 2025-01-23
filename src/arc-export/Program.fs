@@ -1,7 +1,6 @@
 ﻿open System.IO
 open ARCtrl
 open ARCtrl.FileSystem
-open ARCtrl.NET
 open Argu
 
 
@@ -14,6 +13,10 @@ try
         args.TryGetResult(CLIArgs.Out_Directory)
         |>Option.defaultValue arcPath
 
+    if not <| Directory.Exists outDir then
+        printfn "Creating output directory: %s" outDir
+        Directory.CreateDirectory outDir |> ignore
+
     let arc = 
     
         try ARC.load arcPath with
@@ -21,15 +24,14 @@ try
             printfn "Could not read investigation, writing empty arc json."
             let comment1 = Comment("Status","Could not parse ARC")
             let comment2 = Comment("ErrorMessage",$"Could not parse ARC:\n{err.Message}")
-            let fs = ARCtrl.NET.Path.getAllFilePaths arcPath |> FileSystemTree.fromFilePaths |> FileSystem.create
+            let filePaths = ARCtrl.FileSystemHelper.getAllFilePathsAsync arcPath |> Async.RunSynchronously
+            let fs = filePaths |> FileSystemTree.fromFilePaths |> FileSystem.create
             let inv = 
                 ArcInvestigation(Helper.Identifier.createMissingIdentifier() , comments = ResizeArray [|comment1;comment2|])
             let arc = ARC(inv,fs = fs)
             arc
 
     let outputFormats = args.GetResults(CLIArgs.Output_Format)
-    
-    //args.Contains(CLIArgs.Output_Format)
             
     if outputFormats |> List.contains CLIArgs.OutputFormat.ISA_Json || List.isEmpty outputFormats then
         Writers.write_isa_json outDir arc
