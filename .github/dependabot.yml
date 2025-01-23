@@ -8,7 +8,7 @@ updates:
     allow:
       - dependency-name: 
           # List your specific NuGet packages here
-          - ARCtrl*
+          - ARCtrl
 
   # Weekly updates for all other NuGet packages
   - package-ecosystem: nuget
@@ -18,7 +18,7 @@ updates:
     ignore:
       - dependency-name:
           # Exclude the packages already covered by the daily updates
-          - ARCtrl*
+          - ARCtrl
 
   # Weekly updates for GitHub Actions
   - package-ecosystem: github-actions
