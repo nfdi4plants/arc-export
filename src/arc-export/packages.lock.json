@@ -19,25 +19,25 @@
       },
       "Argu": {
         "type": "Direct",
-        "requested": "[6.2.4, )",
-        "resolved": "6.2.4",
-        "contentHash": "RuANu8+L1P2HWozmbRXkj6MQGYwP5DL2wdARfBPtRjsLS8TSgwYjOKxMnY5LtjmHLlMBD3u2+MfbAy8xMGg8Qg==",
+        "requested": "[6.2.5, )",
+        "resolved": "6.2.5",
+        "contentHash": "68vfXYZCcyTFtC11Z26+S4cSyEPiUJ8PL+iGuYpIbCsH+TN27bIxV/QczHXus/+iSCOfjMJsBffBC90mlzKXrw==",
         "dependencies": {
-          "FSharp.Core": "6.0.7",
+          "FSharp.Core": "6.0.0",
           "System.Configuration.ConfigurationManager": "4.4.0"
         }
       },
       "FSharp.Core": {
         "type": "Direct",
-        "requested": "[8.0.400, )",
-        "resolved": "8.0.400",
-        "contentHash": "kHMdDDmlZl98tujgHCmL8/HNH9VKbxsRMC9s7wbwr4noR40SSa5D4d00yF8cMK52s8jabVuiLLcrUw9r+PkKDQ=="
+        "requested": "[9.0.100, )",
+        "resolved": "9.0.100",
+        "contentHash": "ye8yagHGsH08H2Twno5GRWkSbrMtxK/SWiHuPcF+3nODpW65/VJ8RO0aWxp8n9+KQbmahg90wAEL3TEXjF0r6A=="
       },
       "JsonDSL": {
         "type": "Direct",
-        "requested": "[0.1.0, 0.1.0]",
-        "resolved": "0.1.0",
-        "contentHash": "w2vohWW7xgS4M3AafHV1doEEQbeOHo0qOw1Tq0wnfjuoWC42vlFOmx7DGuB4dE2c5fgZ9Ie7225BixdP6Nkcig==",
+        "requested": "[0.2.0, 0.2.0]",
+        "resolved": "0.2.0",
+        "contentHash": "bq41FAkRAlG+b1aWz5ZejrtJng2Pg8KqEotjGlucmacLOwEF/+qr0Remrn/GH/MPlYJsKcFTOY5IkN3/0ArqIg==",
         "dependencies": {
           "FSharp.Core": "6.0.6",
           "System.Text.Json": "7.0.2"
