@@ -12,7 +12,7 @@ updates:
 
   # Weekly updates for all other NuGet packages
   - package-ecosystem: nuget
-    directory: "/src/arc-export/"
+    directory: "/"
     schedule:
       interval: weekly
     ignore:
