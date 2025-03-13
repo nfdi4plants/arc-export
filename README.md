@@ -3,7 +3,24 @@ Automatic building of a Docker container for exporting ARCs to Arc.json
 
 # Develop
 
+## Build
+
 use VS or VSCode tooling or run `dotnet build` or `dotnet test` from the command line.
+
+## Test
+This repo uses external arcs as fixtures to create and test the output. These are referenced as _git submodules_ in `/tests/fixtures`.
+
+To clone the repo with the submodules, use the following command:
+```shell
+git clone --recurse-submodules
+```
+
+If you have already cloned the repo, you can initialize the submodules with the following command:
+```shell
+git submodule init
+```
+
+Note that the submodules are set on a specific commit, so **do not update them**.
 
 # Setup
 
