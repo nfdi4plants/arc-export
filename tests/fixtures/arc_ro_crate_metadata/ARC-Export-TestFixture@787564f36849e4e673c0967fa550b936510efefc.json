@@ -193,13 +193,13 @@
         }
       },
       {
-        "@id": "#study/MISSING_IDENTIFIER_b8cb8ab4-f1dd-444e-bd3e-c1367bb06d11",
+        "@id": "#study/PLACEHOLDER_STUDY_UnrelatedAssay",
         "@type": [
           "Study"
         ],
         "additionalType": "Study",
-        "identifier": "MISSING_IDENTIFIER_b8cb8ab4-f1dd-444e-bd3e-c1367bb06d11",
-        "filename": "studies/MISSING_IDENTIFIER_b8cb8ab4-f1dd-444e-bd3e-c1367bb06d11/isa.study.xlsx",
+        "identifier": "PLACEHOLDER_STUDY_UnrelatedAssay",
+        "filename": "studies/PLACEHOLDER_STUDY_UnrelatedAssay/isa.study.xlsx",
         "assays": [
           {
             "@id": "#assay/UnrelatedAssay",

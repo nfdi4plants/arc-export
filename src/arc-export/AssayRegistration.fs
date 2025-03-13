@@ -50,7 +50,7 @@ type ARC with
                         wasRegistered <- true
                 )
                 if not wasRegistered then
-                    let newStudy = ArcStudy(Helper.Identifier.createMissingIdentifier())
+                    let newStudy = ArcStudy($"PLACEHOLDER_STUDY_{a.Identifier}")
                     isa.AddStudy newStudy
                     newStudy.RegisterAssay a.Identifier    
         )
