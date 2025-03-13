@@ -1,3 +1,6 @@
 [submodule "ArcPrototype"]
 	path = tests/fixtures/ArcPrototype
 	url = https://git.nfdi4plants.org/muehlhaus/ArcPrototype.git
+[submodule "ARC-Export-TestFixture"]
+	path = tests/fixtures/ARC-Export-TestFixture
+	url = https://git.nfdi4plants.org/weil/ARC-Export-TestFixture.git

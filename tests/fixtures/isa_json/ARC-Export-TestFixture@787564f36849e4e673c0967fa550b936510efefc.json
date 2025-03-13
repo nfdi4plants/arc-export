@@ -1,0 +1,95 @@
+{
+  "@id": "./",
+  "filename": "isa.investigation.xlsx",
+  "identifier": "ARC-Export-TestFixture",
+  "studies": [
+    {
+      "@id": "#study/Study1",
+      "filename": "studies/Study1/isa.study.xlsx",
+      "identifier": "Study1",
+      "materials": {
+        "sources": [
+          {
+            "@id": "#Source_MySource",
+            "name": "MySource"
+          }
+        ],
+        "samples": [
+          {
+            "@id": "#Sample_MySample",
+            "name": "MySample"
+          }
+        ]
+      },
+      "processSequence": [
+        {
+          "@id": "#Process_SimpleTable",
+          "name": "SimpleTable",
+          "inputs": [
+            {
+              "@id": "#Source_MySource",
+              "name": "MySource"
+            }
+          ],
+          "outputs": [
+            {
+              "@id": "#Sample_MySample",
+              "name": "MySample"
+            }
+          ]
+        }
+      ],
+      "assays": [
+        {
+          "filename": "assays/SharedSampleWithStudy/isa.assay.xlsx",
+          "@id": "#assay/SharedSampleWithStudy",
+          "dataFiles": [
+            {
+              "@id": "MyData",
+              "name": "MyData",
+              "type": "Raw Data File"
+            }
+          ],
+          "materials": {
+            "samples": [
+              {
+                "@id": "#Sample_MySample",
+                "name": "MySample"
+              }
+            ]
+          },
+          "processSequence": [
+            {
+              "@id": "#Process_SharedSample",
+              "name": "SharedSample",
+              "inputs": [
+                {
+                  "@id": "#Sample_MySample",
+                  "name": "MySample"
+                }
+              ],
+              "outputs": [
+                {
+                  "@id": "MyData",
+                  "name": "MyData",
+                  "type": "Raw Data File"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "#study/MISSING_IDENTIFIER_b8cb8ab4-f1dd-444e-bd3e-c1367bb06d11",
+      "filename": "studies/MISSING_IDENTIFIER_b8cb8ab4-f1dd-444e-bd3e-c1367bb06d11/isa.study.xlsx",
+      "identifier": "MISSING_IDENTIFIER_b8cb8ab4-f1dd-444e-bd3e-c1367bb06d11",
+      "assays": [
+        {
+          "filename": "assays/UnrelatedAssay/isa.assay.xlsx",
+          "@id": "#assay/UnrelatedAssay"
+        }
+      ]
+    }
+  ]
+}

@@ -19,14 +19,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".ci", ".ci", "{100F8D7F-ECF1-4E1F-BDDF-180E10F8752F}"
 	ProjectSection(SolutionItems) = preProject
 		.github\dependabot.yml = .github\dependabot.yml
+		.github\workflows\manage-issues.yml = .github\workflows\manage-issues.yml
 		.github\workflows\manage-prs.yml = .github\workflows\manage-prs.yml
 		.github\workflows\pipeline.yml = .github\workflows\pipeline.yml
-		.github\workflows\manage-issues.yml = .github\workflows\manage-issues.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "git", "git", "{1D094873-C08D-4D68-BACC-66A2077021C4}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.gitmodules = .gitmodules
 	EndProjectSection
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "arc-export", "src\arc-export\arc-export.fsproj", "{4C8F9483-D970-4D29-AEE2-2A71642ED6DA}"
