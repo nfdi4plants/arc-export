@@ -3,6 +3,7 @@ open ARCtrl
 open ARCtrl.FileSystem
 open Argu
 
+open AssayRegistration
 
 try
     let args = CLIArgs.cliArgParser.ParseCommandLine()
@@ -30,6 +31,8 @@ try
                 ArcInvestigation(Helper.Identifier.createMissingIdentifier() , comments = ResizeArray [|comment1;comment2|])
             let arc = ARC(inv,fs = fs)
             arc
+
+    arc.RegisterAssays()
 
     let outputFormats = args.GetResults(CLIArgs.Output_Format)
             
