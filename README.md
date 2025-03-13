@@ -15,9 +15,10 @@ To clone the repo with the submodules, use the following command:
 git clone --recurse-submodules
 ```
 
-If you have already cloned the repo, you can initialize the submodules with the following command:
+If you have already cloned the repo, you can initialize the submodules with the following commands:
 ```shell
 git submodule init
+git submodule update
 ```
 
 Note that the submodules are set on a specific commit, so **do not update them**.
