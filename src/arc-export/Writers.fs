@@ -16,7 +16,7 @@ let isa_json_filename = "arc-isa.json"
 let arc_summary_markdown_filename = "arc-summary.md"
 
 let write_ro_crate_metadata (outDir: string) (arc: ARC) =
-    let ro_crate_metadata = ARC.toROCrateJsonString(2) arc
+    let ro_crate_metadata = arc.ToROCrateJsonString(2)
     let ro_crate_metadata_path = Path.Combine(outDir, ro_crate_metadata_filename)
     File.WriteAllText(ro_crate_metadata_path, ro_crate_metadata)
 

@@ -4,6 +4,7 @@ open ARCtrl.FileSystem
 open Argu
 
 open AssayRegistration
+open PersonCleaning
 
 try
     let args = CLIArgs.cliArgParser.ParseCommandLine()
@@ -33,6 +34,7 @@ try
             arc
 
     arc.RegisterAssays()
+    arc.CleanPersons()
 
     let outputFormats = args.GetResults(CLIArgs.Output_Format)
             
