@@ -5,6 +5,21 @@ open System.IO
 open type System.Environment
 open Fake.Core
 
+module ROCrateDates = 
+    
+    let datePublishedRegex = "datePublished\": \"[^\\\"]*\""
+
+    let dateModifiedRegex = "dateModified\": \"[^\\\"]*\""
+
+    let replaceRegex (regex: string) (replacement: string) (input: string) =
+        let r = new System.Text.RegularExpressions.Regex(regex)
+        r.Replace(input, replacement)
+
+    let undateString (s : string) = 
+        replaceRegex datePublishedRegex "datePublished\": \"\"" s
+        |> replaceRegex dateModifiedRegex "dateModified\": \"\""
+
+
 let runTool (tool: string) (args: string []) (dir:string) =
     CreateProcess.fromRawCommand tool args
     |> CreateProcess.withWorkingDirectory dir

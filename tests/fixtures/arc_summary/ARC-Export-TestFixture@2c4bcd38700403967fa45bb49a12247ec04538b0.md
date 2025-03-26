@@ -1,4 +1,4 @@
-## [Data set] Untitled ARC
+## [Data set] Test Fixture for testing ARC-Export containing all assays (even unregistered)
 
 ### Registered ARC content:
 

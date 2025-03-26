@@ -2,6 +2,7 @@
   "@id": "./",
   "filename": "isa.investigation.xlsx",
   "identifier": "ARC-Export-TestFixture",
+  "title": "Test Fixture for testing ARC-Export containing all assays (even unregistered)",
   "studies": [
     {
       "@id": "studies/Study1/",

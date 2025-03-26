@@ -40,7 +40,7 @@ type ArcPrototype() =
     member this.``ro-crate metadata is correct`` () =
         Assert.Equal(0,this.Fixture.ROCrateMetadataProcessResult.ExitCode)
         match this.Fixture.ROCrateMetadata with
-        | Ok roc -> Assert.Equal(ReferenceObjects.ArcPrototype.arc_ro_crate_metadata, roc)
+        | Ok roc -> Assert.Equal(ROCrateDates.undateString ReferenceObjects.ArcPrototype.arc_ro_crate_metadata, ROCrateDates.undateString roc)
         | Error e -> Assert.True(false, e)
 
 
@@ -72,5 +72,5 @@ type UnregisteredAssay() =
     member this.``ro-crate metadata is correct`` () =
         Assert.Equal(0,this.Fixture.ROCrateMetadataProcessResult.ExitCode)
         match this.Fixture.ROCrateMetadata with
-        | Ok roc -> Assert.Equal(ReferenceObjects.UnregisteredAssay.arc_ro_crate_metadata, roc)
+        | Ok roc -> Assert.Equal(ROCrateDates.undateString ReferenceObjects.UnregisteredAssay.arc_ro_crate_metadata, ROCrateDates.undateString roc)
         | Error e -> Assert.True(false, e)

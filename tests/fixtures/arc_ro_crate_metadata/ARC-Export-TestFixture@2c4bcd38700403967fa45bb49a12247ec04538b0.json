@@ -1,0 +1,142 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "Sample": "https://bioschemas.org/Sample",
+      "additionalProperty": "http://schema.org/additionalProperty",
+      "intendedUse": "https://bioschemas.org/intendedUse",
+      "computationalTool": "https://bioschemas.org/computationalTool",
+      "labEquipment": "https://bioschemas.org/labEquipment",
+      "reagent": "https://bioschemas.org/reagent",
+      "LabProtocol": "https://bioschemas.org/LabProtocol",
+      "executesLabProtocol": "https://bioschemas.org/executesLabProtocol",
+      "parameterValue": "https://bioschemas.org/parameterValue",
+      "LabProcess": "https://bioschemas.org/LabProcess",
+      "measurementMethod": "http://schema.org/measurementMethod"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "#Source_MySource",
+      "@type": "Sample",
+      "additionalType": "Source",
+      "name": "MySource"
+    },
+    {
+      "@id": "#Sample_MySample",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "MySample"
+    },
+    {
+      "@id": "#Protocol_SimpleTable",
+      "@type": "LabProtocol"
+    },
+    {
+      "@id": "#Process_SimpleTable",
+      "@type": "LabProcess",
+      "name": "SimpleTable",
+      "object": {
+        "@id": "#Source_MySource"
+      },
+      "result": {
+        "@id": "#Sample_MySample"
+      },
+      "executesLabProtocol": {
+        "@id": "#Protocol_SimpleTable"
+      }
+    },
+    {
+      "@id": "studies/Study1/",
+      "@type": "Dataset",
+      "additionalType": "Study",
+      "identifier": "Study1",
+      "dateModified": "2025-03-26T17:48:53.8074330",
+      "hasPart": [],
+      "about": {
+        "@id": "#Process_SimpleTable"
+      }
+    },
+    {
+      "@id": "studies/PLACEHOLDER_STUDY_UnrelatedAssay/",
+      "@type": "Dataset",
+      "additionalType": "Study",
+      "identifier": "PLACEHOLDER_STUDY_UnrelatedAssay",
+      "dateModified": "2025-03-26T17:48:53.8080980"
+    },
+    {
+      "@id": "assays/SharedSampleWithStudy/dataset/MyData",
+      "@type": "File",
+      "name": "assays/SharedSampleWithStudy/dataset/MyData"
+    },
+    {
+      "@id": "#Protocol_SharedSample",
+      "@type": "LabProtocol"
+    },
+    {
+      "@id": "#Process_SharedSample",
+      "@type": "LabProcess",
+      "name": "SharedSample",
+      "object": {
+        "@id": "#Sample_MySample"
+      },
+      "result": {
+        "@id": "assays/SharedSampleWithStudy/dataset/MyData"
+      },
+      "executesLabProtocol": {
+        "@id": "#Protocol_SharedSample"
+      }
+    },
+    {
+      "@id": "assay/SharedSampleWithStudy/",
+      "@type": "Dataset",
+      "additionalType": "Assay",
+      "identifier": "SharedSampleWithStudy",
+      "hasPart": {
+        "@id": "assays/SharedSampleWithStudy/dataset/MyData"
+      },
+      "about": {
+        "@id": "#Process_SharedSample"
+      }
+    },
+    {
+      "@id": "assay/UnrelatedAssay/",
+      "@type": "Dataset",
+      "additionalType": "Assay",
+      "identifier": "UnrelatedAssay"
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "additionalType": "Investigation",
+      "identifier": "ARC-Export-TestFixture",
+      "datePublished": "2025-03-26T17:48:53.8086002",
+      "hasPart": [
+        {
+          "@id": "studies/Study1/"
+        },
+        {
+          "@id": "studies/PLACEHOLDER_STUDY_UnrelatedAssay/"
+        },
+        {
+          "@id": "assay/SharedSampleWithStudy/"
+        },
+        {
+          "@id": "assay/UnrelatedAssay/"
+        }
+      ],
+      "name": "Test Fixture for testing ARC-Export containing all assays (even unregistered)",
+      "license": "ALL RIGHTS RESERVED BY THE AUTHORS"
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      }
+    }
+  ]
+}
