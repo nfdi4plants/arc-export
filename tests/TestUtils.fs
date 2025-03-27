@@ -19,6 +19,10 @@ module ROCrateDates =
         replaceRegex datePublishedRegex "datePublished\": \"\"" s
         |> replaceRegex dateModifiedRegex "dateModified\": \"\""
 
+let jsonStringEquals (expected: string) (actual: string) =
+    let e1 = System.Text.Json.JsonDocument.Parse(expected).RootElement
+    let e2 = System.Text.Json.JsonDocument.Parse(actual).RootElement
+    System.Text.Json.JsonElement.DeepEquals(e1,e2)
 
 let runTool (tool: string) (args: string []) (dir:string) =
     CreateProcess.fromRawCommand tool args
