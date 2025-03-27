@@ -2,9 +2,10 @@
   "@id": "./",
   "filename": "isa.investigation.xlsx",
   "identifier": "ARC-Export-TestFixture",
+  "title": "Test Fixture for testing ARC-Export containing all assays (even unregistered)",
   "studies": [
     {
-      "@id": "#study/Study1",
+      "@id": "studies/Study1/",
       "filename": "studies/Study1/isa.study.xlsx",
       "identifier": "Study1",
       "materials": {
@@ -42,7 +43,7 @@
       "assays": [
         {
           "filename": "assays/SharedSampleWithStudy/isa.assay.xlsx",
-          "@id": "#assay/SharedSampleWithStudy",
+          "@id": "assays/SharedSampleWithStudy/",
           "dataFiles": [
             {
               "@id": "MyData",
@@ -81,13 +82,13 @@
       ]
     },
     {
-      "@id": "#study/PLACEHOLDER_STUDY_UnrelatedAssay",
+      "@id": "studies/PLACEHOLDER_STUDY_UnrelatedAssay/",
       "filename": "studies/PLACEHOLDER_STUDY_UnrelatedAssay/isa.study.xlsx",
       "identifier": "PLACEHOLDER_STUDY_UnrelatedAssay",
       "assays": [
         {
           "filename": "assays/UnrelatedAssay/isa.assay.xlsx",
-          "@id": "#assay/UnrelatedAssay"
+          "@id": "assays/UnrelatedAssay/"
         }
       ]
     }

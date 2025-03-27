@@ -6,7 +6,7 @@ open System.IO
 
 let expected_prototype_commit_hash = "70a7c83e7858a974bf913de2e27d8e44191fc73f"
 
-let expected_unregistedAssay_commit_hash = "787564f36849e4e673c0967fa550b936510efefc"
+let expected_unregistedAssay_commit_hash = "2c4bcd38700403967fa45bb49a12247ec04538b0"
 
 
 module ArcPrototype =

@@ -89,7 +89,7 @@ jobs:
       solution: ./arc-export.sln
       checkout-submodules: true
       configuration: Release
-
+      dotnet-version: 9.x.x
   release-docker-image:
     name: "Release Docker image"
     needs: [setup, build-and-test]

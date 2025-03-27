@@ -65,7 +65,7 @@
   ],
   "studies": [
     {
-      "@id": "#study/experiment1_material",
+      "@id": "studies/experiment1_material/",
       "filename": "studies/experiment1_material/isa.study.xlsx",
       "identifier": "experiment1_material",
       "title": "Prototype for experimental data",
@@ -91,18 +91,6 @@
             {
               "name": "performer (ARC:00000168) measurement1",
               "value": "measurement1"
-            }
-          ]
-        },
-        {
-          "@id": "#EmptyPerson",
-          "comments": [
-            {
-              "name": "Worksheet"
-            },
-            {
-              "name": "performer (ARC:00000168) measurement2",
-              "value": "measurement2"
             }
           ]
         }
@@ -1036,7 +1024,7 @@
       "assays": [
         {
           "filename": "assays/measurement1/isa.assay.xlsx",
-          "@id": "#assay/measurement1",
+          "@id": "assays/measurement1/",
           "dataFiles": [
             {
               "@id": "sample1.raw",
@@ -1066,11 +1054,6 @@
             {
               "@id": "sample6.raw",
               "name": "sample6.raw",
-              "type": "Raw Data File"
-            },
-            {
-              "@id": "sample1.raw#",
-              "name": "sample1.raw#",
               "type": "Raw Data File"
             },
             {
@@ -1501,8 +1484,8 @@
               ],
               "inputs": [
                 {
-                  "@id": "sample1.raw#",
-                  "name": "sample1.raw#",
+                  "@id": "sample1.raw",
+                  "name": "sample1.raw",
                   "type": "Raw Data File"
                 },
                 {
@@ -1628,7 +1611,7 @@
         },
         {
           "filename": "assays/measurement2/isa.assay.xlsx",
-          "@id": "#assay/measurement2"
+          "@id": "assays/measurement2/"
         }
       ],
       "characteristicCategories": [
@@ -1662,7 +1645,7 @@
       ]
     },
     {
-      "@id": "#study/experiment2",
+      "@id": "studies/experiment2/",
       "filename": "studies/experiment2/isa.study.xlsx",
       "identifier": "experiment2",
       "materials": {
