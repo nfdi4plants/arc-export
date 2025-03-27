@@ -34,7 +34,7 @@ type ARCtrl.FileSystem.FileSystemTree with
                 finalAccum
 
         tree
-        // yes i know. but i do really not want to implement a recursive sort in this tree just to make this work across OSes. Sue me.
+        // yes i know. but i do really not want to implement a recursive sort in this tree just to make this work across OSes. Sue me =)
         |> FileSystemTree.toFilePaths(true)
         |> Array.sort
         |> FileSystemTree.fromFilePaths

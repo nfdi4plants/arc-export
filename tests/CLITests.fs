@@ -43,8 +43,10 @@ type ArcPrototype() =
         | Ok roc -> 
             let actual = ROCrateDates.undateString roc
             let expected = ROCrateDates.undateString ReferenceObjects.ArcPrototype.arc_ro_crate_metadata
-            let equals = TestUtils.jsonStringEquals expected actual
-            Assert.True(equals)
+            // Commented out until this actually creates additional value by ignoring sorting of elements in lists
+            //let equals = TestUtils.jsonStringEquals expected actual
+            //Assert.True(equals)
+            Assert.Equal(expected, actual)
         | Error e -> Assert.True(false, e)
 
 
@@ -79,6 +81,8 @@ type UnregisteredAssay() =
         | Ok roc -> 
             let actual = (ROCrateDates.undateString roc)
             let expected = ROCrateDates.undateString ReferenceObjects.UnregisteredAssay.arc_ro_crate_metadata
-            let equals = TestUtils.jsonStringEquals expected actual
-            Assert.True(equals)
+            // Commented out until this actually creates additional value by ignoring sorting of elements in lists
+            //let equals = TestUtils.jsonStringEquals expected actual
+            //Assert.True(equals)
+            Assert.Equal(expected, actual)
         | Error e -> Assert.True(false, e)

@@ -19,9 +19,27 @@ try
         printfn "Creating output directory: %s" outDir
         Directory.CreateDirectory outDir |> ignore
 
+    // We created this function specifically for sorting the paths before creating the ARC
+    // Different sorting were causing errors in testing between different OS instances (local vs CI)
+    let loadARC arcPath = 
+        let paths = FileSystemHelper.getAllFilePathsAsync arcPath |> Async.RunSynchronously |> Array.sort
+        let arc = ARC.fromFilePaths paths
+
+        let contracts = arc.GetReadContracts()
+             
+        let fulFilledContracts = 
+            contracts 
+            |> ARCtrl.Contract.fullFillContractBatchAsync arcPath |> Async.RunSynchronously
+
+        match fulFilledContracts with
+        | Ok c -> 
+            arc.SetISAFromContracts(c)
+            arc
+        | Error e -> failwithf "Could not load ARC from %s: %O" arcPath e
+
     let arc = 
     
-        try ARC.load arcPath with
+        try loadARC arcPath with
         | err -> 
             printfn "Could not read investigation, writing empty arc json."
             let comment1 = Comment("Status","Could not parse ARC")
