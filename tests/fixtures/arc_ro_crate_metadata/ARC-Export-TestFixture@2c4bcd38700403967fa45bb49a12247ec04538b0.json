@@ -88,7 +88,7 @@
       }
     },
     {
-      "@id": "assay/SharedSampleWithStudy/",
+      "@id": "assays/SharedSampleWithStudy/",
       "@type": "Dataset",
       "additionalType": "Assay",
       "identifier": "SharedSampleWithStudy",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "@id": "assay/UnrelatedAssay/",
+      "@id": "assays/UnrelatedAssay/",
       "@type": "Dataset",
       "additionalType": "Assay",
       "identifier": "UnrelatedAssay"
@@ -119,10 +119,10 @@
           "@id": "studies/PLACEHOLDER_STUDY_UnrelatedAssay/"
         },
         {
-          "@id": "assay/SharedSampleWithStudy/"
+          "@id": "assays/SharedSampleWithStudy/"
         },
         {
-          "@id": "assay/UnrelatedAssay/"
+          "@id": "assays/UnrelatedAssay/"
         }
       ],
       "name": "Test Fixture for testing ARC-Export containing all assays (even unregistered)",

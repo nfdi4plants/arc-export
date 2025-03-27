@@ -1880,7 +1880,7 @@
       }
     },
     {
-      "@id": "assay/measurement1/",
+      "@id": "assays/measurement1/",
       "@type": "Dataset",
       "additionalType": "Assay",
       "identifier": "measurement1",
@@ -2042,7 +2042,7 @@
       ]
     },
     {
-      "@id": "assay/measurement2/",
+      "@id": "assays/measurement2/",
       "@type": "Dataset",
       "additionalType": "Assay",
       "identifier": "measurement2"
@@ -2073,10 +2073,10 @@
           "@id": "studies/experiment2/"
         },
         {
-          "@id": "assay/measurement1/"
+          "@id": "assays/measurement1/"
         },
         {
-          "@id": "assay/measurement2/"
+          "@id": "assays/measurement2/"
         }
       ],
       "name": "ArcPrototype",
