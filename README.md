@@ -41,6 +41,14 @@ docker run -v C:\Repos\ArcRepo:/arc ghcr.io/nfdi4plants/arc-export:main /arc-exp
 
 # Basic usage
 
+## Example
+
+The following command executed from within the ARC (`./`) creates all three output files in a folder (`arc-export`) inside the ARC. 
+
+```bash
+docker run --rm -v ./:/arc ghcr.io/nfdi4plants/arc-export:main /arc-export -p arc -f rocrate-metadata -f isa-json -f summary-markdown -o arc/arc-export
+```
+
 ## Output format Selection
 
 Output format can be specified with the `-f` flag, followed by one of the following:
