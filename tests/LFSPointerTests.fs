@@ -29,21 +29,21 @@ let fixtureLFSObject =
 [<Fact>]
 let ``Can correctly parse lfs pointer result`` () = 
     Assert.Equal(
-        GitLFS.GitLFSObject.tryFromString correctLFSOutput,
-        Some correctLFSObject
+        Some correctLFSObject,        
+        GitLFS.GitLFSObject.tryFromString correctLFSOutput
     )
 
 [<Fact>]
 let ``Returns None for wrong lfs pointer result`` () = 
     Assert.Equal(
-        GitLFS.GitLFSObject.tryFromString missingLFSOutput,
-        None
+        None,
+        GitLFS.GitLFSObject.tryFromString missingLFSOutput      
     )
 
 [<Fact>]
 let ``Can correctly retreive and parse lfs pointer`` () = 
     Assert.Equal(
-        GitLFS.tryGetGitLFSObject "fixtures/ArcPrototype" fixtureLFSFilePath,
-        Some fixtureLFSObject
+        Some fixtureLFSObject,
+        GitLFS.tryGetGitLFSObject "fixtures/ArcPrototype" fixtureLFSFilePath       
     )
     

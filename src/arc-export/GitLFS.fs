@@ -117,10 +117,30 @@ let executeGitLFSHashCommand (repoDir : string) (filePath : string) =
     let p = $"{filePath.Trim().Replace('\\','/')}"
     executeGitCommandWithResponse repoDir $"lfs pointer --file {p}"
 
-let tryGetGitLFSObject (repoDir : string) (filePath : string) =
+/// Gets the Git LFS object from a pointer file by simply reading it.
+let tryGetGitLFSObjectFromPointerFile (repoDir : string) (filePath : string) =
+    let fullPath = Path.Combine(repoDir, filePath)
+    if not (File.Exists fullPath) then
+        printfn "Git LFS pointer file not found: %s" fullPath
+        None
+    else
+        File.ReadAllText fullPath
+        |> GitLFSObject.tryFromString 
+
+/// Gets the Git LFS object from the actual file by executing the git command.
+let tryGetGitLFSObjectFromActualFile (repoDir : string) (filePath : string) =
     let output = executeGitLFSHashCommand repoDir filePath
     if output.Count = 0 then
         printf "Git LFS object not found for %s\n" filePath
         None
     else
         GitLFSObject.tryFromString (String.concat "\n" output)
+
+let tryGetGitLFSObject (repoDir : string) (filePath : string) =
+    // First try to get the LFS object from the pointer file
+    let pointerObject = tryGetGitLFSObjectFromPointerFile repoDir filePath
+    match pointerObject with
+    | Some obj -> Some obj
+    | None -> 
+        // If that fails, try to get it from the actual file
+        tryGetGitLFSObjectFromActualFile repoDir filePath
