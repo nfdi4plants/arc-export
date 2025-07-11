@@ -32,42 +32,46 @@ type GitLFSObject =
         Size: int64
     }
 
-    static member fromString (s: string) : GitLFSObject =
-        let parts = s.Split ([| '\n' |], 3, System.StringSplitOptions.RemoveEmptyEntries)
-        if parts.Length <> 3 then
-            failwith "Invalid Git LFS object string format."
+    static member tryFromString (s: string) : GitLFSObject option =
+        try 
+            let parts = s.Split ([| '\n' |], 3, System.StringSplitOptions.RemoveEmptyEntries)
+            if parts.Length <> 3 then
+                failwith "Invalid Git LFS object string format."
         
-        let version = 
-            parts
-            |> Array.pick (fun (line : string) -> 
-                tryMatch versionPattern line 
-                |> Option.map (fun m -> m.Groups.["Version"].Value)               
-            )
-        let hash = 
-            parts
-            |> Array.pick (fun (line : string) -> 
-                tryMatch oidPattern line
-                |> Option.map (fun m -> 
-                    let hashType = m.Groups.["HashType"].Value
-                    let hashValue = m.Groups.["HashValue"].Value
-                    if hashType = "sha256" then
-                        Hash.SHA256 hashValue
-                    else
-                        failwithf "Unsupported hash type: %s" hashType
+            let version = 
+                parts
+                |> Array.pick (fun (line : string) -> 
+                    tryMatch versionPattern line 
+                    |> Option.map (fun m -> m.Groups.["Version"].Value)               
                 )
-            )
-        let size = 
-            parts
-            |> Array.pick (fun (line : string) -> 
-                tryMatch sizePattern line
-                |> Option.map (fun m -> 
-                    match System.Int64.TryParse(m.Groups.["Size"].Value) with
-                    | true, size -> size
-                    | _ -> failwith "Invalid size format."
+            let hash = 
+                parts
+                |> Array.pick (fun (line : string) -> 
+                    tryMatch oidPattern line
+                    |> Option.map (fun m -> 
+                        let hashType = m.Groups.["HashType"].Value
+                        let hashValue = m.Groups.["HashValue"].Value
+                        if hashType = "sha256" then
+                            Hash.SHA256 hashValue
+                        else
+                            failwithf "Unsupported hash type: %s" hashType
+                    )
                 )
-            )
-        { Version = version; Hash = hash; Size = size }
-
+            let size = 
+                parts
+                |> Array.pick (fun (line : string) -> 
+                    tryMatch sizePattern line
+                    |> Option.map (fun m -> 
+                        match System.Int64.TryParse(m.Groups.["Size"].Value) with
+                        | true, size -> size
+                        | _ -> failwith "Invalid size format."
+                    )
+                )
+            Some { Version = version; Hash = hash; Size = size }
+        with
+        | ex -> 
+            printfn "Error parsing Git LFS object: %s" ex.Message
+            None
 
 let executeGitCommandWithResponse (repoDir : string) (command : string) =
 
@@ -116,11 +120,7 @@ let executeGitLFSHashCommand (repoDir : string) (filePath : string) =
 let tryGetGitLFSObject (repoDir : string) (filePath : string) =
     let output = executeGitLFSHashCommand repoDir filePath
     if output.Count = 0 then
+        printf "Git LFS object not found for %s\n" filePath
         None
     else
-        try
-            Some (GitLFSObject.fromString (String.concat "\n" output))
-        with
-        | ex -> 
-            printfn "Error parsing Git LFS object: %s" ex.Message
-            None
+        GitLFSObject.tryFromString (String.concat "\n" output)

@@ -14,12 +14,11 @@
     <Compile Include="TestUtils.fs" />
     <Compile Include="ReferenceObjects.fs" />
     <Compile Include="TestObjects.fs" />
+    <Compile Include="LFSPointerTests.fs" />
     <Compile Include="GitSubmoduleTests.fs" />
     <Compile Include="CLITests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
-  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="Fake.Core.Process" Version="6.0.0" />
