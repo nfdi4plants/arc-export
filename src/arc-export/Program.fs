@@ -60,6 +60,9 @@ try
         Writers.write_isa_json outDir arc
 
     if outputFormats |> List.contains CLIArgs.OutputFormat.ROCrate_Metadata then
+        Writers.write_ro_crate_metadata outDir arc
+
+    if outputFormats |> List.contains CLIArgs.OutputFormat.ROCrate_Metadata_LFS then
         Writers.write_ro_crate_metadata_LFSHashes arcPath outDir arc
 
     if outputFormats |> List.contains CLIArgs.OutputFormat.Summary_Markdown then
