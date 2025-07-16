@@ -6,6 +6,7 @@ open System.IO
 type OutputFormat =
     | ISA_Json
     | ROCrate_Metadata
+    | ROCrate_Metadata_LFS
     | Summary_Markdown
 
 type CliArguments =

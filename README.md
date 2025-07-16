@@ -1,5 +1,5 @@
 # arc-export
-Automatic building of a Docker container for exporting ARCs to Arc.json
+Automatic building of a Docker container for exporting ARCs to various other ARC representations
 
 # Develop
 
@@ -22,6 +22,11 @@ git submodule update
 ```
 
 Note that the submodules are set on a specific commit, so **do not update them**.
+
+To execute the tests run:
+```shell
+dotnet test
+```
 
 # Setup
 
@@ -53,9 +58,10 @@ docker run --rm -v ./:/arc ghcr.io/nfdi4plants/arc-export:main /arc-export -p ar
 
 Output format can be specified with the `-f` flag, followed by one of the following:
 
-- `isa-json` will produce a `arc-isa.json` file
-- `rocrate-metadata` will produce a `arc-ro-crate-metadata.json` file
-- `summary-markdown` will produce a `arc-summary.md` file
+- `isa-json` will produce an `arc-isa.json` file following the [ISA-JSON](https://isa-specs.readthedocs.io/en/latest/isajson.html#investigation-schema-json) specification
+- `rocrate-metadata` will produce an `arc-ro-crate-metadata.json` file following the [ARC RO-Crate profile](https://github.com/nfdi4plants/arc-ro-crate-profile)
+- `summary-markdown` will produce an `arc-summary.md` file
+- (experimental) `rocrate-metadata-lfs` will produce an `arc-ro-crate-metadata.json` file following the [ARC RO-Crate profile](https://github.com/nfdi4plants/arc-ro-crate-profile), where all objects of type `File` which are tracked by git-lfs additionally contain the according SHA256 hash 
 
 E.g. 
 
@@ -63,13 +69,13 @@ E.g.
 docker run -v C:\Repos\ArcRepo:/arc arc-export:latest /arc-export -p arc -f rocrate-metadata -f isa-json -f summary-markdown
 ```
 
-will produce all three output files.
+will produce all three basic output files.
 
 ## Help
 
 ```cli
 USAGE: arc-export [--help] --arc-directory <path> [--out-directory <path>]
-                  [--output-format <isa-json|rocrate-metadata|summary-markdown>]
+                  [--output-format <isa-json|rocrate-metadata|rocrate-metadata-lfs|summary-markdown>]
 
 OPTIONS:
 
