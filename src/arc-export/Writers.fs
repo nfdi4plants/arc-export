@@ -21,8 +21,6 @@ let arc_summary_markdown_filename = "arc-summary.md"
 let write_ro_crate_metadata (outDir: string) (arc: ARC) =
     if arc.Title.IsNone then
         arc.Title <- Some "Untitled ARC"
-    if arc.Description.IsNone then
-        arc.Description <- Some "No description provided."
     let ro_crate_metadata = arc.ToROCrateJsonString(2)
     let ro_crate_metadata_path = Path.Combine(outDir, ro_crate_metadata_filename)
     File.WriteAllText(ro_crate_metadata_path, ro_crate_metadata)
@@ -32,8 +30,6 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
     let sha256 = "http://schema.org/sha256"
     if arc.Title.IsNone then
         arc.Title <- Some "Untitled ARC"
-    if arc.Description.IsNone then
-        arc.Description <- Some "No description provided."
     arc.MakeDataFilesAbsolute()
     let license = ROCrate.getDefaultLicense()
     let isa = arc.ToROCrateInvestigation(fs = arc.FileSystem)

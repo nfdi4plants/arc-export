@@ -152,7 +152,7 @@
       "@type": "LabProtocol"
     },
     {
-      "@id": "#Process_process_1_0",
+      "@id": "#Process_S_experiment1_material_process_1_0",
       "@type": "LabProcess",
       "name": "process_1_0",
       "object": {
@@ -189,7 +189,7 @@
       }
     },
     {
-      "@id": "#Process_process_1_1",
+      "@id": "#Process_S_experiment1_material_process_1_1",
       "@type": "LabProcess",
       "name": "process_1_1",
       "object": {
@@ -226,7 +226,7 @@
       }
     },
     {
-      "@id": "#Process_process_1_2",
+      "@id": "#Process_S_experiment1_material_process_1_2",
       "@type": "LabProcess",
       "name": "process_1_2",
       "object": {
@@ -272,7 +272,7 @@
       }
     },
     {
-      "@id": "#Process_process_1_3",
+      "@id": "#Process_S_experiment1_material_process_1_3",
       "@type": "LabProcess",
       "name": "process_1_3",
       "object": {
@@ -309,7 +309,7 @@
       }
     },
     {
-      "@id": "#Process_process_1_4",
+      "@id": "#Process_S_experiment1_material_process_1_4",
       "@type": "LabProcess",
       "name": "process_1_4",
       "object": {
@@ -346,7 +346,7 @@
       }
     },
     {
-      "@id": "#Process_process_1_5",
+      "@id": "#Process_S_experiment1_material_process_1_5",
       "@type": "LabProcess",
       "name": "process_1_5",
       "object": {
@@ -373,7 +373,7 @@
       "@type": "LabProtocol"
     },
     {
-      "@id": "#Process_process_2_0",
+      "@id": "#Process_S_experiment1_material_process_2_0",
       "@type": "LabProcess",
       "name": "process_2_0",
       "object": {
@@ -396,7 +396,7 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_process_2_1",
+      "@id": "#Process_S_experiment1_material_process_2_1",
       "@type": "LabProcess",
       "name": "process_2_1",
       "object": {
@@ -419,7 +419,7 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_process_2_2",
+      "@id": "#Process_S_experiment1_material_process_2_2",
       "@type": "LabProcess",
       "name": "process_2_2",
       "object": {
@@ -442,7 +442,7 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_process_2_3",
+      "@id": "#Process_S_experiment1_material_process_2_3",
       "@type": "LabProcess",
       "name": "process_2_3",
       "object": {
@@ -465,7 +465,7 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_process_2_4",
+      "@id": "#Process_S_experiment1_material_process_2_4",
       "@type": "LabProcess",
       "name": "process_2_4",
       "object": {
@@ -488,7 +488,7 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_process_2_5",
+      "@id": "#Process_S_experiment1_material_process_2_5",
       "@type": "LabProcess",
       "name": "process_2_5",
       "object": {
@@ -521,7 +521,7 @@
       }
     },
     {
-      "@id": "#Process_Cell_Cultivation_0",
+      "@id": "#Process_S_experiment1_material_Cell_Cultivation_0",
       "@type": "LabProcess",
       "name": "Cell Cultivation_0",
       "object": {
@@ -535,7 +535,7 @@
       }
     },
     {
-      "@id": "#Process_Cell_Cultivation_1",
+      "@id": "#Process_S_experiment1_material_Cell_Cultivation_1",
       "@type": "LabProcess",
       "name": "Cell Cultivation_1",
       "object": {
@@ -549,7 +549,7 @@
       }
     },
     {
-      "@id": "#Process_Cell_Cultivation_2",
+      "@id": "#Process_S_experiment1_material_Cell_Cultivation_2",
       "@type": "LabProcess",
       "name": "Cell Cultivation_2",
       "object": {
@@ -563,7 +563,7 @@
       }
     },
     {
-      "@id": "#Process_Cell_Cultivation_3",
+      "@id": "#Process_S_experiment1_material_Cell_Cultivation_3",
       "@type": "LabProcess",
       "name": "Cell Cultivation_3",
       "object": {
@@ -577,7 +577,7 @@
       }
     },
     {
-      "@id": "#Process_Cell_Cultivation_4",
+      "@id": "#Process_S_experiment1_material_Cell_Cultivation_4",
       "@type": "LabProcess",
       "name": "Cell Cultivation_4",
       "object": {
@@ -591,7 +591,7 @@
       }
     },
     {
-      "@id": "#Process_Cell_Cultivation_5",
+      "@id": "#Process_S_experiment1_material_Cell_Cultivation_5",
       "@type": "LabProcess",
       "name": "Cell Cultivation_5",
       "object": {
@@ -609,7 +609,7 @@
       "@type": "Dataset",
       "additionalType": "Study",
       "identifier": "experiment1_material",
-      "dateModified": "2025-03-26T17:19:02.2360166",
+      "dateModified": "2025-07-29T21:36:54.8863581",
       "description": "In this a devised study to have an exemplary experimental material description.",
       "hasPart": [
         {
@@ -634,58 +634,58 @@
       "name": "Prototype for experimental data",
       "about": [
         {
-          "@id": "#Process_process_1_0"
+          "@id": "#Process_S_experiment1_material_process_1_0"
         },
         {
-          "@id": "#Process_process_1_1"
+          "@id": "#Process_S_experiment1_material_process_1_1"
         },
         {
-          "@id": "#Process_process_1_2"
+          "@id": "#Process_S_experiment1_material_process_1_2"
         },
         {
-          "@id": "#Process_process_1_3"
+          "@id": "#Process_S_experiment1_material_process_1_3"
         },
         {
-          "@id": "#Process_process_1_4"
+          "@id": "#Process_S_experiment1_material_process_1_4"
         },
         {
-          "@id": "#Process_process_1_5"
+          "@id": "#Process_S_experiment1_material_process_1_5"
         },
         {
-          "@id": "#Process_process_2_0"
+          "@id": "#Process_S_experiment1_material_process_2_0"
         },
         {
-          "@id": "#Process_process_2_1"
+          "@id": "#Process_S_experiment1_material_process_2_1"
         },
         {
-          "@id": "#Process_process_2_2"
+          "@id": "#Process_S_experiment1_material_process_2_2"
         },
         {
-          "@id": "#Process_process_2_3"
+          "@id": "#Process_S_experiment1_material_process_2_3"
         },
         {
-          "@id": "#Process_process_2_4"
+          "@id": "#Process_S_experiment1_material_process_2_4"
         },
         {
-          "@id": "#Process_process_2_5"
+          "@id": "#Process_S_experiment1_material_process_2_5"
         },
         {
-          "@id": "#Process_Cell_Cultivation_0"
+          "@id": "#Process_S_experiment1_material_Cell_Cultivation_0"
         },
         {
-          "@id": "#Process_Cell_Cultivation_1"
+          "@id": "#Process_S_experiment1_material_Cell_Cultivation_1"
         },
         {
-          "@id": "#Process_Cell_Cultivation_2"
+          "@id": "#Process_S_experiment1_material_Cell_Cultivation_2"
         },
         {
-          "@id": "#Process_Cell_Cultivation_3"
+          "@id": "#Process_S_experiment1_material_Cell_Cultivation_3"
         },
         {
-          "@id": "#Process_Cell_Cultivation_4"
+          "@id": "#Process_S_experiment1_material_Cell_Cultivation_4"
         },
         {
-          "@id": "#Process_Cell_Cultivation_5"
+          "@id": "#Process_S_experiment1_material_Cell_Cultivation_5"
         }
       ]
     },
@@ -716,7 +716,7 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_experiment2",
+      "@id": "#Process_S_experiment2_experiment2_0",
       "@type": "LabProcess",
       "name": "experiment2",
       "object": {
@@ -737,10 +737,10 @@
       "@type": "Dataset",
       "additionalType": "Study",
       "identifier": "experiment2",
-      "dateModified": "2025-03-26T17:19:02.2388400",
+      "dateModified": "2025-07-29T21:36:54.8886739",
       "hasPart": [],
       "about": {
-        "@id": "#Process_experiment2"
+        "@id": "#Process_S_experiment2_experiment2_0"
       }
     },
     {
@@ -1092,7 +1092,7 @@
       "columnIndex": "2"
     },
     {
-      "@id": "#Process_Cell_Lysis_0",
+      "@id": "#Process_A_measurement1_Cell_Lysis_0",
       "@type": "LabProcess",
       "name": "Cell Lysis_0",
       "object": {
@@ -1120,7 +1120,7 @@
       "name": "sample eppi 2"
     },
     {
-      "@id": "#Process_Cell_Lysis_1",
+      "@id": "#Process_A_measurement1_Cell_Lysis_1",
       "@type": "LabProcess",
       "name": "Cell Lysis_1",
       "object": {
@@ -1148,7 +1148,7 @@
       "name": "sample eppi 3"
     },
     {
-      "@id": "#Process_Cell_Lysis_2",
+      "@id": "#Process_A_measurement1_Cell_Lysis_2",
       "@type": "LabProcess",
       "name": "Cell Lysis_2",
       "object": {
@@ -1176,7 +1176,7 @@
       "name": "sample eppi 4"
     },
     {
-      "@id": "#Process_Cell_Lysis_3",
+      "@id": "#Process_A_measurement1_Cell_Lysis_3",
       "@type": "LabProcess",
       "name": "Cell Lysis_3",
       "object": {
@@ -1204,7 +1204,7 @@
       "name": "sample eppi 5"
     },
     {
-      "@id": "#Process_Cell_Lysis_4",
+      "@id": "#Process_A_measurement1_Cell_Lysis_4",
       "@type": "LabProcess",
       "name": "Cell Lysis_4",
       "object": {
@@ -1232,7 +1232,7 @@
       "name": "sample eppi 6"
     },
     {
-      "@id": "#Process_Cell_Lysis_5",
+      "@id": "#Process_A_measurement1_Cell_Lysis_5",
       "@type": "LabProcess",
       "name": "Cell Lysis_5",
       "object": {
@@ -1265,7 +1265,7 @@
       "name": "extractionProtocol.txt"
     },
     {
-      "@id": "#Process_Protein_Extraction_0",
+      "@id": "#Process_A_measurement1_Protein_Extraction_0",
       "@type": "LabProcess",
       "name": "Protein Extraction_0",
       "object": {
@@ -1285,7 +1285,7 @@
       "name": "sample eppi extracted 2"
     },
     {
-      "@id": "#Process_Protein_Extraction_1",
+      "@id": "#Process_A_measurement1_Protein_Extraction_1",
       "@type": "LabProcess",
       "name": "Protein Extraction_1",
       "object": {
@@ -1305,7 +1305,7 @@
       "name": "sample eppi extracted 3"
     },
     {
-      "@id": "#Process_Protein_Extraction_2",
+      "@id": "#Process_A_measurement1_Protein_Extraction_2",
       "@type": "LabProcess",
       "name": "Protein Extraction_2",
       "object": {
@@ -1325,7 +1325,7 @@
       "name": "sample eppi extracted 4"
     },
     {
-      "@id": "#Process_Protein_Extraction_3",
+      "@id": "#Process_A_measurement1_Protein_Extraction_3",
       "@type": "LabProcess",
       "name": "Protein Extraction_3",
       "object": {
@@ -1345,7 +1345,7 @@
       "name": "sample eppi extracted 5"
     },
     {
-      "@id": "#Process_Protein_Extraction_4",
+      "@id": "#Process_A_measurement1_Protein_Extraction_4",
       "@type": "LabProcess",
       "name": "Protein Extraction_4",
       "object": {
@@ -1365,7 +1365,7 @@
       "name": "sample eppi extracted 6"
     },
     {
-      "@id": "#Process_Protein_Extraction_5",
+      "@id": "#Process_A_measurement1_Protein_Extraction_5",
       "@type": "LabProcess",
       "name": "Protein Extraction_5",
       "object": {
@@ -1411,7 +1411,7 @@
       ]
     },
     {
-      "@id": "#Process_Protein_Measurement_0",
+      "@id": "#Process_A_measurement1_Protein_Measurement_0",
       "@type": "LabProcess",
       "name": "Protein Measurement_0",
       "object": {
@@ -1425,7 +1425,7 @@
       }
     },
     {
-      "@id": "#Process_Protein_Measurement_1",
+      "@id": "#Process_A_measurement1_Protein_Measurement_1",
       "@type": "LabProcess",
       "name": "Protein Measurement_1",
       "object": {
@@ -1439,7 +1439,7 @@
       }
     },
     {
-      "@id": "#Process_Protein_Measurement_2",
+      "@id": "#Process_A_measurement1_Protein_Measurement_2",
       "@type": "LabProcess",
       "name": "Protein Measurement_2",
       "object": {
@@ -1453,7 +1453,7 @@
       }
     },
     {
-      "@id": "#Process_Protein_Measurement_3",
+      "@id": "#Process_A_measurement1_Protein_Measurement_3",
       "@type": "LabProcess",
       "name": "Protein Measurement_3",
       "object": {
@@ -1467,7 +1467,7 @@
       }
     },
     {
-      "@id": "#Process_Protein_Measurement_4",
+      "@id": "#Process_A_measurement1_Protein_Measurement_4",
       "@type": "LabProcess",
       "name": "Protein Measurement_4",
       "object": {
@@ -1481,7 +1481,7 @@
       }
     },
     {
-      "@id": "#Process_Protein_Measurement_5",
+      "@id": "#Process_A_measurement1_Protein_Measurement_5",
       "@type": "LabProcess",
       "name": "Protein Measurement_5",
       "object": {
@@ -1508,7 +1508,7 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_0",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_0",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_0",
       "object": {
@@ -1525,7 +1525,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_1",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_1",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_1",
       "object": {
@@ -1542,7 +1542,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_2",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_2",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_2",
       "object": {
@@ -1559,7 +1559,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_3",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_3",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_3",
       "object": {
@@ -1576,7 +1576,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_4",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_4",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_4",
       "object": {
@@ -1593,7 +1593,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_5",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_5",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_5",
       "object": {
@@ -1610,7 +1610,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_6",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_6",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_6",
       "object": {
@@ -1627,7 +1627,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_7",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_7",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_7",
       "object": {
@@ -1644,7 +1644,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_8",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_8",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_8",
       "object": {
@@ -1661,7 +1661,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_9",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_9",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_9",
       "object": {
@@ -1678,7 +1678,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_10",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_10",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_10",
       "object": {
@@ -1695,7 +1695,7 @@
       }
     },
     {
-      "@id": "#Process_Computational_Proteome_Analysis_11",
+      "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_11",
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_11",
       "object": {
@@ -1912,94 +1912,94 @@
       ],
       "about": [
         {
-          "@id": "#Process_Cell_Lysis_0"
+          "@id": "#Process_A_measurement1_Cell_Lysis_0"
         },
         {
-          "@id": "#Process_Cell_Lysis_1"
+          "@id": "#Process_A_measurement1_Cell_Lysis_1"
         },
         {
-          "@id": "#Process_Cell_Lysis_2"
+          "@id": "#Process_A_measurement1_Cell_Lysis_2"
         },
         {
-          "@id": "#Process_Cell_Lysis_3"
+          "@id": "#Process_A_measurement1_Cell_Lysis_3"
         },
         {
-          "@id": "#Process_Cell_Lysis_4"
+          "@id": "#Process_A_measurement1_Cell_Lysis_4"
         },
         {
-          "@id": "#Process_Cell_Lysis_5"
+          "@id": "#Process_A_measurement1_Cell_Lysis_5"
         },
         {
-          "@id": "#Process_Protein_Extraction_0"
+          "@id": "#Process_A_measurement1_Protein_Extraction_0"
         },
         {
-          "@id": "#Process_Protein_Extraction_1"
+          "@id": "#Process_A_measurement1_Protein_Extraction_1"
         },
         {
-          "@id": "#Process_Protein_Extraction_2"
+          "@id": "#Process_A_measurement1_Protein_Extraction_2"
         },
         {
-          "@id": "#Process_Protein_Extraction_3"
+          "@id": "#Process_A_measurement1_Protein_Extraction_3"
         },
         {
-          "@id": "#Process_Protein_Extraction_4"
+          "@id": "#Process_A_measurement1_Protein_Extraction_4"
         },
         {
-          "@id": "#Process_Protein_Extraction_5"
+          "@id": "#Process_A_measurement1_Protein_Extraction_5"
         },
         {
-          "@id": "#Process_Protein_Measurement_0"
+          "@id": "#Process_A_measurement1_Protein_Measurement_0"
         },
         {
-          "@id": "#Process_Protein_Measurement_1"
+          "@id": "#Process_A_measurement1_Protein_Measurement_1"
         },
         {
-          "@id": "#Process_Protein_Measurement_2"
+          "@id": "#Process_A_measurement1_Protein_Measurement_2"
         },
         {
-          "@id": "#Process_Protein_Measurement_3"
+          "@id": "#Process_A_measurement1_Protein_Measurement_3"
         },
         {
-          "@id": "#Process_Protein_Measurement_4"
+          "@id": "#Process_A_measurement1_Protein_Measurement_4"
         },
         {
-          "@id": "#Process_Protein_Measurement_5"
+          "@id": "#Process_A_measurement1_Protein_Measurement_5"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_0"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_0"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_1"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_1"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_2"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_2"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_3"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_3"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_4"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_4"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_5"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_5"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_6"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_6"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_7"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_7"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_8"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_8"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_9"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_9"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_10"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_10"
         },
         {
-          "@id": "#Process_Computational_Proteome_Analysis_11"
+          "@id": "#Process_A_measurement1_Computational_Proteome_Analysis_11"
         }
       ],
       "variableMeasured": [
@@ -2063,7 +2063,7 @@
           "@id": "http://orcid.org/0000-0002-8241-5300"
         }
       ],
-      "datePublished": "2025-03-26T17:19:02.2392537",
+      "datePublished": "2025-07-29T21:36:54.8890199",
       "description": "A prototypic ARC that implements all specification standards accordingly",
       "hasPart": [
         {
