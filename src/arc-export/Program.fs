@@ -48,7 +48,7 @@ try
             let fs = filePaths |> FileSystemTree.fromFilePaths |> FileSystem.create
             let inv = 
                 ArcInvestigation(Helper.Identifier.createMissingIdentifier() , comments = ResizeArray [|comment1;comment2|])
-            let arc = ARC(inv,fs = fs)
+            let arc = ARC.fromArcInvestigation(inv,fs = fs)
             arc
 
     arc.RegisterAssays()
