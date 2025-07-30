@@ -19,17 +19,20 @@ let isa_json_filename = "arc-isa.json"
 let arc_summary_markdown_filename = "arc-summary.md"
 
 let write_ro_crate_metadata (outDir: string) (arc: ARC) =
+    if arc.Title.IsNone then
+        arc.Title <- Some "Untitled ARC"
     let ro_crate_metadata = arc.ToROCrateJsonString(2)
     let ro_crate_metadata_path = Path.Combine(outDir, ro_crate_metadata_filename)
     File.WriteAllText(ro_crate_metadata_path, ro_crate_metadata)
 
 
-
 let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: ARC) =
-    let sha256 = "https://schema.org/sha256"
+    let sha256 = "http://schema.org/sha256"
+    if arc.Title.IsNone then
+        arc.Title <- Some "Untitled ARC"
     arc.MakeDataFilesAbsolute()
     let license = ROCrate.getDefaultLicense()
-    let isa = arc.ISA.Value.ToROCrateInvestigation()
+    let isa = arc.ToROCrateInvestigation(fs = arc.FileSystem)
     LDDataset.setSDDatePublishedAsDateTime(isa, System.DateTime.Now)
     LDDataset.setLicenseAsCreativeWork(isa, license)
     let graph = isa.Flatten()
@@ -40,7 +43,7 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
     graph.AddNode(ROCrate.metadataFileDescriptor)
     graph.Nodes
     |> Seq.iter (fun n -> 
-        if LDFile.validate(n, ?context = graph.TryGetContext()) && not (n.Id.Contains("#"))  then
+        if LDFile.validate(n, ?context = graph.TryGetContext()) && not (n.Id.Contains("#")) && not (n.HasType(LDDataset.schemaType, ?context = graph.TryGetContext()))  then
             match GitLFS.tryGetGitLFSObject repoDir n.Id with
             | Some lfsHash ->
                 match lfsHash.Hash with
@@ -57,17 +60,15 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
 
 
 let write_isa_json (outDir: string) (arc: ARC) =
-    let inv = arc.ISA |> Option.get
-    let isa_json = inv.ToISAJsonString(2)
+    let isa_json = arc.ToISAJsonString(2)
     let isa_json_path = Path.Combine(outDir, isa_json_filename)
     File.WriteAllText(isa_json_path, isa_json)
 
 let write_arc_summary_markdown (outDir: string) (arc: ARC) =
-    let inv = arc.ISA |> Option.get
     let registeredPayload = arc.GetRegisteredPayload(IgnoreHidden = true)
     let markdownContent =
         MARKDOWN_TEMPLATE
-            .Replace("[[ARC_TITLE]]", inv.Title |> Option.defaultValue "Untitled ARC")
+            .Replace("[[ARC_TITLE]]", arc.Title |> Option.defaultValue "Untitled ARC")
             .Replace("[[FILE_TREE]]", FileSystemTree.toMarkdownTOC registeredPayload)
     let arc_summary_markdown_path = Path.Combine(outDir, arc_summary_markdown_filename)
     File.WriteAllText(arc_summary_markdown_path, markdownContent)

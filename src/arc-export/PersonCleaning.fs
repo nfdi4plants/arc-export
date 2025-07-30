@@ -18,15 +18,14 @@ let personIsEmpty (p : Person) =
 type ARC with
 
     member this.CleanPersons () =
-        let isa = this.ISA |> Option.get
-        let newContacts = isa.Contacts |> ARCtrl.Helper.ResizeArray.filter (fun p -> not (personIsEmpty p))
-        isa.Contacts <- newContacts
-        isa.Studies
+        let newContacts = this.Contacts |> ARCtrl.Helper.ResizeArray.filter (fun p -> not (personIsEmpty p))
+        this.Contacts <- newContacts
+        this.Studies
         |> Seq.iter (fun s -> 
             let newContacts = s.Contacts |> ARCtrl.Helper.ResizeArray.filter (fun p -> not (personIsEmpty p))
             s.Contacts <- newContacts
         )
-        isa.Assays
+        this.Assays
         |> Seq.iter (fun a -> 
             let newContacts = a.Performers |> ARCtrl.Helper.ResizeArray.filter (fun p -> not (personIsEmpty p))
             a.Performers <- newContacts

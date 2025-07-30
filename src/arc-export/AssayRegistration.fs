@@ -6,7 +6,7 @@ let assayBelongsToStudy (assay:ArcAssay) (study:ArcStudy) =
     let cellsOfColOpt (col : CompositeColumn option) =
         match col with
         | Some c -> c.Cells
-        | None -> [||]
+        | None -> ResizeArray()
     let tryNameOfCell (c : CompositeCell) =
         match c with
         | CompositeCell.FreeText "" -> None
@@ -38,12 +38,11 @@ let assayBelongsToStudy (assay:ArcAssay) (study:ArcStudy) =
 type ARC with
 
     member this.RegisterAssays () =
-        let isa = this.ISA |> Option.get
-        isa.Assays
+        this.Assays
         |> Seq.iter (fun a -> 
             if a.StudiesRegisteredIn.Length = 0 then               
                 let mutable wasRegistered = false
-                isa.Studies
+                this.Studies
                 |> Seq.iter (fun s -> 
                     if assayBelongsToStudy a s then
                         s.RegisterAssay a.Identifier
@@ -51,6 +50,6 @@ type ARC with
                 )
                 if not wasRegistered then
                     let newStudy = ArcStudy($"PLACEHOLDER_STUDY_{a.Identifier}")
-                    isa.AddStudy newStudy
+                    this.AddStudy newStudy
                     newStudy.RegisterAssay a.Identifier    
         )
