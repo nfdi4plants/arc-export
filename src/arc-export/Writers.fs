@@ -28,6 +28,7 @@ let write_ro_crate_metadata (outDir: string) (arc: ARC) =
 
 let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: ARC) =
     let sha256 = "http://schema.org/sha256"
+    let contentSize = "http://schema.org/contentSize"
     if arc.Title.IsNone then
         arc.Title <- Some "Untitled ARC"
     arc.MakeDataFilesAbsolute()
@@ -49,6 +50,7 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
                 match lfsHash.Hash with
                 | GitLFS.Hash.SHA256 hash ->
                     n.SetProperty(sha256, hash, ?context = graph.TryGetContext())
+                n.SetProperty(contentSize, $"{lfsHash.Size}b", ?context = graph.TryGetContext())
             | None -> 
                 printfn "No Git LFS object found for %s" n.Id
                 ()
