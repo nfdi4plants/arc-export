@@ -7,6 +7,8 @@ open AssayRegistration
 open PersonCleaning
 
 try
+
+    printfn "Start arc-export"
     let args = CLIArgs.cliArgParser.ParseCommandLine()
 
     let arcPath = args.GetResult(CLIArgs.ARC_Directory)
@@ -37,6 +39,7 @@ try
             arc
         | Error e -> failwithf "Could not load ARC from %s: %O" arcPath e
 
+    printfn "Loading ARC from %s" arcPath
     let arc = 
     
         try loadARC arcPath with
@@ -54,6 +57,8 @@ try
     arc.RegisterAssays()
     arc.CleanPersons()
 
+    printfn "Exporting ARC content to %s" outDir
+
     let outputFormats = args.GetResults(CLIArgs.Output_Format)
             
     if outputFormats |> List.contains CLIArgs.OutputFormat.ISA_Json || List.isEmpty outputFormats then
@@ -67,6 +72,8 @@ try
 
     if outputFormats |> List.contains CLIArgs.OutputFormat.Summary_Markdown then
         Writers.write_arc_summary_markdown outDir arc
+
+    printfn "Finished arc-export"
 
 with
     | :? ArguParseException as ex ->
