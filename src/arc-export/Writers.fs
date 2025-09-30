@@ -62,7 +62,14 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
 
 
 let write_isa_json (outDir: string) (arc: ARC) =
-    let isa_json = arc.ToISAJsonString(2)
+    printfn "Writing ISA-JSON to %s" (Path.Combine(outDir, isa_json_filename))
+    let isa_json = 
+        // Include this guard to avoid timeouts on large ARCs
+        // https://github.com/nfdi4plants/DataHUB/issues/51
+        if arc.StudyCount > 200 || arc.Studies |> Seq.exists (fun s -> s.RegisteredAssayCount > 200) then
+            arc.ToISAJsonString(2, useIDReferencing = true)
+        else 
+            arc.ToISAJsonString(2, useIDReferencing = false)
     let isa_json_path = Path.Combine(outDir, isa_json_filename)
     File.WriteAllText(isa_json_path, isa_json)
 
