@@ -19,6 +19,7 @@ let isa_json_filename = "arc-isa.json"
 let arc_summary_markdown_filename = "arc-summary.md"
 
 let write_ro_crate_metadata (outDir: string) (arc: ARC) =
+    printfn "Writing ARC RO-Crate metadata to %s" (Path.Combine(outDir, ro_crate_metadata_filename))
     if arc.Title.IsNone then
         arc.Title <- Some "Untitled ARC"
     let ro_crate_metadata = arc.ToROCrateJsonString(2)
@@ -27,6 +28,7 @@ let write_ro_crate_metadata (outDir: string) (arc: ARC) =
 
 
 let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: ARC) =
+    printfn "Writing ARC RO-Crate metadata with LFS hashes to %s" (Path.Combine(outDir, ro_crate_metadata_filename))
     let sha256 = "http://schema.org/sha256"
     let contentSize = "http://schema.org/contentSize"
     if arc.Title.IsNone then
@@ -62,12 +64,26 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
 
 
 let write_isa_json (outDir: string) (arc: ARC) =
-    let isa_json = arc.ToISAJsonString(2)
+    printfn "Writing ISA-JSON to %s" (Path.Combine(outDir, isa_json_filename))
+    let isa_json = 
+        // Include this guard to avoid timeouts on large ARCs
+        // https://github.com/nfdi4plants/DataHUB/issues/51
+        if arc.StudyCount > 200 || arc.Studies |> Seq.exists (fun s -> s.RegisteredAssayCount > 200) then
+            printfn "\tLarge ARC detected (more than 200 studies or assays), using ID referencing in ISA-JSON export."
+            arc.ToISAJsonString(2, useIDReferencing = true)
+        else 
+            arc.ToISAJsonString(2, useIDReferencing = false)
     let isa_json_path = Path.Combine(outDir, isa_json_filename)
     File.WriteAllText(isa_json_path, isa_json)
 
 let write_arc_summary_markdown (outDir: string) (arc: ARC) =
-    let registeredPayload = arc.GetRegisteredPayload(IgnoreHidden = true)
+    printfn "Writing ARC summary markdown to %s" (Path.Combine(outDir, arc_summary_markdown_filename))
+    let registeredPayload = 
+        if arc.StudyCount > 200 || arc.Studies |> Seq.exists (fun s -> s.RegisteredAssayCount > 200) then
+            printfn "\tLarge ARC detected (more than 200 studies or assays), using experimental quick implementation of registered payload retrieval."
+            getRegisteredPayload arc true
+        else
+            arc.GetRegisteredPayload(IgnoreHidden = true)
     let markdownContent =
         MARKDOWN_TEMPLATE
             .Replace("[[ARC_TITLE]]", arc.Title |> Option.defaultValue "Untitled ARC")
