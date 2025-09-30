@@ -75,6 +75,11 @@ let write_isa_json (outDir: string) (arc: ARC) =
 
 let write_arc_summary_markdown (outDir: string) (arc: ARC) =
     let registeredPayload = arc.GetRegisteredPayload(IgnoreHidden = true)
+    let registeredPayload = 
+        if arc.StudyCount > 200 || arc.Studies |> Seq.exists (fun s -> s.RegisteredAssayCount > 200) then
+            getRegisteredPayload arc true
+        else
+            arc.GetRegisteredPayload(IgnoreHidden = true)
     let markdownContent =
         MARKDOWN_TEMPLATE
             .Replace("[[ARC_TITLE]]", arc.Title |> Option.defaultValue "Untitled ARC")
