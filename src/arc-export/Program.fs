@@ -54,15 +54,9 @@ try
             let arc = ARC.fromArcInvestigation(inv,fs = fs)
             arc
 
-    arc.RegisterAssays()
     arc.CleanPersons()
 
-    printfn "Exporting ARC content to %s" outDir
-
     let outputFormats = args.GetResults(CLIArgs.Output_Format)
-            
-    if outputFormats |> List.contains CLIArgs.OutputFormat.ISA_Json || List.isEmpty outputFormats then
-        Writers.write_isa_json outDir arc
 
     if outputFormats |> List.contains CLIArgs.OutputFormat.ROCrate_Metadata then
         Writers.write_ro_crate_metadata outDir arc
@@ -70,8 +64,14 @@ try
     if outputFormats |> List.contains CLIArgs.OutputFormat.ROCrate_Metadata_LFS then
         Writers.write_ro_crate_metadata_LFSHashes arcPath outDir arc
 
+    if outputFormats |> List.contains CLIArgs.OutputFormat.Summary_Markdown || outputFormats |> List.contains CLIArgs.OutputFormat.ISA_Json || List.isEmpty outputFormats then
+        arc.RegisterAssays()
     if outputFormats |> List.contains CLIArgs.OutputFormat.Summary_Markdown then
         Writers.write_arc_summary_markdown outDir arc
+            
+    if outputFormats |> List.contains CLIArgs.OutputFormat.ISA_Json || List.isEmpty outputFormats then    
+        Writers.write_isa_json outDir arc
+
 
     printfn "Finished arc-export"
 

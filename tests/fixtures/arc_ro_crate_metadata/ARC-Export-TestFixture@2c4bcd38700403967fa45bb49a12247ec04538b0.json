@@ -58,13 +58,6 @@
       }
     },
     {
-      "@id": "studies/PLACEHOLDER_STUDY_UnrelatedAssay/",
-      "@type": "Dataset",
-      "additionalType": "Study",
-      "identifier": "PLACEHOLDER_STUDY_UnrelatedAssay",
-      "dateModified": "2025-07-29T21:44:43.5156342"
-    },
-    {
       "@id": "assays/SharedSampleWithStudy/dataset/MyData",
       "@type": "File",
       "name": "assays/SharedSampleWithStudy/dataset/MyData"
@@ -114,9 +107,6 @@
       "hasPart": [
         {
           "@id": "studies/Study1/"
-        },
-        {
-          "@id": "studies/PLACEHOLDER_STUDY_UnrelatedAssay/"
         },
         {
           "@id": "assays/SharedSampleWithStudy/"
