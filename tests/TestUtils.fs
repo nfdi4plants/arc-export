@@ -21,6 +21,7 @@ module ROCrateDates =
         replaceRegex datePublishedRegex "datePublished\": \"\"" s
         |> replaceRegex dateModifiedRegex "dateModified\": \"\""
         |> replaceRegex dateCreatedRegex "dateCreated\": \"\""
+        |> fun s -> s.Replace("\\r\\n", "\\n")
 
 let jsonStringEquals (expected: string) (actual: string) =
     let e1 = System.Text.Json.JsonDocument.Parse(expected).RootElement
