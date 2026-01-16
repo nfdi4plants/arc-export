@@ -4,7 +4,7 @@ open TestUtils
 
 open System.IO
 
-let expected_prototype_commit_hash = "70a7c83e7858a974bf913de2e27d8e44191fc73f"
+let expected_prototype_commit_hash = "1af1a66e072be988759318296d91eb2fff010bff"
 
 let expected_unregistedAssay_commit_hash = "2c4bcd38700403967fa45bb49a12247ec04538b0"
 

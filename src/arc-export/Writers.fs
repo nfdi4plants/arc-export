@@ -22,7 +22,7 @@ let write_ro_crate_metadata (outDir: string) (arc: ARC) =
     printfn "Writing ARC RO-Crate metadata to %s" (Path.Combine(outDir, ro_crate_metadata_filename))
     if arc.Title.IsNone then
         arc.Title <- Some "Untitled ARC"
-    let ro_crate_metadata = arc.ToROCrateJsonString(2)
+    let ro_crate_metadata = arc.ToROCrateJsonString(2, ignoreBrokenWR = true)
     let ro_crate_metadata_path = Path.Combine(outDir, ro_crate_metadata_filename)
     File.WriteAllText(ro_crate_metadata_path, ro_crate_metadata)
 
@@ -34,10 +34,8 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
     if arc.Title.IsNone then
         arc.Title <- Some "Untitled ARC"
     arc.MakeDataFilesAbsolute()
-    let license = ROCrate.getDefaultLicense()
-    let isa = arc.ToROCrateInvestigation(fs = arc.FileSystem)
+    let isa = arc.ToROCrateInvestigation(fs = arc.FileSystem, ignoreBrokenWR = true)
     LDDataset.setSDDatePublishedAsDateTime(isa, System.DateTime.Now)
-    LDDataset.setLicenseAsCreativeWork(isa, license)
     let graph = isa.Flatten()
     let customContextPart = Context.initBioschemasContext()
     customContextPart.AddMapping("sha256", sha256)

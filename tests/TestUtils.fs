@@ -11,6 +11,8 @@ module ROCrateDates =
 
     let dateModifiedRegex = "dateModified\": \"[^\\\"]*\""
 
+    let dateCreatedRegex = "dateCreated\": \"[^\\\"]*\""
+
     let replaceRegex (regex: string) (replacement: string) (input: string) =
         let r = new System.Text.RegularExpressions.Regex(regex)
         r.Replace(input, replacement)
@@ -18,6 +20,8 @@ module ROCrateDates =
     let undateString (s : string) = 
         replaceRegex datePublishedRegex "datePublished\": \"\"" s
         |> replaceRegex dateModifiedRegex "dateModified\": \"\""
+        |> replaceRegex dateCreatedRegex "dateCreated\": \"\""
+        |> fun s -> s.Replace("\\r\\n", "\\n")
 
 let jsonStringEquals (expected: string) (actual: string) =
     let e1 = System.Text.Json.JsonDocument.Parse(expected).RootElement
