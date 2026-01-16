@@ -34,10 +34,8 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
     if arc.Title.IsNone then
         arc.Title <- Some "Untitled ARC"
     arc.MakeDataFilesAbsolute()
-    let license = ROCrate.getDefaultLicense()
     let isa = arc.ToROCrateInvestigation(fs = arc.FileSystem)
     LDDataset.setSDDatePublishedAsDateTime(isa, System.DateTime.Now)
-    LDDataset.setLicenseAsCreativeWork(isa, license)
     let graph = isa.Flatten()
     let customContextPart = Context.initBioschemasContext()
     customContextPart.AddMapping("sha256", sha256)
