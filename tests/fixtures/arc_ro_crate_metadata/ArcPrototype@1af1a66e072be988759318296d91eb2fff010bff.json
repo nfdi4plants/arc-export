@@ -358,13 +358,16 @@
         {
           "@id": "assays/measurement1/dataset/proteomics_result.csv#col=12"
         }
-      ]
+      ],
+      "exampleOfWork": {
+        "@id": "#FormalParameter_R_FixedScriptResult_firstArg"
+      }
     },
     {
-      "@id": "#Sample_Cultivation_flask",
+      "@id": "#Sample_Cultivation_Flask1",
       "@type": "Sample",
       "additionalType": "Sample",
-      "name": "Cultivation flask"
+      "name": "Cultivation Flask1"
     },
     {
       "@id": "#Sample_sample_eppi_1",
@@ -427,7 +430,7 @@
       "@type": "LabProcess",
       "name": "Cell Lysis_0",
       "object": {
-        "@id": "#Sample_Cultivation_flask"
+        "@id": "#Sample_Cultivation_Flask1"
       },
       "result": {
         "@id": "#Sample_sample_eppi_1"
@@ -445,6 +448,12 @@
       ]
     },
     {
+      "@id": "#Sample_Cultivation_Flask2",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Cultivation Flask2"
+    },
+    {
       "@id": "#Sample_sample_eppi_2",
       "@type": "Sample",
       "additionalType": "Sample",
@@ -455,7 +464,7 @@
       "@type": "LabProcess",
       "name": "Cell Lysis_1",
       "object": {
-        "@id": "#Sample_Cultivation_flask"
+        "@id": "#Sample_Cultivation_Flask2"
       },
       "result": {
         "@id": "#Sample_sample_eppi_2"
@@ -473,6 +482,12 @@
       ]
     },
     {
+      "@id": "#Sample_Cultivation_Flask3",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Cultivation Flask3"
+    },
+    {
       "@id": "#Sample_sample_eppi_3",
       "@type": "Sample",
       "additionalType": "Sample",
@@ -483,7 +498,7 @@
       "@type": "LabProcess",
       "name": "Cell Lysis_2",
       "object": {
-        "@id": "#Sample_Cultivation_flask"
+        "@id": "#Sample_Cultivation_Flask3"
       },
       "result": {
         "@id": "#Sample_sample_eppi_3"
@@ -501,6 +516,12 @@
       ]
     },
     {
+      "@id": "#Sample_Cultivation_Flask4",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Cultivation Flask4"
+    },
+    {
       "@id": "#Sample_sample_eppi_4",
       "@type": "Sample",
       "additionalType": "Sample",
@@ -511,7 +532,7 @@
       "@type": "LabProcess",
       "name": "Cell Lysis_3",
       "object": {
-        "@id": "#Sample_Cultivation_flask"
+        "@id": "#Sample_Cultivation_Flask4"
       },
       "result": {
         "@id": "#Sample_sample_eppi_4"
@@ -529,6 +550,12 @@
       ]
     },
     {
+      "@id": "#Sample_Cultivation_Flask5",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Cultivation Flask5"
+    },
+    {
       "@id": "#Sample_sample_eppi_5",
       "@type": "Sample",
       "additionalType": "Sample",
@@ -539,7 +566,7 @@
       "@type": "LabProcess",
       "name": "Cell Lysis_4",
       "object": {
-        "@id": "#Sample_Cultivation_flask"
+        "@id": "#Sample_Cultivation_Flask5"
       },
       "result": {
         "@id": "#Sample_sample_eppi_5"
@@ -557,6 +584,12 @@
       ]
     },
     {
+      "@id": "#Sample_Cultivation_Flask6",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Cultivation Flask6"
+    },
+    {
       "@id": "#Sample_sample_eppi_6",
       "@type": "Sample",
       "additionalType": "Sample",
@@ -567,7 +600,7 @@
       "@type": "LabProcess",
       "name": "Cell Lysis_5",
       "object": {
-        "@id": "#Sample_Cultivation_flask"
+        "@id": "#Sample_Cultivation_Flask6"
       },
       "result": {
         "@id": "#Sample_sample_eppi_6"
@@ -1379,34 +1412,34 @@
       "identifier": "measurement2"
     },
     {
-      "@id": "studies/experiment1_material/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
+      "@id": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
       "@type": "File",
-      "name": "studies/experiment1_material/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
+      "name": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
     },
     {
-      "@id": "studies/experiment1_material/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
+      "@id": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
       "@type": "File",
-      "name": "studies/experiment1_material/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
+      "name": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
     },
     {
-      "@id": "studies/experiment1_material/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
+      "@id": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
       "@type": "File",
-      "name": "studies/experiment1_material/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
+      "name": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
     },
     {
-      "@id": "studies/experiment1_material/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
+      "@id": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
       "@type": "File",
-      "name": "studies/experiment1_material/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
+      "name": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
     },
     {
-      "@id": "studies/experiment1_material/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
+      "@id": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
       "@type": "File",
-      "name": "studies/experiment1_material/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
+      "name": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
     },
     {
-      "@id": "studies/experiment1_material/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
+      "@id": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
       "@type": "File",
-      "name": "studies/experiment1_material/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
+      "name": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
     },
     {
       "@id": "#CharacteristicValue_organism_Arabidopsis_thaliana",
@@ -1428,10 +1461,10 @@
       "columnIndex": "1"
     },
     {
-      "@id": "#Source_RealObject1",
+      "@id": "#Source_Source1",
       "@type": "Sample",
       "additionalType": "Source",
-      "name": "RealObject1",
+      "name": "Source1",
       "additionalProperty": [
         {
           "@id": "#CharacteristicValue_organism_Arabidopsis_thaliana"
@@ -1442,37 +1475,37 @@
       ]
     },
     {
-      "@id": "#Sample_Sample1",
-      "@type": "Sample",
-      "additionalType": "Sample",
-      "name": "Sample1",
-      "additionalProperty": {
-        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_e36ca6b8-19ba-4504-aa82-d4781765873d"
+      "@id": "https://bioregistry.io/EFO:0003789",
+      "@type": "DefinedTerm",
+      "name": "growth protocol",
+      "termCode": "https://bioregistry.io/EFO:0003789"
+    },
+    {
+      "@id": "#Protocol_CellCultivation",
+      "@type": "LabProtocol",
+      "intendedUse": {
+        "@id": "https://bioregistry.io/EFO:0003789"
       }
     },
     {
-      "@id": "#Protocol_process_1",
-      "@type": "LabProtocol"
-    },
-    {
-      "@id": "#Process_S_experiment1_material_process_1_0",
+      "@id": "#Process_S_MaterialPreparation_CellCultivation_0",
       "@type": "LabProcess",
-      "name": "process_1_0",
+      "name": "CellCultivation_0",
       "object": {
-        "@id": "#Source_RealObject1"
+        "@id": "#Source_Source1"
       },
       "result": {
-        "@id": "#Sample_Sample1"
+        "@id": "#Sample_Cultivation_Flask1"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_1"
+        "@id": "#Protocol_CellCultivation"
       }
     },
     {
-      "@id": "#Source_RealObject2",
+      "@id": "#Source_Source2",
       "@type": "Sample",
       "additionalType": "Source",
-      "name": "RealObject2",
+      "name": "Source2",
       "additionalProperty": [
         {
           "@id": "#CharacteristicValue_organism_Arabidopsis_thaliana"
@@ -1483,33 +1516,24 @@
       ]
     },
     {
-      "@id": "#Sample_Sample2",
-      "@type": "Sample",
-      "additionalType": "Sample",
-      "name": "Sample2",
-      "additionalProperty": {
-        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_714ca2b7-22b7-4f69-b83d-9165f624da25"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_process_1_1",
+      "@id": "#Process_S_MaterialPreparation_CellCultivation_1",
       "@type": "LabProcess",
-      "name": "process_1_1",
+      "name": "CellCultivation_1",
       "object": {
-        "@id": "#Source_RealObject2"
+        "@id": "#Source_Source2"
       },
       "result": {
-        "@id": "#Sample_Sample2"
+        "@id": "#Sample_Cultivation_Flask2"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_1"
+        "@id": "#Protocol_CellCultivation"
       }
     },
     {
-      "@id": "#Source_RealObject3",
+      "@id": "#Source_Source3",
       "@type": "Sample",
       "additionalType": "Source",
-      "name": "RealObject3",
+      "name": "Source3",
       "additionalProperty": [
         {
           "@id": "#CharacteristicValue_organism_Arabidopsis_thaliana"
@@ -1520,26 +1544,17 @@
       ]
     },
     {
-      "@id": "#Sample_Sample3",
-      "@type": "Sample",
-      "additionalType": "Sample",
-      "name": "Sample3",
-      "additionalProperty": {
-        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_66fac760-acc7-4ed4-ba21-2cb67fa36e4d"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_process_1_2",
+      "@id": "#Process_S_MaterialPreparation_CellCultivation_2",
       "@type": "LabProcess",
-      "name": "process_1_2",
+      "name": "CellCultivation_2",
       "object": {
-        "@id": "#Source_RealObject3"
+        "@id": "#Source_Source3"
       },
       "result": {
-        "@id": "#Sample_Sample3"
+        "@id": "#Sample_Cultivation_Flask3"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_1"
+        "@id": "#Protocol_CellCultivation"
       }
     },
     {
@@ -1552,10 +1567,10 @@
       "columnIndex": "1"
     },
     {
-      "@id": "#Source_RealObject4",
+      "@id": "#Source_Source4",
       "@type": "Sample",
       "additionalType": "Source",
-      "name": "RealObject4",
+      "name": "Source4",
       "additionalProperty": [
         {
           "@id": "#CharacteristicValue_organism_Arabidopsis_thaliana"
@@ -1566,33 +1581,24 @@
       ]
     },
     {
-      "@id": "#Sample_Sample4",
-      "@type": "Sample",
-      "additionalType": "Sample",
-      "name": "Sample4",
-      "additionalProperty": {
-        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_cba5f40c-fc05-44d6-a589-b0e3dafaeefe"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_process_1_3",
+      "@id": "#Process_S_MaterialPreparation_CellCultivation_3",
       "@type": "LabProcess",
-      "name": "process_1_3",
+      "name": "CellCultivation_3",
       "object": {
-        "@id": "#Source_RealObject4"
+        "@id": "#Source_Source4"
       },
       "result": {
-        "@id": "#Sample_Sample4"
+        "@id": "#Sample_Cultivation_Flask4"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_1"
+        "@id": "#Protocol_CellCultivation"
       }
     },
     {
-      "@id": "#Source_RealObject5",
+      "@id": "#Source_Source5",
       "@type": "Sample",
       "additionalType": "Source",
-      "name": "RealObject5",
+      "name": "Source5",
       "additionalProperty": [
         {
           "@id": "#CharacteristicValue_organism_Arabidopsis_thaliana"
@@ -1603,33 +1609,24 @@
       ]
     },
     {
-      "@id": "#Sample_Sample5",
-      "@type": "Sample",
-      "additionalType": "Sample",
-      "name": "Sample5",
-      "additionalProperty": {
-        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_84c37b60-2342-4226-a36c-4b8dfe84ebe9"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_process_1_4",
+      "@id": "#Process_S_MaterialPreparation_CellCultivation_4",
       "@type": "LabProcess",
-      "name": "process_1_4",
+      "name": "CellCultivation_4",
       "object": {
-        "@id": "#Source_RealObject5"
+        "@id": "#Source_Source5"
       },
       "result": {
-        "@id": "#Sample_Sample5"
+        "@id": "#Sample_Cultivation_Flask5"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_1"
+        "@id": "#Protocol_CellCultivation"
       }
     },
     {
-      "@id": "#Source_RealObject6",
+      "@id": "#Source_Source6",
       "@type": "Sample",
       "additionalType": "Source",
-      "name": "RealObject6",
+      "name": "Source6",
       "additionalProperty": [
         {
           "@id": "#CharacteristicValue_organism_Arabidopsis_thaliana"
@@ -1640,26 +1637,17 @@
       ]
     },
     {
-      "@id": "#Sample_Sample6",
-      "@type": "Sample",
-      "additionalType": "Sample",
-      "name": "Sample6",
-      "additionalProperty": {
-        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_208df064-4b1c-4da0-a1f8-6412e1fb2284"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_process_1_5",
+      "@id": "#Process_S_MaterialPreparation_CellCultivation_5",
       "@type": "LabProcess",
-      "name": "process_1_5",
+      "name": "CellCultivation_5",
       "object": {
-        "@id": "#Source_RealObject6"
+        "@id": "#Source_Source6"
       },
       "result": {
-        "@id": "#Sample_Sample6"
+        "@id": "#Sample_Cultivation_Flask6"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_1"
+        "@id": "#Protocol_CellCultivation"
       }
     },
     {
@@ -1672,21 +1660,30 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Protocol_process_2",
+      "@id": "#Sample_Sample1",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Sample1",
+      "additionalProperty": {
+        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_e36ca6b8-19ba-4504-aa82-d4781765873d"
+      }
+    },
+    {
+      "@id": "#Protocol_AccessoryDataRetrieval",
       "@type": "LabProtocol"
     },
     {
-      "@id": "#Process_S_experiment1_material_process_2_0",
+      "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_0",
       "@type": "LabProcess",
-      "name": "process_2_0",
+      "name": "AccessoryDataRetrieval_0",
       "object": {
         "@id": "#Sample_Sample1"
       },
       "result": {
-        "@id": "studies/experiment1_material/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
+        "@id": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_2"
+        "@id": "#Protocol_AccessoryDataRetrieval"
       }
     },
     {
@@ -1699,17 +1696,26 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_S_experiment1_material_process_2_1",
+      "@id": "#Sample_Sample2",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Sample2",
+      "additionalProperty": {
+        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_714ca2b7-22b7-4f69-b83d-9165f624da25"
+      }
+    },
+    {
+      "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_1",
       "@type": "LabProcess",
-      "name": "process_2_1",
+      "name": "AccessoryDataRetrieval_1",
       "object": {
         "@id": "#Sample_Sample2"
       },
       "result": {
-        "@id": "studies/experiment1_material/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
+        "@id": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_2"
+        "@id": "#Protocol_AccessoryDataRetrieval"
       }
     },
     {
@@ -1722,17 +1728,26 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_S_experiment1_material_process_2_2",
+      "@id": "#Sample_Sample3",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Sample3",
+      "additionalProperty": {
+        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_66fac760-acc7-4ed4-ba21-2cb67fa36e4d"
+      }
+    },
+    {
+      "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_2",
       "@type": "LabProcess",
-      "name": "process_2_2",
+      "name": "AccessoryDataRetrieval_2",
       "object": {
         "@id": "#Sample_Sample3"
       },
       "result": {
-        "@id": "studies/experiment1_material/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
+        "@id": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_2"
+        "@id": "#Protocol_AccessoryDataRetrieval"
       }
     },
     {
@@ -1745,17 +1760,26 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_S_experiment1_material_process_2_3",
+      "@id": "#Sample_Sample4",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Sample4",
+      "additionalProperty": {
+        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_cba5f40c-fc05-44d6-a589-b0e3dafaeefe"
+      }
+    },
+    {
+      "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_3",
       "@type": "LabProcess",
-      "name": "process_2_3",
+      "name": "AccessoryDataRetrieval_3",
       "object": {
         "@id": "#Sample_Sample4"
       },
       "result": {
-        "@id": "studies/experiment1_material/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
+        "@id": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_2"
+        "@id": "#Protocol_AccessoryDataRetrieval"
       }
     },
     {
@@ -1768,17 +1792,26 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_S_experiment1_material_process_2_4",
+      "@id": "#Sample_Sample5",
+      "@type": "Sample",
+      "additionalType": "Sample",
+      "name": "Sample5",
+      "additionalProperty": {
+        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_84c37b60-2342-4226-a36c-4b8dfe84ebe9"
+      }
+    },
+    {
+      "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_4",
       "@type": "LabProcess",
-      "name": "process_2_4",
+      "name": "AccessoryDataRetrieval_4",
       "object": {
         "@id": "#Sample_Sample5"
       },
       "result": {
-        "@id": "studies/experiment1_material/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
+        "@id": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_process_2"
+        "@id": "#Protocol_AccessoryDataRetrieval"
       }
     },
     {
@@ -1791,204 +1824,92 @@
       "columnIndex": "0"
     },
     {
-      "@id": "#Process_S_experiment1_material_process_2_5",
-      "@type": "LabProcess",
-      "name": "process_2_5",
-      "object": {
-        "@id": "#Sample_Sample6"
-      },
-      "result": {
-        "@id": "studies/experiment1_material/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
-      },
-      "executesLabProtocol": {
-        "@id": "#Protocol_process_2"
-      }
-    },
-    {
-      "@id": "#Sample_Cultivation_Flask",
+      "@id": "#Sample_Sample6",
       "@type": "Sample",
       "additionalType": "Sample",
-      "name": "Cultivation Flask"
-    },
-    {
-      "@id": "http://purl.obolibrary.org/obo/EFO_0003789",
-      "@type": "DefinedTerm",
-      "name": "growth protocol",
-      "termCode": "http://purl.obolibrary.org/obo/EFO_0003789"
-    },
-    {
-      "@id": "#Protocol_Cell_Cultivation",
-      "@type": "LabProtocol",
-      "intendedUse": {
-        "@id": "http://purl.obolibrary.org/obo/EFO_0003789"
+      "name": "Sample6",
+      "additionalProperty": {
+        "@id": "#CharacteristicValue_Performed_Procedure_Step_SOP_Instance_UID_208df064-4b1c-4da0-a1f8-6412e1fb2284"
       }
     },
     {
-      "@id": "#Process_S_experiment1_material_Cell_Cultivation_0",
+      "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_5",
       "@type": "LabProcess",
-      "name": "Cell Cultivation_0",
-      "object": {
-        "@id": "#Sample_Sample1"
-      },
-      "result": {
-        "@id": "#Sample_Cultivation_Flask"
-      },
-      "executesLabProtocol": {
-        "@id": "#Protocol_Cell_Cultivation"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_Cell_Cultivation_1",
-      "@type": "LabProcess",
-      "name": "Cell Cultivation_1",
-      "object": {
-        "@id": "#Sample_Sample2"
-      },
-      "result": {
-        "@id": "#Sample_Cultivation_Flask"
-      },
-      "executesLabProtocol": {
-        "@id": "#Protocol_Cell_Cultivation"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_Cell_Cultivation_2",
-      "@type": "LabProcess",
-      "name": "Cell Cultivation_2",
-      "object": {
-        "@id": "#Sample_Sample3"
-      },
-      "result": {
-        "@id": "#Sample_Cultivation_Flask"
-      },
-      "executesLabProtocol": {
-        "@id": "#Protocol_Cell_Cultivation"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_Cell_Cultivation_3",
-      "@type": "LabProcess",
-      "name": "Cell Cultivation_3",
-      "object": {
-        "@id": "#Sample_Sample4"
-      },
-      "result": {
-        "@id": "#Sample_Cultivation_Flask"
-      },
-      "executesLabProtocol": {
-        "@id": "#Protocol_Cell_Cultivation"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_Cell_Cultivation_4",
-      "@type": "LabProcess",
-      "name": "Cell Cultivation_4",
-      "object": {
-        "@id": "#Sample_Sample5"
-      },
-      "result": {
-        "@id": "#Sample_Cultivation_Flask"
-      },
-      "executesLabProtocol": {
-        "@id": "#Protocol_Cell_Cultivation"
-      }
-    },
-    {
-      "@id": "#Process_S_experiment1_material_Cell_Cultivation_5",
-      "@type": "LabProcess",
-      "name": "Cell Cultivation_5",
+      "name": "AccessoryDataRetrieval_5",
       "object": {
         "@id": "#Sample_Sample6"
       },
       "result": {
-        "@id": "#Sample_Cultivation_Flask"
+        "@id": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
       },
       "executesLabProtocol": {
-        "@id": "#Protocol_Cell_Cultivation"
+        "@id": "#Protocol_AccessoryDataRetrieval"
       }
     },
     {
-      "@id": "studies/experiment1_material/",
+      "@id": "studies/MaterialPreparation/",
       "@type": "Dataset",
       "additionalType": "Study",
-      "identifier": "experiment1_material",
-      "dateModified": "2026-01-16T12:43:25.0954620",
+      "identifier": "MaterialPreparation",
+      "dateModified": "2026-01-16T13:38:54.6521198",
       "description": "In this a devised study to have an exemplary experimental material description.",
       "hasPart": [
         {
-          "@id": "studies/experiment1_material/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
+          "@id": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
         },
         {
-          "@id": "studies/experiment1_material/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
+          "@id": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
         },
         {
-          "@id": "studies/experiment1_material/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
+          "@id": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
         },
         {
-          "@id": "studies/experiment1_material/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
+          "@id": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
         },
         {
-          "@id": "studies/experiment1_material/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
+          "@id": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
         },
         {
-          "@id": "studies/experiment1_material/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
+          "@id": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
         }
       ],
       "name": "Prototype for experimental data",
       "about": [
         {
-          "@id": "#Process_S_experiment1_material_process_1_0"
+          "@id": "#Process_S_MaterialPreparation_CellCultivation_0"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_1_1"
+          "@id": "#Process_S_MaterialPreparation_CellCultivation_1"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_1_2"
+          "@id": "#Process_S_MaterialPreparation_CellCultivation_2"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_1_3"
+          "@id": "#Process_S_MaterialPreparation_CellCultivation_3"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_1_4"
+          "@id": "#Process_S_MaterialPreparation_CellCultivation_4"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_1_5"
+          "@id": "#Process_S_MaterialPreparation_CellCultivation_5"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_2_0"
+          "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_0"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_2_1"
+          "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_1"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_2_2"
+          "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_2"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_2_3"
+          "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_3"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_2_4"
+          "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_4"
         },
         {
-          "@id": "#Process_S_experiment1_material_process_2_5"
-        },
-        {
-          "@id": "#Process_S_experiment1_material_Cell_Cultivation_0"
-        },
-        {
-          "@id": "#Process_S_experiment1_material_Cell_Cultivation_1"
-        },
-        {
-          "@id": "#Process_S_experiment1_material_Cell_Cultivation_2"
-        },
-        {
-          "@id": "#Process_S_experiment1_material_Cell_Cultivation_3"
-        },
-        {
-          "@id": "#Process_S_experiment1_material_Cell_Cultivation_4"
-        },
-        {
-          "@id": "#Process_S_experiment1_material_Cell_Cultivation_5"
+          "@id": "#Process_S_MaterialPreparation_AccessoryDataRetrieval_5"
         }
       ]
     },
@@ -2015,7 +1936,7 @@
       "name": "protein assay",
       "value": "SDS-PAGE",
       "propertyID": "https://bioregistry.io/EFO:0001458",
-      "valueReference": "http://purl.obolibrary.org/obo/EFO_0010936",
+      "valueReference": "https://bioregistry.io/EFO:0010936",
       "columnIndex": "0"
     },
     {
@@ -2040,16 +1961,388 @@
       "@type": "Dataset",
       "additionalType": "Study",
       "identifier": "experiment2",
-      "dateModified": "2026-01-16T12:43:25.0980900",
+      "dateModified": "2026-01-16T13:38:54.6551082",
       "hasPart": [],
       "about": {
         "@id": "#Process_S_experiment2_experiment2_0"
       }
     },
     {
-      "@id": "#LICENSE",
+      "@id": "#Organization_Department_of_Biology,_University_of_Kaiserslautern",
+      "@type": "Organization",
+      "name": "Department of Biology, University of Kaiserslautern"
+    },
+    {
+      "@id": "https://credit.niso.org/contributor-roles/formal-analysis/",
+      "@type": "DefinedTerm",
+      "name": "Formal analysis",
+      "termCode": "https://credit.niso.org/contributor-roles/formal-analysis/"
+    },
+    {
+      "@id": "#Person_Timo_Mühlhaus",
+      "@type": "Person",
+      "givenName": "Timo",
+      "affiliation": {
+        "@id": "#Organization_Department_of_Biology,_University_of_Kaiserslautern"
+      },
+      "email": "muehlhaus@bio.uni-kl.de",
+      "familyName": "Mühlhaus",
+      "jobTitle": {
+        "@id": "https://credit.niso.org/contributor-roles/formal-analysis/"
+      },
+      "address": "Erwin-Schrödinger-Straße 56, Kaiserslautern, DE"
+    },
+    {
+      "@id": "#Position_1",
+      "@type": "PropertyValue",
+      "name": "Position",
+      "value": "1"
+    },
+    {
+      "@id": "#FormalParameter_W_FixedScript_firstArg",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "firstArg",
+      "valueRequired": true,
+      "identifier": {
+        "@id": "#Position_1"
+      }
+    },
+    {
+      "@id": "#Position_2",
+      "@type": "PropertyValue",
+      "name": "Position",
+      "value": "2"
+    },
+    {
+      "@id": "#FormalParameter_W_FixedScript_secondArg",
+      "@type": "FormalParameter",
+      "additionalType": "string",
+      "name": "secondArg",
+      "valueRequired": true,
+      "identifier": {
+        "@id": "#Position_2"
+      }
+    },
+    {
+      "@id": "#Glob_*.csv",
+      "@type": "PropertyValue",
+      "name": "Glob",
+      "value": "*.csv"
+    },
+    {
+      "@id": "#FormalParameter_W_FixedScript_output",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "output",
+      "valueRequired": true,
+      "identifier": {
+        "@id": "#Glob_*.csv"
+      }
+    },
+    {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl",
+      "@type": "ComputerLanguage",
+      "name": "Common Workflow Language",
+      "alternateName": "CWL",
+      "identifier": {
+        "@id": "https://w3id.org/cwl/v1.2/"
+      },
+      "url": {
+        "@id": "https://www.commonwl.org/"
+      }
+    },
+    {
+      "@id": "#Organization_DataPLANT",
+      "@type": "Organization",
+      "name": "DataPLANT"
+    },
+    {
+      "@id": "#OA_CWL",
+      "@type": "DefinedTerm",
+      "name": "CWL"
+    },
+    {
+      "@id": "workflows/FixedScript/workflow.cwl",
+      "@type": [
+        "File",
+        "ComputationalWorkflow",
+        "SoftwareSourceCode",
+        "LabProtocol"
+      ],
+      "additionalType": "WorkflowProtocol",
+      "input": [
+        {
+          "@id": "#FormalParameter_W_FixedScript_firstArg"
+        },
+        {
+          "@id": "#FormalParameter_W_FixedScript_secondArg"
+        }
+      ],
+      "output": {
+        "@id": "#FormalParameter_W_FixedScript_output"
+      },
+      "name": "workflows/FixedScript/workflow.cwl",
+      "programmingLanguage": {
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
+      },
+      "creator": {
+        "@id": "#Person_Timo_Mühlhaus"
+      },
+      "sdPublisher": {
+        "@id": "#Organization_DataPLANT"
+      },
+      "dateCreated": "2026-01-16T12:38:54.6623256Z",
+      "intendedUse": {
+        "@id": "#OA_CWL"
+      }
+    },
+    {
+      "@id": "workflows/FixedScript/",
+      "@type": "Dataset",
+      "additionalType": "Workflow",
+      "identifier": "FixedScript",
+      "creator": {
+        "@id": "#Person_Timo_Mühlhaus"
+      },
+      "hasPart": {
+        "@id": "workflows/FixedScript/workflow.cwl"
+      },
+      "name": "Column addition workflow",
+      "mainEntity": {
+        "@id": "workflows/FixedScript/workflow.cwl"
+      }
+    },
+    {
+      "@id": "#Person_Caroline_Ott",
+      "@type": "Person",
+      "givenName": "Caroline",
+      "affiliation": {
+        "@id": "#Organization_Department_of_Biology,_University_of_Kaiserslautern"
+      },
+      "email": "caroline.ott@rptu.de",
+      "familyName": "Ott",
+      "additionalName": "J. V.",
+      "address": "Erwin-Schrödinger-Straße 56, Kaiserslautern, DE"
+    },
+    {
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv",
+      "@type": "File",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv"
+    },
+    {
+      "@id": "./runs/FixedScriptResult/result.csv",
+      "@type": "File",
+      "name": "./runs/FixedScriptResult/result.csv"
+    },
+    {
+      "@id": "#FormalParameter_R_FixedScriptResult_firstArg",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "firstArg",
+      "valueRequired": true
+    },
+    {
+      "@id": "#FormalParameter_R_FixedScriptResult_secondArg",
+      "@type": "FormalParameter",
+      "additionalType": "string",
+      "name": "secondArg",
+      "valueRequired": true
+    },
+    {
+      "@id": "#FormalParameter_R_FixedScriptResult_FixedScriptResult",
+      "@type": "FormalParameter",
+      "additionalType": "File",
+      "name": "FixedScriptResult",
+      "valueRequired": true
+    },
+    {
+      "@id": "WorkflowStep_runs/FixedScriptResult/run.cwl_FixedScript",
+      "@type": "ComputationalWorkflow",
+      "name": "FixedScript",
+      "identifier": "../../workflows/FixedScript/workflow.cwl"
+    },
+    {
+      "@id": "runs/FixedScriptResult/run.cwl",
+      "@type": [
+        "File",
+        "ComputationalWorkflow",
+        "SoftwareSourceCode",
+        "LabProtocol"
+      ],
+      "additionalType": "WorkflowProtocol",
+      "input": [
+        {
+          "@id": "#FormalParameter_R_FixedScriptResult_firstArg"
+        },
+        {
+          "@id": "#FormalParameter_R_FixedScriptResult_secondArg"
+        }
+      ],
+      "output": {
+        "@id": "#FormalParameter_R_FixedScriptResult_FixedScriptResult"
+      },
+      "name": "runs/FixedScriptResult/run.cwl",
+      "programmingLanguage": {
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
+      },
+      "hasPart": {
+        "@id": "WorkflowStep_runs/FixedScriptResult/run.cwl_FixedScript"
+      },
+      "creator": {
+        "@id": "#Person_Caroline_Ott"
+      },
+      "sdPublisher": {
+        "@id": "#Organization_DataPLANT"
+      },
+      "dateCreated": "2026-01-16T12:38:54.7090982Z"
+    },
+    {
+      "@id": "#Protocol_ColumnAddition",
+      "@type": "LabProtocol"
+    },
+    {
+      "@id": "#ParameterValue_Transformation_Addition",
+      "@type": "PropertyValue",
+      "additionalType": "ParameterValue",
+      "name": "Transformation",
+      "value": "Addition",
+      "propertyID": "https://bioregistry.io/NCIT:C43582",
+      "valueReference": "https://bioregistry.io/NCIT:C64911",
+      "columnIndex": "0"
+    },
+    {
+      "@id": "#WorkflowInvocation_FixedScriptResult_ColumnAddition_0",
+      "@type": [
+        "CreateAction",
+        "LabProcess"
+      ],
+      "additionalType": "WorkflowInvocation",
+      "name": "ColumnAddition",
+      "object": {
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv"
+      },
+      "result": {
+        "@id": "./runs/FixedScriptResult/result.csv"
+      },
+      "instrument": {
+        "@id": "runs/FixedScriptResult/run.cwl"
+      },
+      "executesLabProtocol": {
+        "@id": "#Protocol_ColumnAddition"
+      },
+      "parameterValue": {
+        "@id": "#ParameterValue_Transformation_Addition"
+      }
+    },
+    {
+      "@id": "#WorkflowParameter_secondArg_./result.csv",
+      "@type": "PropertyValue",
+      "additionalType": "WorkflowInput",
+      "name": "secondArg",
+      "value": "./result.csv",
+      "exampleOfWork": {
+        "@id": "#FormalParameter_R_FixedScriptResult_secondArg"
+      }
+    },
+    {
+      "@id": "#WorkflowInvocation_FixedScriptResult",
+      "@type": [
+        "CreateAction",
+        "LabProcess"
+      ],
+      "additionalType": "WorkflowInvocation",
+      "name": "FixedScriptResult",
+      "object": [
+        {
+          "@id": "assays/measurement1/dataset/proteomics_result.csv"
+        },
+        {
+          "@id": "#WorkflowParameter_secondArg_./result.csv"
+        }
+      ],
+      "instrument": {
+        "@id": "runs/FixedScriptResult/run.cwl"
+      },
+      "executesLabProtocol": {
+        "@id": "runs/FixedScriptResult/run.cwl"
+      }
+    },
+    {
+      "@id": "#OA_Docker_Image",
+      "@type": "DefinedTerm",
+      "name": "Docker Image"
+    },
+    {
+      "@id": "#OA_.NET",
+      "@type": "DefinedTerm",
+      "name": ".NET"
+    },
+    {
+      "@id": "runs/FixedScriptResult/",
+      "@type": "Dataset",
+      "additionalType": "Run",
+      "identifier": "FixedScriptResult",
+      "creator": {
+        "@id": "#Person_Caroline_Ott"
+      },
+      "description": "This run adds the values of two columns",
+      "hasPart": [
+        {
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv"
+        },
+        {
+          "@id": "./runs/FixedScriptResult/result.csv"
+        },
+        {
+          "@id": "assays/measurement1/dataset/proteomics_result.csv"
+        },
+        {
+          "@id": "runs/FixedScriptResult/run.cwl"
+        }
+      ],
+      "name": "Column Addition",
+      "mentions": [
+        {
+          "@id": "#WorkflowInvocation_FixedScriptResult_ColumnAddition_0"
+        },
+        {
+          "@id": "#WorkflowInvocation_FixedScriptResult"
+        }
+      ],
+      "about": [
+        {
+          "@id": "#WorkflowInvocation_FixedScriptResult_ColumnAddition_0"
+        },
+        {
+          "@id": "#WorkflowInvocation_FixedScriptResult"
+        }
+      ],
+      "measurementMethod": {
+        "@id": "#OA_Docker_Image"
+      },
+      "measurementTechnique": {
+        "@id": "#OA_.NET"
+      },
+      "mainEntity": {
+        "@id": "runs/FixedScriptResult/run.cwl"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/wfrun/process/0.5"
+        },
+        {
+          "@id": "https://w3id.org/ro/wfrun/workflow/0.5"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        }
+      ]
+    },
+    {
+      "@id": "LICENSE.md",
       "@type": "CreativeWork",
-      "text": "ALL RIGHTS RESERVED BY THE AUTHORS"
+      "text": "This work is licensed under the Creative Commons Attribution 4.0 International License.\r\nhttps://creativecommons.org/licenses/by/4.0/"
     },
     {
       "@id": "./",
@@ -2067,7 +2360,7 @@
           "@id": "http://orcid.org/0000-0002-8241-5300"
         }
       ],
-      "datePublished": "2026-01-16T12:43:25.0984713",
+      "datePublished": "2026-01-16T13:38:54.7100123",
       "description": "A prototypic ARC that implements all specification standards accordingly",
       "hasPart": [
         {
@@ -2077,15 +2370,21 @@
           "@id": "assays/measurement2/"
         },
         {
-          "@id": "studies/experiment1_material/"
+          "@id": "studies/MaterialPreparation/"
         },
         {
           "@id": "studies/experiment2/"
+        },
+        {
+          "@id": "workflows/FixedScript/"
+        },
+        {
+          "@id": "runs/FixedScriptResult/"
         }
       ],
       "name": "ArcPrototype",
       "license": {
-        "@id": "#LICENSE"
+        "@id": "LICENSE.md"
       }
     },
     {

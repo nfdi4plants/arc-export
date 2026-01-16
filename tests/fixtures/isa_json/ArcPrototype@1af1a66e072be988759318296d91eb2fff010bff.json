@@ -65,9 +65,9 @@
   ],
   "studies": [
     {
-      "@id": "studies/experiment1_material/",
-      "filename": "studies/experiment1_material/isa.study.xlsx",
-      "identifier": "experiment1_material",
+      "@id": "studies/MaterialPreparation/",
+      "filename": "studies/MaterialPreparation/isa.study.xlsx",
+      "identifier": "MaterialPreparation",
       "title": "Prototype for experimental data",
       "description": "In this a devised study to have an exemplary experimental material description.",
       "people": [
@@ -99,18 +99,18 @@
         {
           "@id": "#EmptyProtocol",
           "protocolType": {
-            "@id": "http://purl.obolibrary.org/obo/EFO_0003789",
+            "@id": "https://bioregistry.io/EFO:0003789",
             "annotationValue": "growth protocol",
             "termSource": "EFO",
-            "termAccession": "http://purl.obolibrary.org/obo/EFO_0003789"
+            "termAccession": "https://bioregistry.io/EFO:0003789"
           }
         }
       ],
       "materials": {
         "sources": [
           {
-            "@id": "#Source_RealObject1",
-            "name": "RealObject1",
+            "@id": "#Source_Source1",
+            "name": "Source1",
             "characteristics": [
               {
                 "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -149,8 +149,8 @@
             ]
           },
           {
-            "@id": "#Source_RealObject2",
-            "name": "RealObject2",
+            "@id": "#Source_Source2",
+            "name": "Source2",
             "characteristics": [
               {
                 "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -189,8 +189,8 @@
             ]
           },
           {
-            "@id": "#Source_RealObject3",
-            "name": "RealObject3",
+            "@id": "#Source_Source3",
+            "name": "Source3",
             "characteristics": [
               {
                 "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -229,8 +229,8 @@
             ]
           },
           {
-            "@id": "#Source_RealObject4",
-            "name": "RealObject4",
+            "@id": "#Source_Source4",
+            "name": "Source4",
             "characteristics": [
               {
                 "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -269,8 +269,8 @@
             ]
           },
           {
-            "@id": "#Source_RealObject5",
-            "name": "RealObject5",
+            "@id": "#Source_Source5",
+            "name": "Source5",
             "characteristics": [
               {
                 "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -309,8 +309,8 @@
             ]
           },
           {
-            "@id": "#Source_RealObject6",
-            "name": "RealObject6",
+            "@id": "#Source_Source6",
+            "name": "Source6",
             "characteristics": [
               {
                 "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -351,28 +351,28 @@
         ],
         "samples": [
           {
-            "@id": "#Sample_Sample1",
-            "name": "Sample1"
+            "@id": "#Sample_Cultivation_Flask1",
+            "name": "Cultivation Flask1"
           },
           {
-            "@id": "#Sample_Sample2",
-            "name": "Sample2"
+            "@id": "#Sample_Cultivation_Flask2",
+            "name": "Cultivation Flask2"
           },
           {
-            "@id": "#Sample_Sample3",
-            "name": "Sample3"
+            "@id": "#Sample_Cultivation_Flask3",
+            "name": "Cultivation Flask3"
           },
           {
-            "@id": "#Sample_Sample4",
-            "name": "Sample4"
+            "@id": "#Sample_Cultivation_Flask4",
+            "name": "Cultivation Flask4"
           },
           {
-            "@id": "#Sample_Sample5",
-            "name": "Sample5"
+            "@id": "#Sample_Cultivation_Flask5",
+            "name": "Cultivation Flask5"
           },
           {
-            "@id": "#Sample_Sample6",
-            "name": "Sample6"
+            "@id": "#Sample_Cultivation_Flask6",
+            "name": "Cultivation Flask6"
           },
           {
             "@id": "#Sample_Sample1",
@@ -505,21 +505,26 @@
                 }
               }
             ]
-          },
-          {
-            "@id": "#Sample_Cultivation_Flask",
-            "name": "Cultivation Flask"
           }
         ]
       },
       "processSequence": [
         {
-          "@id": "#Process_process_1",
-          "name": "process_1",
+          "@id": "#Process_CellCultivation",
+          "name": "CellCultivation",
+          "executesProtocol": {
+            "@id": "#Protocol_MaterialPreparation_CellCultivation",
+            "protocolType": {
+              "@id": "https://bioregistry.io/EFO:0003789",
+              "annotationValue": "growth protocol",
+              "termSource": "EFO",
+              "termAccession": "https://bioregistry.io/EFO:0003789"
+            }
+          },
           "inputs": [
             {
-              "@id": "#Source_RealObject1",
-              "name": "RealObject1",
+              "@id": "#Source_Source1",
+              "name": "Source1",
               "characteristics": [
                 {
                   "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -558,8 +563,8 @@
               ]
             },
             {
-              "@id": "#Source_RealObject2",
-              "name": "RealObject2",
+              "@id": "#Source_Source2",
+              "name": "Source2",
               "characteristics": [
                 {
                   "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -598,8 +603,8 @@
               ]
             },
             {
-              "@id": "#Source_RealObject3",
-              "name": "RealObject3",
+              "@id": "#Source_Source3",
+              "name": "Source3",
               "characteristics": [
                 {
                   "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -638,8 +643,8 @@
               ]
             },
             {
-              "@id": "#Source_RealObject4",
-              "name": "RealObject4",
+              "@id": "#Source_Source4",
+              "name": "Source4",
               "characteristics": [
                 {
                   "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -678,8 +683,8 @@
               ]
             },
             {
-              "@id": "#Source_RealObject5",
-              "name": "RealObject5",
+              "@id": "#Source_Source5",
+              "name": "Source5",
               "characteristics": [
                 {
                   "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -718,8 +723,8 @@
               ]
             },
             {
-              "@id": "#Source_RealObject6",
-              "name": "RealObject6",
+              "@id": "#Source_Source6",
+              "name": "Source6",
               "characteristics": [
                 {
                   "@id": "#MaterialAttributeValue/organism=Arabidopsis thaliana",
@@ -760,34 +765,34 @@
           ],
           "outputs": [
             {
-              "@id": "#Sample_Sample1",
-              "name": "Sample1"
+              "@id": "#Sample_Cultivation_Flask1",
+              "name": "Cultivation Flask1"
             },
             {
-              "@id": "#Sample_Sample2",
-              "name": "Sample2"
+              "@id": "#Sample_Cultivation_Flask2",
+              "name": "Cultivation Flask2"
             },
             {
-              "@id": "#Sample_Sample3",
-              "name": "Sample3"
+              "@id": "#Sample_Cultivation_Flask3",
+              "name": "Cultivation Flask3"
             },
             {
-              "@id": "#Sample_Sample4",
-              "name": "Sample4"
+              "@id": "#Sample_Cultivation_Flask4",
+              "name": "Cultivation Flask4"
             },
             {
-              "@id": "#Sample_Sample5",
-              "name": "Sample5"
+              "@id": "#Sample_Cultivation_Flask5",
+              "name": "Cultivation Flask5"
             },
             {
-              "@id": "#Sample_Sample6",
-              "name": "Sample6"
+              "@id": "#Sample_Cultivation_Flask6",
+              "name": "Cultivation Flask6"
             }
           ]
         },
         {
-          "@id": "#Process_process_2",
-          "name": "process_2",
+          "@id": "#Process_AccessoryDataRetrieval",
+          "name": "AccessoryDataRetrieval",
           "inputs": [
             {
               "@id": "#Sample_Sample1",
@@ -954,71 +959,6 @@
               "type": "Raw Data File"
             }
           ]
-        },
-        {
-          "@id": "#Process_Cell_Cultivation",
-          "name": "Cell Cultivation",
-          "executesProtocol": {
-            "@id": "#Protocol_experiment1_material_Cell_Cultivation",
-            "protocolType": {
-              "@id": "http://purl.obolibrary.org/obo/EFO_0003789",
-              "annotationValue": "growth protocol",
-              "termSource": "EFO",
-              "termAccession": "http://purl.obolibrary.org/obo/EFO_0003789"
-            }
-          },
-          "inputs": [
-            {
-              "@id": "#Sample_Sample1",
-              "name": "Sample1"
-            },
-            {
-              "@id": "#Sample_Sample2",
-              "name": "Sample2"
-            },
-            {
-              "@id": "#Sample_Sample3",
-              "name": "Sample3"
-            },
-            {
-              "@id": "#Sample_Sample4",
-              "name": "Sample4"
-            },
-            {
-              "@id": "#Sample_Sample5",
-              "name": "Sample5"
-            },
-            {
-              "@id": "#Sample_Sample6",
-              "name": "Sample6"
-            }
-          ],
-          "outputs": [
-            {
-              "@id": "#Sample_Cultivation_Flask",
-              "name": "Cultivation Flask"
-            },
-            {
-              "@id": "#Sample_Cultivation_Flask",
-              "name": "Cultivation Flask"
-            },
-            {
-              "@id": "#Sample_Cultivation_Flask",
-              "name": "Cultivation Flask"
-            },
-            {
-              "@id": "#Sample_Cultivation_Flask",
-              "name": "Cultivation Flask"
-            },
-            {
-              "@id": "#Sample_Cultivation_Flask",
-              "name": "Cultivation Flask"
-            },
-            {
-              "@id": "#Sample_Cultivation_Flask",
-              "name": "Cultivation Flask"
-            }
-          ]
         }
       ],
       "assays": [
@@ -1120,8 +1060,28 @@
           "materials": {
             "samples": [
               {
-                "@id": "#Sample_Cultivation_flask",
-                "name": "Cultivation flask"
+                "@id": "#Sample_Cultivation_Flask1",
+                "name": "Cultivation Flask1"
+              },
+              {
+                "@id": "#Sample_Cultivation_Flask2",
+                "name": "Cultivation Flask2"
+              },
+              {
+                "@id": "#Sample_Cultivation_Flask3",
+                "name": "Cultivation Flask3"
+              },
+              {
+                "@id": "#Sample_Cultivation_Flask4",
+                "name": "Cultivation Flask4"
+              },
+              {
+                "@id": "#Sample_Cultivation_Flask5",
+                "name": "Cultivation Flask5"
+              },
+              {
+                "@id": "#Sample_Cultivation_Flask6",
+                "name": "Cultivation Flask6"
               },
               {
                 "@id": "#Sample_sample_eppi_1",
@@ -1185,7 +1145,7 @@
               "@id": "#Process_Cell_Lysis",
               "name": "Cell Lysis",
               "executesProtocol": {
-                "@id": "#Protocol_experiment1_material_measurement1_Cell_Lysis",
+                "@id": "#Protocol_MaterialPreparation_measurement1_Cell_Lysis",
                 "parameters": [
                   {
                     "@id": "#ProtocolParameter/OBI:0302894",
@@ -1265,28 +1225,28 @@
               ],
               "inputs": [
                 {
-                  "@id": "#Sample_Cultivation_flask",
-                  "name": "Cultivation flask"
+                  "@id": "#Sample_Cultivation_Flask1",
+                  "name": "Cultivation Flask1"
                 },
                 {
-                  "@id": "#Sample_Cultivation_flask",
-                  "name": "Cultivation flask"
+                  "@id": "#Sample_Cultivation_Flask2",
+                  "name": "Cultivation Flask2"
                 },
                 {
-                  "@id": "#Sample_Cultivation_flask",
-                  "name": "Cultivation flask"
+                  "@id": "#Sample_Cultivation_Flask3",
+                  "name": "Cultivation Flask3"
                 },
                 {
-                  "@id": "#Sample_Cultivation_flask",
-                  "name": "Cultivation flask"
+                  "@id": "#Sample_Cultivation_Flask4",
+                  "name": "Cultivation Flask4"
                 },
                 {
-                  "@id": "#Sample_Cultivation_flask",
-                  "name": "Cultivation flask"
+                  "@id": "#Sample_Cultivation_Flask5",
+                  "name": "Cultivation Flask5"
                 },
                 {
-                  "@id": "#Sample_Cultivation_flask",
-                  "name": "Cultivation flask"
+                  "@id": "#Sample_Cultivation_Flask6",
+                  "name": "Cultivation Flask6"
                 }
               ],
               "outputs": [
@@ -1380,7 +1340,7 @@
               "@id": "#Process_Protein_Measurement",
               "name": "Protein Measurement",
               "executesProtocol": {
-                "@id": "#Protocol_experiment1_material_measurement1_Protein_Measurement",
+                "@id": "#Protocol_MaterialPreparation_measurement1_Protein_Measurement",
                 "components": [
                   {
                     "componentName": "Trypsin (MS:1001251)",
@@ -1678,10 +1638,10 @@
                 }
               },
               "value": {
-                "@id": "http://purl.obolibrary.org/obo/EFO_0010936",
+                "@id": "https://bioregistry.io/EFO:0010936",
                 "annotationValue": "SDS-PAGE",
                 "termSource": "EFO",
-                "termAccession": "http://purl.obolibrary.org/obo/EFO_0010936"
+                "termAccession": "https://bioregistry.io/EFO:0010936"
               }
             }
           ],

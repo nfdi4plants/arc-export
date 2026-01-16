@@ -3,6 +3,7 @@
 ### Registered ARC content:
 
 - root
+    - LICENSE.md
     - README.md
     - isa.investigation.xlsx
     - assays
@@ -22,12 +23,22 @@
             - README.md
             - isa.assay.xlsx
     - runs
-        - FSharpArcCapsule.yml
         - README.md
-        - fsResult1
+        - ARCMountResult
             - result.csv
+            - run.cwl
+            - run.yml
+        - DevcontainerResult
+            - result.csv
+            - run.cwl
+            - run.yml
+        - FixedScriptResult
+            - isa.run.xlsx
+            - result.csv
+            - run.cwl
+            - run.yml
     - studies
-        - experiment1_material
+        - MaterialPreparation
             - README.md
             - isa.study.xlsx
             - resources
@@ -42,13 +53,14 @@
             - isa.study.xlsx
     - workflows
         - ARCMount
-            - FSharpArcCapsule.cwl
             - script.fsx
+            - workflow.cwl
         - Devcontainer
-            - FSharpArcCapsule.cwl
+            - workflow.cwl
             - FSharpArcCapsule
                 - Dockerfile
                 - script.fsx
         - FixedScript
-            - FSharpArcCapsule.cwl
+            - isa.workflow.xlsx
             - script.fsx
+            - workflow.cwl
