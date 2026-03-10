@@ -28,6 +28,14 @@ To execute the tests run:
 dotnet test
 ```
 
+### Run locally with dotnet
+
+This assumes you have the git submodules cloned as described in the test section.
+
+```shell
+dotnet run --project ./src/arc-export/arc-export.fsproj -- -p ./tests/fixtures/ArcPrototype/ -f rocrate-metadata -f isa-json -f summary-markdown
+```
+
 # Setup
 
 ## local docker build
