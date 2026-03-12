@@ -33,7 +33,7 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
     let contentSize = "http://schema.org/contentSize"
     if arc.Title.IsNone then
         arc.Title <- Some "Untitled ARC"
-    arc.MakeDataFilesAbsolute()
+    
     let isa = arc.ToROCrateInvestigation(fs = arc.FileSystem, ignoreBrokenWR = true)
     LDDataset.setSDDatePublishedAsDateTime(isa, System.DateTime.Now)
     let graph = isa.Flatten()

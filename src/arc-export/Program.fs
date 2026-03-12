@@ -55,6 +55,7 @@ try
             arc
 
     arc.CleanPersons()
+    arc.MakeDataFilesAbsolute()
 
     let outputFormats = args.GetResults(CLIArgs.Output_Format)
 
