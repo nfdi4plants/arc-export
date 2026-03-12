@@ -36,7 +36,7 @@ type ArcPrototype() =
         | Ok s -> Assert.Equal(ReferenceObjects.ArcPrototype.arc_summary, s)
         | Error e -> Assert.True(false, e)
         
-    [<Fact(Skip = "Updated ARCtrl dependency to 3.0.3 due to bugs in inenio workflow. Not sure how to update the expected output for this test, so skipping for now @Freymaurer")>]
+    [<Fact>]
     member this.``ro-crate metadata is correct`` () =
         Assert.Equal(0,this.Fixture.ROCrateMetadataProcessResult.ExitCode)
         match this.Fixture.ROCrateMetadata with
@@ -74,7 +74,7 @@ type UnregisteredAssay() =
         | Ok s -> Assert.Equal(ReferenceObjects.UnregisteredAssay.arc_summary, s)
         | Error e -> Assert.True(false, e)
         
-    [<Fact(Skip = "Updated ARCtrl dependency to 3.0.3 due to bugs in inenio workflow. Not sure how to update the expected output for this test, so skipping for now @Freymaurer")>]
+    [<Fact>]
     member this.``ro-crate metadata is correct`` () =
         Assert.Equal(0,this.Fixture.ROCrateMetadataProcessResult.ExitCode)
         match this.Fixture.ROCrateMetadata with

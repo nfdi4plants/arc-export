@@ -1851,7 +1851,7 @@
       "@type": "Dataset",
       "additionalType": "Study",
       "identifier": "MaterialPreparation",
-      "dateModified": "2026-01-16T13:38:54.6521198",
+      "dateModified": "2026-03-12T14:05:52.1140105",
       "description": "In this a devised study to have an exemplary experimental material description.",
       "hasPart": [
         {
@@ -1961,7 +1961,7 @@
       "@type": "Dataset",
       "additionalType": "Study",
       "identifier": "experiment2",
-      "dateModified": "2026-01-16T13:38:54.6551082",
+      "dateModified": "2026-03-12T14:05:52.1165528",
       "hasPart": [],
       "about": {
         "@id": "#Process_S_experiment2_experiment2_0"
@@ -2092,7 +2092,7 @@
       "sdPublisher": {
         "@id": "#Organization_DataPLANT"
       },
-      "dateCreated": "2026-01-16T12:38:54.6623256Z",
+      "dateCreated": "2026-03-12T13:05:52.1257353Z",
       "intendedUse": {
         "@id": "#OA_CWL"
       }
@@ -2160,7 +2160,7 @@
       "@id": "WorkflowStep_runs/FixedScriptResult/run.cwl_FixedScript",
       "@type": "ComputationalWorkflow",
       "name": "FixedScript",
-      "identifier": "../../workflows/FixedScript/workflow.cwl"
+      "identifier": "inline:CommandLineTool"
     },
     {
       "@id": "runs/FixedScriptResult/run.cwl",
@@ -2195,7 +2195,7 @@
       "sdPublisher": {
         "@id": "#Organization_DataPLANT"
       },
-      "dateCreated": "2026-01-16T12:38:54.7090982Z"
+      "dateCreated": "2026-03-12T13:05:52.1845036Z"
     },
     {
       "@id": "#Protocol_ColumnAddition",
@@ -2360,7 +2360,7 @@
           "@id": "http://orcid.org/0000-0002-8241-5300"
         }
       ],
-      "datePublished": "2026-01-16T13:38:54.7100123",
+      "datePublished": "2026-03-12T14:05:52.0435579",
       "description": "A prototypic ARC that implements all specification standards accordingly",
       "hasPart": [
         {
@@ -2383,6 +2383,7 @@
         }
       ],
       "name": "ArcPrototype",
+      "sdDatePublished": "2026-03-12T14:05:52.1857843",
       "license": {
         "@id": "LICENSE.md"
       }

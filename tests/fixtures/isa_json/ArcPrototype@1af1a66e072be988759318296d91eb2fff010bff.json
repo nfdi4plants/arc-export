@@ -929,33 +929,33 @@
           ],
           "outputs": [
             {
-              "@id": "Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
-              "name": "Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
+              "@id": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
+              "name": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
               "type": "Raw Data File"
             },
             {
-              "@id": "Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
-              "name": "Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
+              "@id": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
+              "name": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
               "type": "Raw Data File"
             },
             {
-              "@id": "Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
-              "name": "Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
+              "@id": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
+              "name": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
               "type": "Raw Data File"
             },
             {
-              "@id": "Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
-              "name": "Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
+              "@id": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
+              "name": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
               "type": "Raw Data File"
             },
             {
-              "@id": "Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
-              "name": "Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
+              "@id": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
+              "name": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
               "type": "Raw Data File"
             },
             {
-              "@id": "Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
-              "name": "Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
+              "@id": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
+              "name": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
               "type": "Raw Data File"
             }
           ]
@@ -967,93 +967,93 @@
           "@id": "assays/measurement1/",
           "dataFiles": [
             {
-              "@id": "sample1.raw",
-              "name": "sample1.raw",
+              "@id": "assays/measurement1/dataset/sample1.raw",
+              "name": "assays/measurement1/dataset/sample1.raw",
               "type": "Raw Data File"
             },
             {
-              "@id": "sample2.raw",
-              "name": "sample2.raw",
+              "@id": "assays/measurement1/dataset/sample2.raw",
+              "name": "assays/measurement1/dataset/sample2.raw",
               "type": "Raw Data File"
             },
             {
-              "@id": "sample3.raw",
-              "name": "sample3.raw",
+              "@id": "assays/measurement1/dataset/sample3.raw",
+              "name": "assays/measurement1/dataset/sample3.raw",
               "type": "Raw Data File"
             },
             {
-              "@id": "sample4.raw",
-              "name": "sample4.raw",
+              "@id": "assays/measurement1/dataset/sample4.raw",
+              "name": "assays/measurement1/dataset/sample4.raw",
               "type": "Raw Data File"
             },
             {
-              "@id": "sample5.raw",
-              "name": "sample5.raw",
+              "@id": "assays/measurement1/dataset/sample5.raw",
+              "name": "assays/measurement1/dataset/sample5.raw",
               "type": "Raw Data File"
             },
             {
-              "@id": "sample6.raw",
-              "name": "sample6.raw",
+              "@id": "assays/measurement1/dataset/sample6.raw",
+              "name": "assays/measurement1/dataset/sample6.raw",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=1",
-              "name": "proteomics_result.csv#col=1",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=1",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=1",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=2",
-              "name": "proteomics_result.csv#col=2",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=2",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=2",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=3",
-              "name": "proteomics_result.csv#col=3",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=3",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=3",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=4",
-              "name": "proteomics_result.csv#col=4",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=4",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=4",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=5",
-              "name": "proteomics_result.csv#col=5",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=5",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=5",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=6",
-              "name": "proteomics_result.csv#col=6",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=6",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=6",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=7",
-              "name": "proteomics_result.csv#col=7",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=7",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=7",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=8",
-              "name": "proteomics_result.csv#col=8",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=8",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=8",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=9",
-              "name": "proteomics_result.csv#col=9",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=9",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=9",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=10",
-              "name": "proteomics_result.csv#col=10",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=10",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=10",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=11",
-              "name": "proteomics_result.csv#col=11",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=11",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=11",
               "type": "Raw Data File"
             },
             {
-              "@id": "proteomics_result.csv#col=12",
-              "name": "proteomics_result.csv#col=12",
+              "@id": "assays/measurement1/dataset/proteomics_result.csv#col=12",
+              "name": "assays/measurement1/dataset/proteomics_result.csv#col=12",
               "type": "Raw Data File"
             }
           ],
@@ -1390,33 +1390,33 @@
               ],
               "outputs": [
                 {
-                  "@id": "sample1.raw",
-                  "name": "sample1.raw",
+                  "@id": "assays/measurement1/dataset/sample1.raw",
+                  "name": "assays/measurement1/dataset/sample1.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample2.raw",
-                  "name": "sample2.raw",
+                  "@id": "assays/measurement1/dataset/sample2.raw",
+                  "name": "assays/measurement1/dataset/sample2.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample3.raw",
-                  "name": "sample3.raw",
+                  "@id": "assays/measurement1/dataset/sample3.raw",
+                  "name": "assays/measurement1/dataset/sample3.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample4.raw",
-                  "name": "sample4.raw",
+                  "@id": "assays/measurement1/dataset/sample4.raw",
+                  "name": "assays/measurement1/dataset/sample4.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample5.raw",
-                  "name": "sample5.raw",
+                  "@id": "assays/measurement1/dataset/sample5.raw",
+                  "name": "assays/measurement1/dataset/sample5.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample6.raw",
-                  "name": "sample6.raw",
+                  "@id": "assays/measurement1/dataset/sample6.raw",
+                  "name": "assays/measurement1/dataset/sample6.raw",
                   "type": "Raw Data File"
                 }
               ]
@@ -1444,125 +1444,125 @@
               ],
               "inputs": [
                 {
-                  "@id": "sample1.raw",
-                  "name": "sample1.raw",
+                  "@id": "assays/measurement1/dataset/sample1.raw",
+                  "name": "assays/measurement1/dataset/sample1.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample1.raw",
-                  "name": "sample1.raw",
+                  "@id": "assays/measurement1/dataset/sample1.raw",
+                  "name": "assays/measurement1/dataset/sample1.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample2.raw",
-                  "name": "sample2.raw",
+                  "@id": "assays/measurement1/dataset/sample2.raw",
+                  "name": "assays/measurement1/dataset/sample2.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample2.raw",
-                  "name": "sample2.raw",
+                  "@id": "assays/measurement1/dataset/sample2.raw",
+                  "name": "assays/measurement1/dataset/sample2.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample3.raw",
-                  "name": "sample3.raw",
+                  "@id": "assays/measurement1/dataset/sample3.raw",
+                  "name": "assays/measurement1/dataset/sample3.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample3.raw",
-                  "name": "sample3.raw",
+                  "@id": "assays/measurement1/dataset/sample3.raw",
+                  "name": "assays/measurement1/dataset/sample3.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample4.raw",
-                  "name": "sample4.raw",
+                  "@id": "assays/measurement1/dataset/sample4.raw",
+                  "name": "assays/measurement1/dataset/sample4.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample4.raw",
-                  "name": "sample4.raw",
+                  "@id": "assays/measurement1/dataset/sample4.raw",
+                  "name": "assays/measurement1/dataset/sample4.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample5.raw",
-                  "name": "sample5.raw",
+                  "@id": "assays/measurement1/dataset/sample5.raw",
+                  "name": "assays/measurement1/dataset/sample5.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample5.raw",
-                  "name": "sample5.raw",
+                  "@id": "assays/measurement1/dataset/sample5.raw",
+                  "name": "assays/measurement1/dataset/sample5.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample6.raw",
-                  "name": "sample6.raw",
+                  "@id": "assays/measurement1/dataset/sample6.raw",
+                  "name": "assays/measurement1/dataset/sample6.raw",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "sample6.raw",
-                  "name": "sample6.raw",
+                  "@id": "assays/measurement1/dataset/sample6.raw",
+                  "name": "assays/measurement1/dataset/sample6.raw",
                   "type": "Raw Data File"
                 }
               ],
               "outputs": [
                 {
-                  "@id": "proteomics_result.csv#col=1",
-                  "name": "proteomics_result.csv#col=1",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=1",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=1",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=2",
-                  "name": "proteomics_result.csv#col=2",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=2",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=2",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=3",
-                  "name": "proteomics_result.csv#col=3",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=3",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=3",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=4",
-                  "name": "proteomics_result.csv#col=4",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=4",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=4",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=5",
-                  "name": "proteomics_result.csv#col=5",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=5",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=5",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=6",
-                  "name": "proteomics_result.csv#col=6",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=6",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=6",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=7",
-                  "name": "proteomics_result.csv#col=7",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=7",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=7",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=8",
-                  "name": "proteomics_result.csv#col=8",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=8",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=8",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=9",
-                  "name": "proteomics_result.csv#col=9",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=9",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=9",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=10",
-                  "name": "proteomics_result.csv#col=10",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=10",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=10",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=11",
-                  "name": "proteomics_result.csv#col=11",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=11",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=11",
                   "type": "Raw Data File"
                 },
                 {
-                  "@id": "proteomics_result.csv#col=12",
-                  "name": "proteomics_result.csv#col=12",
+                  "@id": "assays/measurement1/dataset/proteomics_result.csv#col=12",
+                  "name": "assays/measurement1/dataset/proteomics_result.csv#col=12",
                   "type": "Raw Data File"
                 }
               ]

@@ -7,6 +7,8 @@ open Fake.Core
 
 module ROCrateDates = 
     
+    let sdDatePublishedRegex = "\"sdDatePublished\": \"[^\"]*\""
+
     let datePublishedRegex = "datePublished\": \"[^\\\"]*\""
 
     let dateModifiedRegex = "dateModified\": \"[^\\\"]*\""
@@ -21,6 +23,7 @@ module ROCrateDates =
         replaceRegex datePublishedRegex "datePublished\": \"\"" s
         |> replaceRegex dateModifiedRegex "dateModified\": \"\""
         |> replaceRegex dateCreatedRegex "dateCreated\": \"\""
+        |> replaceRegex sdDatePublishedRegex "\"datePublished\": \"\""
         |> fun s -> s.Replace("\\r\\n", "\\n")
 
 let jsonStringEquals (expected: string) (actual: string) =
@@ -68,7 +71,7 @@ type ARCTestFixture(arcName : string) =
     interface IDisposable with
         override this.Dispose() =
             Directory.Delete($"./{arcName}", true)
-
+                        
     member this.ISAJsonProcessResult = resultIsaJson
     member this.ArcSummaryProcessResult = resultSummaryMarkdown
     member this.ROCrateMetadataProcessResult = resultROCrateMetadata

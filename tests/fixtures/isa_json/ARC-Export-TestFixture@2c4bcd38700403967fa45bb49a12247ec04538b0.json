@@ -46,8 +46,8 @@
           "@id": "assays/SharedSampleWithStudy/",
           "dataFiles": [
             {
-              "@id": "MyData",
-              "name": "MyData",
+              "@id": "assays/SharedSampleWithStudy/dataset/MyData",
+              "name": "assays/SharedSampleWithStudy/dataset/MyData",
               "type": "Raw Data File"
             }
           ],
@@ -71,8 +71,8 @@
               ],
               "outputs": [
                 {
-                  "@id": "MyData",
-                  "name": "MyData",
+                  "@id": "assays/SharedSampleWithStudy/dataset/MyData",
+                  "name": "assays/SharedSampleWithStudy/dataset/MyData",
                   "type": "Raw Data File"
                 }
               ]

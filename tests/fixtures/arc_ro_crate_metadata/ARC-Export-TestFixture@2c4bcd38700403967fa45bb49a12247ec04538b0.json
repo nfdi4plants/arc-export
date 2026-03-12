@@ -91,7 +91,7 @@
       "@type": "Dataset",
       "additionalType": "Study",
       "identifier": "Study1",
-      "dateModified": "2026-01-16T12:44:00.9658894",
+      "dateModified": "2026-03-12T14:15:45.7654329",
       "hasPart": [],
       "about": {
         "@id": "#Process_S_Study1_SimpleTable_0"
@@ -107,7 +107,7 @@
       "@type": "Dataset",
       "additionalType": "Investigation",
       "identifier": "ARC-Export-TestFixture",
-      "datePublished": "2026-01-16T12:44:00.9667723",
+      "datePublished": "2026-03-12T14:15:45.7488140",
       "hasPart": [
         {
           "@id": "assays/SharedSampleWithStudy/"
@@ -120,6 +120,7 @@
         }
       ],
       "name": "Test Fixture for testing ARC-Export containing all assays (even unregistered)",
+      "sdDatePublished": "2026-03-12T14:15:45.7663373",
       "license": {
         "@id": "#LICENSE"
       }
