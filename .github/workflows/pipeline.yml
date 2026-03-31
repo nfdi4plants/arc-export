@@ -36,7 +36,7 @@ jobs:
           submodules: true
       - name: Get all relevant file changes
         id: changed-files-yaml
-        uses: tj-actions/changed-files@531f5f7d163941f0c1c04e0ff4d8bb243ac4366f
+        uses: tj-actions/changed-files@c34c1c13a740b06851baff92ab9a653d93ad6ce7
         with:
           files_yaml: |
             global:
