@@ -55,7 +55,7 @@ type GitLfsFile = {
     version: string 
 }
 
-type GitLfsJson = {
+type GitLfsFiles = {
     files: GitLfsFile []
 }
 
@@ -63,7 +63,7 @@ let deserializeGitLfsJson (json: string) =
     let options = JsonSerializerOptions()
     options.PropertyNameCaseInsensitive <- true
 
-    JsonSerializer.Deserialize<GitLfsJson>(json, options)
+    JsonSerializer.Deserialize<GitLfsFiles>(json, options)
 
 let [<Literal>] oidPattern = """(?<=oid )(?<HashType>\S+):(?<HashValue>\S+)"""
 let [<Literal>] sizePattern = """(?<=size )(?<Size>\d+)"""

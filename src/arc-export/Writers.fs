@@ -68,21 +68,21 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
                         printfn "ERROR: File on path does not exist: %s" fullPath
             )
     | None ->
-        printfn "Oh No! Unable to generate git lfs json (`git lfs ls-files -j`)"
-    // graph.Nodes
-    // |> Seq.iteri (fun i n -> 
-    //     if LDFile.validate(n, ?context = graph.TryGetContext()) && not (n.Id.Contains("#")) && not (n.HasType(LDDataset.schemaType, ?context = graph.TryGetContext()))  then
-    //         printfn "checking lfs for index %i - %s" i n.Id
-    //         match GitLFS.tryGetGitLFSObject repoDir n.Id with
-    //         | Some lfsHash ->
-    //             match lfsHash.Hash with
-    //             | GitLFS.Hash.SHA256 hash ->
-    //                 n.SetProperty(sha256, hash, ?context = graph.TryGetContext())
-    //             n.SetProperty(contentSize, $"{lfsHash.Size}b", ?context = graph.TryGetContext())
-    //         | None -> 
-    //             printfn "No Git LFS object found for %s" n.Id
-    //             ()
-    // )
+        printfn "Oh No! Unable to generate git lfs json (`git lfs ls-files -j`), consider updating git-lfs (>= v3.2.0). Trying to explicitly parse files instead."
+        graph.Nodes
+        |> Seq.iteri (fun i n -> 
+            if LDFile.validate(n, ?context = graph.TryGetContext()) && not (n.Id.Contains("#")) && not (n.HasType(LDDataset.schemaType, ?context = graph.TryGetContext()))  then
+                printfn "checking lfs for index %i - %s" i n.Id
+                match GitLFS.tryGetGitLFSObject repoDir n.Id with
+                | Some lfsHash ->
+                    match lfsHash.Hash with
+                    | GitLFS.Hash.SHA256 hash ->
+                        n.SetProperty(sha256, hash, ?context = graph.TryGetContext())
+                    n.SetProperty(contentSize, $"{lfsHash.Size}b", ?context = graph.TryGetContext())
+                | None -> 
+                    printfn "No Git LFS object found for %s" n.Id
+                    ()
+        )
     graph.Compact_InPlace()
     let ro_crate_metadata = graph.ToROCrateJsonString(2)
     let ro_crate_metadata_path = Path.Combine(outDir, ro_crate_metadata_filename)
