@@ -4,6 +4,67 @@ open System.Diagnostics
 open System.Runtime.InteropServices
 open System.IO
 
+open System
+open System.IO
+
+/// This is a function to strictly check if a file is a git lfs pointer file. It was created due to
+/// system out of memory issues with the tryfromString function
+let isGitLfsPointerFile (filePath: string) =
+    if not (File.Exists filePath) then
+        printfn "file for Path does not exist: %s" filePath
+        false
+    else
+        try
+            // LFS pointer files are small (usually < 1 KB)
+            let fileInfo = FileInfo(filePath)
+            if fileInfo.Length > 2048L then
+                false
+            else
+                let lines = File.ReadLines(filePath) |> Seq.truncate 3 |> Seq.toArray
+
+                if lines.Length < 3 then
+                    false
+                else
+                    let hasVersion =
+                        lines.[0].StartsWith("version https://git-lfs.github.com/spec/")
+
+                    let hasOid =
+                        lines |> Array.exists (fun l -> l.StartsWith("oid sha256:"))
+
+                    let hasSize =
+                        lines |> Array.exists (fun l -> l.StartsWith("size "))
+
+                    hasVersion && hasOid && hasSize
+        with
+        | _ -> false
+
+open System.IO
+open System.Text.Json
+
+open System.Text.Json.Serialization
+
+
+type GitLfsFile = { 
+    name: string
+    size: int64
+    checkout: bool
+    downloaded: bool
+    [<JsonPropertyName("oid_type")>]
+    oidType: string
+    oid: string
+    version: string 
+}
+
+type GitLfsFiles = {
+    files: GitLfsFile []
+}
+
+let deserializeGitLfsJson (json: string) =
+    let options = JsonSerializerOptions()
+    options.PropertyNameCaseInsensitive <- true
+
+    JsonSerializer.Deserialize<GitLfsFiles>(json, options)
+
 let [<Literal>] oidPattern = """(?<=oid )(?<HashType>\S+):(?<HashValue>\S+)"""
 let [<Literal>] sizePattern = """(?<=size )(?<Size>\d+)"""
 let [<Literal>] versionPattern = """(?<=version )(?<Version>\S+)"""
@@ -34,9 +95,7 @@ type GitLFSObject =
 
     static member tryFromString (s: string) : GitLFSObject option =
         try 
-            let parts = s.Split ([| '\n' |], 3, System.StringSplitOptions.RemoveEmptyEntries)
-            if parts.Length <> 3 then
-                failwith "Invalid Git LFS object string format."
+            let parts = s.Split ([| "\n"; System.Environment.NewLine |], System.StringSplitOptions.RemoveEmptyEntries)
         
             let version = 
                 parts
@@ -70,9 +129,44 @@ type GitLFSObject =
             Some { Version = version; Hash = hash; Size = size }
         with
         | ex -> 
-            printfn "Error parsing Git LFS object: %s" ex.Message
+            printfn "Error parsing Git LFS object: %s - (%s)" ex.Message s
             None
 
+open System
+open System.Diagnostics
+open System.IO
+
+type CommandResult =
+    { ExitCode: int
+      StdOut: string
+      StdErr: string }
+
+let runGit (repoDir: string) (args: string) : CommandResult =
+    let psi =
+        ProcessStartInfo(
+            FileName = "git",
+            Arguments = args,
+            WorkingDirectory = repoDir,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            UseShellExecute = false,
+            CreateNoWindow = true
+        )
+
+    use proc = new Process(StartInfo = psi)
+
+    proc.Start() |> ignore
+
+    // Read both streams fully BEFORE waiting
+    let stdOut = proc.StandardOutput.ReadToEnd()
+    let stdErr = proc.StandardError.ReadToEnd()
+
+    proc.WaitForExit()
+
+    { ExitCode = proc.ExitCode
+      StdOut = stdOut
+      StdErr = stdErr }
+ 
 let executeGitCommandWithResponse (repoDir : string) (command : string) =
 
     let procStartInfo = 
@@ -89,7 +183,7 @@ let executeGitCommandWithResponse (repoDir : string) (command : string) =
     let outputHandler (_sender:obj) (args:DataReceivedEventArgs) = 
         if (args.Data = null |> not) then
             outputs.Add(args.Data)
-            printfn ($"GIT: {args.Data}")
+            // printfn ($"GIT: {args.Data}")
         
     let errorHandler (_sender:obj) (args:DataReceivedEventArgs) =  
         if (args.Data = null |> not) then
@@ -115,13 +209,15 @@ let executeGitCommand (repoDir : string) (command : string) =
 let executeGitLFSHashCommand (repoDir : string) (filePath : string) = 
     // or "git cat-file -p :assays/measurement1/dataset/proteomics_result.csv"
     let p = $"{filePath.Trim().Replace('\\','/')}"
-    executeGitCommandWithResponse repoDir $"lfs pointer --file {p}"
+    printfn "%s" p
+    executeGitCommandWithResponse repoDir $"lfs pointer --file=\"{p}\""
 
 /// Gets the Git LFS object from a pointer file by simply reading it.
 let tryGetGitLFSObjectFromPointerFile (repoDir : string) (filePath : string) =
     let fullPath = Path.Combine(repoDir, filePath)
-    if not (File.Exists fullPath) then
-        printfn "Git LFS pointer file not found: %s" fullPath
+    // check if file is pointer file
+    if isGitLfsPointerFile fullPath |> not then
+        
         None
     else
         File.ReadAllText fullPath
@@ -144,3 +240,21 @@ let tryGetGitLFSObject (repoDir : string) (filePath : string) =
     | None -> 
         // If that fails, try to get it from the actual file
         tryGetGitLFSObjectFromActualFile repoDir filePath
+
+let tryCreateGitLfsJson (repoDir: string) =
+    let output = 
+        runGit repoDir "lfs ls-files -j"
+    try
+        deserializeGitLfsJson output.StdOut
+        |> Some
+    with
+        | _ -> None
+
+let normalizePathToGitPath (p: string) =
+    p.Replace("\\", "/").Trim()
+    |> fun p -> if p.StartsWith "./" then p.Substring(2) else p
+    |> fun p -> p.Trim('/')
+
+let tryGetPathFromGitLfsJson (p: string) (arr: GitLfsFile []) =
+    arr
+    |> Array.tryFind (fun lfs -> lfs.name = normalizePathToGitPath p) 
