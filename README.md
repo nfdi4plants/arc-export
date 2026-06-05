@@ -39,6 +39,9 @@ dotnet run --project ./src/arc-export/arc-export.fsproj -- -p ./tests/fixtures/A
 # Setup
 
 ## local docker build
+
+> **Note:** the Docker build runs the test suite as part of the build, and the tests depend on the git submodules under `tests/fixtures`. Initialize submodules first (see [Test](#test)) — otherwise the build will fail.
+
 ```shell
 docker build . -t arc-export
 

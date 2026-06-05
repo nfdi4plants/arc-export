@@ -1,24 +1,25 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS base
 
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-COPY "src/arc-export" .
-RUN dotnet restore "./arc-export.fsproj"
-RUN dotnet build "./arc-export.fsproj" -c $BUILD_CONFIGURATION -o /build
-
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./arc-export.fsproj" -c $BUILD_CONFIGURATION -o /publish
-
-FROM base AS final
-
-# This container needs git-lfs installed so the cli tool can access it to retrieve lfs tracked files.
+# git-lfs is needed both at test time (LFS-related fixtures shell out to git) and
+# at runtime (the cli tool retrieves LFS-tracked files). Install it once here so
+# both the build/test stage and the final image inherit it.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends git-lfs \
     && rm -rf /var/lib/apt/lists/* \
     && git lfs install --system
 
+FROM base AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+COPY . .
+RUN dotnet restore "./arc-export.sln"
+RUN dotnet test "./arc-export.sln" -c $BUILD_CONFIGURATION --no-restore
+
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./src/arc-export/arc-export.fsproj" -c $BUILD_CONFIGURATION -o /publish --no-restore
+
+FROM base AS final
 COPY --from=publish /publish .
 
 #FROM mcr.microsoft.com/dotnet/sdk:6.0
