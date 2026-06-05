@@ -11,6 +11,26 @@ let ``Can execute compiled tool`` () =
     let res = runTool "arc-export" [|"--help"|] "."
     Assert.Equal(0, res.ExitCode)
 
+[<Fact>]
+let ``lfs ro-crate metadata only hashes LFS-tracked files`` () =
+    // Regression test: only files actually tracked by Git LFS may receive a sha256.
+    // The LFS writer shells out to git, which needs a real repo - the fixture copied
+    // into bin/ has a broken submodule .git pointer, so run against the source
+    // submodule (the same path GitSubmoduleTests/TestObjects use).
+    let outDir = "./ArcPrototype_lfs"
+    DirectoryInfo(outDir).Create() |> ignore
+    try
+        let res = runTool "arc-export" [|"-p"; "../../../fixtures/ArcPrototype"; "-f"; "rocrate-metadata-lfs"; "-o"; outDir|] "."
+        Assert.Equal(0, res.ExitCode)
+        let actual =
+            File.ReadAllText(Path.Combine(outDir, "arc-ro-crate-metadata.json"))
+            |> fun f -> f.ReplaceLineEndings("\n")
+            |> ROCrateDates.undateString
+        let expected = ROCrateDates.undateString ReferenceObjects.ArcPrototype.arc_ro_crate_metadata_lfs
+        Assert.Equal(expected, actual)
+    finally
+        Directory.Delete(outDir, true)
+
 
 type ARCPrototypeFixture() = inherit ARCTestFixture("ArcPrototype")
 

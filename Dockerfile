@@ -12,6 +12,13 @@ ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./arc-export.fsproj" -c $BUILD_CONFIGURATION -o /publish
 
 FROM base AS final
+
+# This container needs git-lfs installed so the cli tool can access it to retrieve lfs tracked files.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends git-lfs \
+    && rm -rf /var/lib/apt/lists/* \
+    && git lfs install --system
+
 COPY --from=publish /publish .
 
 #FROM mcr.microsoft.com/dotnet/sdk:6.0

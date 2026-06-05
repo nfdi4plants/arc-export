@@ -69,19 +69,30 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
             )
     | None ->
         printfn "Oh No! Unable to generate git lfs json (`git lfs ls-files -j`), consider updating git-lfs (>= v3.2.0). Trying to explicitly parse files instead."
+        // Determine which files are actually LFS-tracked. Without this, `git lfs pointer
+        // --file` would generate a (bogus) hash for every file, LFS-tracked or not.
+        let lfsTrackedFiles = GitLFS.tryGetLfsTrackedFiles repoDir
+        match lfsTrackedFiles with
+        | None -> printfn "WARNING: Could not list Git LFS files (`git lfs ls-files`). No LFS hashes will be written."
+        | Some files -> printfn "Found %i Git LFS tracked file(s)." files.Count
         graph.Nodes
-        |> Seq.iteri (fun i n -> 
+        |> Seq.iteri (fun i n ->
             if LDFile.validate(n, ?context = graph.TryGetContext()) && not (n.Id.Contains("#")) && not (n.HasType(LDDataset.schemaType, ?context = graph.TryGetContext()))  then
-                printfn "checking lfs for index %i - %s" i n.Id
-                match GitLFS.tryGetGitLFSObject repoDir n.Id with
-                | Some lfsHash ->
-                    match lfsHash.Hash with
-                    | GitLFS.Hash.SHA256 hash ->
-                        n.SetProperty(sha256, hash, ?context = graph.TryGetContext())
-                    n.SetProperty(contentSize, $"{lfsHash.Size}b", ?context = graph.TryGetContext())
-                | None -> 
-                    printfn "No Git LFS object found for %s" n.Id
-                    ()
+                let isLfsTracked =
+                    match lfsTrackedFiles with
+                    | Some files -> files.Contains(GitLFS.normalizePathToGitPath n.Id)
+                    | None -> false
+                if isLfsTracked then
+                    printfn "checking lfs for index %i - %s" i n.Id
+                    match GitLFS.tryGetGitLFSObject repoDir n.Id with
+                    | Some lfsHash ->
+                        match lfsHash.Hash with
+                        | GitLFS.Hash.SHA256 hash ->
+                            n.SetProperty(sha256, hash, ?context = graph.TryGetContext())
+                        n.SetProperty(contentSize, $"{lfsHash.Size}b", ?context = graph.TryGetContext())
+                    | None ->
+                        printfn "No Git LFS object found for %s" n.Id
+                        ()
         )
     graph.Compact_InPlace()
     let ro_crate_metadata = graph.ToROCrateJsonString(2)

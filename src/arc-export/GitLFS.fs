@@ -217,7 +217,6 @@ let tryGetGitLFSObjectFromPointerFile (repoDir : string) (filePath : string) =
     let fullPath = Path.Combine(repoDir, filePath)
     // check if file is pointer file
     if isGitLfsPointerFile fullPath |> not then
-        
         None
     else
         File.ReadAllText fullPath
@@ -232,13 +231,18 @@ let tryGetGitLFSObjectFromActualFile (repoDir : string) (filePath : string) =
     else
         GitLFSObject.tryFromString (String.concat "\n" output)
 
+/// Gets the Git LFS object for a file. NOTE: this does NOT verify that the file is
+/// actually tracked by Git LFS - `tryGetGitLFSObjectFromActualFile` will generate a
+/// pointer for any file. Callers must restrict this to known LFS-tracked files
+/// (see `tryGetLfsTrackedFiles`).
 let tryGetGitLFSObject (repoDir : string) (filePath : string) =
     // First try to get the LFS object from the pointer file
     let pointerObject = tryGetGitLFSObjectFromPointerFile repoDir filePath
     match pointerObject with
     | Some obj -> Some obj
-    | None -> 
-        // If that fails, try to get it from the actual file
+    | None ->
+        // If that fails (the file is checked out as real content), regenerate
+        // the pointer from the actual file.
         tryGetGitLFSObjectFromActualFile repoDir filePath
 
 let tryCreateGitLfsJson (repoDir: string) =
@@ -257,4 +261,29 @@ let normalizePathToGitPath (p: string) =
 
 let tryGetPathFromGitLfsJson (p: string) (arr: GitLfsFile []) =
     arr
-    |> Array.tryFind (fun lfs -> lfs.name = normalizePathToGitPath p) 
+    |> Array.tryFind (fun lfs -> lfs.name = normalizePathToGitPath p)
+
+/// Parses a single line of `git lfs ls-files` output ("<oid> <* | -> <path>")
+/// into its normalized git path. ('*' = content present, '-' = pointer only.)
+let tryParseLsFilesLine (line: string) : string option =
+    let idx =
+        match line.IndexOf(" * "), line.IndexOf(" - ") with
+        | i, _ when i >= 0 -> i
+        | _, j -> j
+    if idx >= 0 then
+        Some(line.Substring(idx + 3) |> normalizePathToGitPath)
+    else
+        None
+
+/// Returns the set of LFS-tracked file paths (as normalized git paths) by parsing
+/// `git lfs ls-files`. Unlike `git lfs ls-files -j`, this works on git-lfs < v3.2.0.
+/// Used as a fallback so that only files actually tracked by LFS get a hash.
+let tryGetLfsTrackedFiles (repoDir: string) : Set<string> option =
+    let output = runGit repoDir "lfs ls-files"
+    if output.ExitCode <> 0 then
+        None
+    else
+        output.StdOut.Split([| '\n'; '\r' |], StringSplitOptions.RemoveEmptyEntries)
+        |> Array.choose tryParseLsFilesLine
+        |> Set.ofArray
+        |> Some

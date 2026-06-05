@@ -25,9 +25,16 @@ module ArcPrototype =
         with _ -> 
             ""
 
-    let arc_ro_crate_metadata = 
+    let arc_ro_crate_metadata =
         try
             File.ReadAllText $"fixtures/arc_ro_crate_metadata/ArcPrototype@{expected_prototype_commit_hash}.json"
+            |> fun f -> f.ReplaceLineEndings("\n")
+        with _ ->
+            ""
+
+    let arc_ro_crate_metadata_lfs =
+        try
+            File.ReadAllText $"fixtures/arc_ro_crate_metadata_lfs/ArcPrototype@{expected_prototype_commit_hash}.json"
             |> fun f -> f.ReplaceLineEndings("\n")
         with _ ->
             ""
