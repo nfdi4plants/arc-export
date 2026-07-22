@@ -31,7 +31,7 @@ try
              
         let fulFilledContracts = 
             contracts 
-            |> ARCtrl.Contract.fullFillContractBatchAsync arcPath |> Async.RunSynchronously
+            |> ARCtrl.Contract.fullFillContractBatchAsync false arcPath |> Async.RunSynchronously
 
         match fulFilledContracts with
         | Ok c -> 
