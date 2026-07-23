@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS base
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS base
 
 # git-lfs is needed both at test time (LFS-related fixtures shell out to git) and
 # at runtime (the cli tool retrieves LFS-tracked files). Install it once here so
