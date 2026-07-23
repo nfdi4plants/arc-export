@@ -18,6 +18,14 @@ let isa_json_filename = "arc-isa.json"
 [<Literal>]
 let arc_summary_markdown_filename = "arc-summary.md"
 
+
+let projectID = 
+    try 
+        let var = System.Environment.GetEnvironmentVariable("CI_PROJECT_URL")
+        if var = null || var = "" then None else Some var
+    with
+    | _ -> None
+
 let write_ro_crate_metadata (outDir: string) (arc: ARC) =
     printfn "It is writing here"
     printfn "Writing ARC RO-Crate metadata to %s" (Path.Combine(outDir, ro_crate_metadata_filename))
@@ -37,6 +45,7 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
     
     let isa = arc.ToROCrateInvestigation(fs = arc.FileSystem, ignoreBrokenWR = true)
     LDDataset.setSDDatePublishedAsDateTime(isa, System.DateTime.Now)
+    if projectID.IsSome then isa.SetProperty("http://schema.org/mainEntityOfPage", projectID.Value)
     let graph = isa.Flatten()
     let customContextPart = Context.initBioschemasContext()
     customContextPart.AddMapping("sha256", sha256)
