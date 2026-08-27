@@ -25,6 +25,13 @@ let fixtureLFSObject =
       Hash = SHA256 "01bb750bd981905d7065d48943567869570597745c4478bde4f7dbee16be8e3d"
       Size = 95710L }
 
+[<Fact>]
+let ``Git LFS JSON deserialization normalizes null files to an empty array`` () =
+    let result = GitLFS.deserializeGitLfsJson """{"files":null}"""
+
+    Assert.NotNull(result.files)
+    Assert.Empty(result.files)
+
 
 [<Fact>]
 let ``Can correctly parse lfs pointer result`` () = 

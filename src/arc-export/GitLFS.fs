@@ -63,7 +63,13 @@ let deserializeGitLfsJson (json: string) =
     let options = JsonSerializerOptions()
     options.PropertyNameCaseInsensitive <- true
 
-    JsonSerializer.Deserialize<GitLfsFiles>(json, options)
+    let info = JsonSerializer.Deserialize<GitLfsFiles>(json, options)
+    if obj.ReferenceEquals(info, null) then
+        failwith "Git LFS JSON must contain an object."
+    elif isNull info.files then
+        { info with files = [||] }
+    else
+        info
 
 let [<Literal>] oidPattern = """(?<=oid )(?<HashType>\S+):(?<HashValue>\S+)"""
 let [<Literal>] sizePattern = """(?<=size )(?<Size>\d+)"""

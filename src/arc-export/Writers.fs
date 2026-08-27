@@ -54,6 +54,8 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
     graph.AddNode(ROCrate.metadataFileDescriptor)
     let gitlfsInfo = GitLFS.tryCreateGitLfsJson repoDir
     match gitlfsInfo with
+    | Some info when Array.isEmpty info.files ->
+        printfn "No Git LFS tracked files found; writing RO-Crate without LFS hashes."
     | Some info ->
         graph.Nodes
         |> Seq.iteri (fun i n -> 
