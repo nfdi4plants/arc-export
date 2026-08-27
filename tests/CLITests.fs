@@ -31,6 +31,41 @@ let ``lfs ro-crate metadata only hashes LFS-tracked files`` () =
     finally
         Directory.Delete(outDir, true)
 
+[<Fact>]
+let ``lfs ro-crate metadata succeeds without LFS-tracked files`` () =
+    // This source fixture is a real git repository for which git-lfs 3.7.1
+    // returns {"files":null}. It reproduces the CI failure from issue #87.
+    let outDir = "./ARC-Export-TestFixture_no_lfs"
+    DirectoryInfo(outDir).Create() |> ignore
+    try
+        let res =
+            runTool
+                "arc-export"
+                [| "-p"
+                   "../../../fixtures/ARC-Export-TestFixture"
+                   "-f"
+                   "rocrate-metadata-lfs"
+                   "-o"
+                   outDir |]
+                "."
+
+        let outputPath = Path.Combine(outDir, "arc-ro-crate-metadata.json")
+        Assert.Equal(0, res.ExitCode)
+        Assert.DoesNotContain("Internal Error", res.Result.Output)
+        Assert.True(File.Exists(outputPath), "Expected fresh RO-Crate metadata output.")
+
+        let actual = File.ReadAllText(outputPath)
+        use json = System.Text.Json.JsonDocument.Parse(actual)
+        let hasSha256Property =
+            json.RootElement.GetProperty("@graph").EnumerateArray()
+            |> Seq.exists (fun node ->
+                node.EnumerateObject()
+                |> Seq.exists (fun property -> property.NameEquals("sha256"))
+            )
+        Assert.False(hasSha256Property, "No graph node should be enriched with an LFS hash.")
+    finally
+        Directory.Delete(outDir, true)
+
 
 type ARCPrototypeFixture() = inherit ARCTestFixture("ArcPrototype")
 
