@@ -30,7 +30,7 @@ jobs:
       trigger-release-docker: ${{steps.set-triggers.outputs.trigger-release-docker}}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
           submodules: true
@@ -103,7 +103,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           submodules: true
 
