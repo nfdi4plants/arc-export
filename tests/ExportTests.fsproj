@@ -21,12 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fake.Core.Process" Version="6.0.0" />
-    <PackageReference Include="coverlet.collector" Version="6.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Fake.Core.Process" Version="6.1.4" />
+    <PackageReference Include="coverlet.collector" Version="10.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.9.0" />
     <PackageReference Include="xunit" Version="2.9.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="3.0.1" />
-    <PackageReference Update="FSharp.Core" Version="10.0.101" />
+    <PackageReference Update="FSharp.Core" Version="10.1.401" />
   </ItemGroup>
 
   <ItemGroup>
