@@ -42,8 +42,9 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           flavor: latest=false
           tags: |
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/release' }}
             type=ref,event=branch
-            type=sha
+            type=sha,prefix={{branch}}-sha-
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5.1.0
