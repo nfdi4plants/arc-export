@@ -12,6 +12,7 @@
     <Compile Include="PersonCleaning.fs" />
     <Compile Include="AssayRegistration.fs" />
     <Compile Include="ArcSummaryMarkdown.fs" />
+    <Compile Include="DataHubContext.fs" />
     <Compile Include="Writers.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

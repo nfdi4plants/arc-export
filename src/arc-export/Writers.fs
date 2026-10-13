@@ -5,12 +5,20 @@ open ARCtrl.ROCrate
 open ARCtrl.Json
 open ARCtrl.Json.ARC
 open System.IO
+open System.IO.Compression
+open System.Text
 open ARCtrl.FileSystem
 open ArcSummaryMarkdown
 open ARCtrl.Conversion
 
 [<Literal>]
 let ro_crate_metadata_filename = "arc-ro-crate-metadata.json"
+
+[<Literal>]
+let bundled_ro_crate_metadata_filename = "ro-crate-metadata.json"
+
+[<Literal>]
+let ro_crate_bundle_filename = "arc-ro-crate.zip"
 
 [<Literal>]
 let isa_json_filename = "arc-isa.json"
@@ -26,18 +34,19 @@ let projectID =
     with
     | _ -> None
 
-let write_ro_crate_metadata (outDir: string) (arc: ARC) =
-    printfn "It is writing here"
-    printfn "Writing ARC RO-Crate metadata to %s" (Path.Combine(outDir, ro_crate_metadata_filename))
+let create_ro_crate_metadata (arc: ARC) =
     if arc.Title.IsNone then
         arc.Title <- Some "Untitled ARC"
-    let ro_crate_metadata = arc.ToROCrateJsonString(2, ignoreBrokenWR = true)
-    let ro_crate_metadata_path = Path.Combine(outDir, ro_crate_metadata_filename)
-    File.WriteAllText(ro_crate_metadata_path, ro_crate_metadata)
+    arc.ToROCrateJsonString(2, ignoreBrokenWR = true)
 
 
-let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: ARC) =
-    printfn "Writing ARC RO-Crate metadata with LFS hashes to %s" (Path.Combine(outDir, ro_crate_metadata_filename))
+let write_ro_crate_metadata (outDir: string) (arc: ARC) =
+    let path = Path.Combine(outDir, ro_crate_metadata_filename)
+    printfn "Writing ARC RO-Crate metadata to %s" path
+    File.WriteAllText(path, create_ro_crate_metadata arc)
+
+
+let create_ro_crate_metadata_LFSHashes (repoDir: string) (arc: ARC) =
     let sha256 = "http://schema.org/sha256"
     let contentSize = "http://schema.org/contentSize"
     if arc.Title.IsNone then
@@ -106,9 +115,52 @@ let write_ro_crate_metadata_LFSHashes (repoDir : string) (outDir: string) (arc: 
                         ()
         )
     graph.Compact_InPlace()
-    let ro_crate_metadata = graph.ToROCrateJsonString(2)
-    let ro_crate_metadata_path = Path.Combine(outDir, ro_crate_metadata_filename)
-    File.WriteAllText(ro_crate_metadata_path, ro_crate_metadata)
+    graph.ToROCrateJsonString(2)
+
+
+let write_ro_crate_metadata_LFSHashes (repoDir: string) (outDir: string) (arc: ARC) =
+    let path = Path.Combine(outDir, ro_crate_metadata_filename)
+    printfn "Writing ARC RO-Crate metadata with LFS hashes to %s" path
+    File.WriteAllText(path, create_ro_crate_metadata_LFSHashes repoDir arc)
+
+
+let private isBundleDocument (path: string) =
+    let stem = Path.GetFileNameWithoutExtension(path).ToUpperInvariant()
+    let extension = Path.GetExtension(path).ToLowerInvariant()
+    List.contains stem [ "README"; "LICENSE"; "LICENCE" ]
+    && List.contains extension [ ""; ".md"; ".markdown"; ".txt"; ".rst" ]
+
+
+let write_ro_crate_bundle (repoDir: string) (outDir: string) (includeLfsHashes: bool) (arc: ARC) =
+    let outputPath = Path.Combine(outDir, ro_crate_bundle_filename)
+    printfn "Writing ARC RO-Crate bundle to %s" outputPath
+    let metadata =
+        if includeLfsHashes then create_ro_crate_metadata_LFSHashes repoDir arc
+        else create_ro_crate_metadata arc
+    let context =
+        DataHubContext.build (System.Environment.GetEnvironmentVariable >> Option.ofObj)
+        |> DataHubContext.serialize
+    let documents =
+        Directory.GetFiles(repoDir)
+        |> Array.filter isBundleDocument
+        |> Array.sortWith (fun a b -> System.StringComparer.Ordinal.Compare(a, b))
+    let temporaryPath = Path.Combine(outDir, $".{ro_crate_bundle_filename}.{System.Guid.NewGuid():N}.tmp")
+    try
+        // Dispose the archive before publishing so its central directory is complete.
+        do
+            use stream = new FileStream(temporaryPath, FileMode.CreateNew, FileAccess.Write, FileShare.None)
+            use archive = new ZipArchive(stream, ZipArchiveMode.Create)
+            let writeJson name (content: string) =
+                let entry = archive.CreateEntry(name, CompressionLevel.Optimal)
+                use writer = new StreamWriter(entry.Open(), UTF8Encoding(false))
+                writer.Write(content)
+            writeJson bundled_ro_crate_metadata_filename metadata
+            writeJson DataHubContext.filename context
+            for path in documents do
+                archive.CreateEntryFromFile(path, Path.GetFileName(path), CompressionLevel.Optimal) |> ignore
+        File.Move(temporaryPath, outputPath, true)
+    finally
+        if File.Exists(temporaryPath) then File.Delete(temporaryPath)
 
 
 let write_isa_json (outDir: string) (arc: ARC) =
