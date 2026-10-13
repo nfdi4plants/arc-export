@@ -3,6 +3,9 @@ name: Build, test, and publish Docker image
 on:
   push:
     branches: ['dev', 'release']
+    paths:
+      - 'src/arc-export/**'
+      - 'Dockerfile'
 
 permissions:
   contents: read
