@@ -1,0 +1,33 @@
+name: Build and test
+
+on:
+  pull_request:
+    branches: ['dev', 'release']
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build and test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.x.x
+
+      - name: Build
+        run: dotnet build ./arc-export.sln --configuration Release
+
+      - name: Test
+        run: dotnet test ./arc-export.sln --configuration Release --no-build
