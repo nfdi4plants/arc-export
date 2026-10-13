@@ -1,6 +1,12 @@
 name: Build and test
 
 on:
+  push:
+    branches: ['dev', 'release']
+    # Source and Dockerfile changes are tested by the publishing pipeline.
+    paths-ignore:
+      - 'src/arc-export/**'
+      - 'Dockerfile'
   pull_request:
     branches: ['dev', 'release']
   workflow_call:
