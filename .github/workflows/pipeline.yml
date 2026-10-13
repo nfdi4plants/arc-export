@@ -1,99 +1,20 @@
-name: "pipeline"
+name: Build, test, and publish Docker image
 
 on:
   push:
-    branches: ['main']
+    branches: ['dev', 'release']
 
-  pull_request:
-    branches: ['main']
+permissions:
+  contents: read
 
-
-jobs:   
-  setup:
-    runs-on: ubuntu-latest
-    outputs: 
-
-      # changed files output, might be relevant for other jobs
-      global_any_modified: ${{ steps.changed-files-yaml.outputs.global_any_modified }}
-      global_all_modified_files: ${{ steps.changed-files-yaml.outputs.global_all_modified_files }}
-
-      tests_all_modified_files: ${{ steps.changed-files-yaml.outputs.tests_all_modified_files }}
-      tests_any_modified: ${{ steps.changed-files-yaml.outputs.tests_any_modified }}
-
-      src_all_modified_files: ${{ steps.changed-files-yaml.outputs.src_all_modified_files }}
-      src_any_modified: ${{ steps.changed-files-yaml.outputs.src_any_modified }}
-      
-      dockerfile_modified: ${{ steps.changed-files-yaml.outputs.dockerfile_any_modified }}
-
-      # trigger other jobs
-      trigger-build-and-test: ${{steps.set-triggers.outputs.trigger-build-and-test}}
-      trigger-release-docker: ${{steps.set-triggers.outputs.trigger-release-docker}}
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
-          submodules: true
-      - name: Get all relevant file changes
-        id: changed-files-yaml
-        uses: tj-actions/changed-files@531f5f7d163941f0c1c04e0ff4d8bb243ac4366f
-        with:
-          files_yaml: |
-            global:
-              - '**'
-            tests:
-              - tests/**
-            src:
-              - src/**
-            dockerfile:
-              - Dockerfile
-
-      - name: set triggers
-        id: set-triggers
-        run: |
-          echo "trigger-build-and-test=${{ steps.changed-files-yaml.outputs.tests_any_modified == 'true' || steps.changed-files-yaml.outputs.src_any_modified  == 'true' || steps.changed-files-yaml.outputs.dockerfile_any_modified  == 'true'}}" >> $GITHUB_OUTPUT
-          echo "trigger-release-docker=${{ github.event_name == 'push' && (steps.changed-files-yaml.outputs.tests_any_modified == 'true' || steps.changed-files-yaml.outputs.src_any_modified  == 'true' || steps.changed-files-yaml.outputs.dockerfile_any_modified  == 'true') }}" >> $GITHUB_OUTPUT
-
-          echo "$GITHUB_OUTPUT"
-
-      - name: list outputs
-        run: |
-          echo "global:"
-          echo "- any: ${{ steps.changed-files-yaml.outputs.global_any_modified }}"
-          echo "- all: ${{ steps.changed-files-yaml.outputs.global_all_modified_files }}"
-          echo "tests:"
-          echo "- any: ${{ steps.changed-files-yaml.outputs.tests_any_modified }}"
-          echo "- all: ${{ steps.changed-files-yaml.outputs.tests_all_modified_files }}"
-          echo "src:"
-          echo "- any: ${{ steps.changed-files-yaml.outputs.src_any_modified }}"
-          echo "- all: ${{ steps.changed-files-yaml.outputs.src_all_modified_files }}"
-          echo "dockerfile: ${{ steps.changed-files-yaml.outputs.dockerfile_any_modified }}"
-          echo "computed outputs:"
-          echo "trigger build-and-test: ${{steps.set-triggers.outputs.trigger-build-and-test}}"
-          echo "trigger docker release: ${{steps.set-triggers.outputs.trigger-release-docker}}"
-
-      - name: list triggered jobs
-        run: |
-          echo "this should trigger the following jobs:"
-          echo "build-and-test-projects: ${{steps.set-triggers.outputs.trigger-build-and-test}}"
-          echo "release-docker-image: ${{steps.set-triggers.outputs.trigger-release-docker}}"
-
+jobs:
   build-and-test:
-    name: "Build and test"
-    needs: setup
-    # https://github.com/actions/runner/issues/1173
-    if: needs.setup.outputs.trigger-build-and-test == 'true'
-    uses: nfdi4plants/actions-workflows/.github/workflows/build-and-test-solution.yml@main
-    with:
-      macos: false
-      solution: ./arc-export.sln
-      checkout-submodules: true
-      configuration: Release
-      dotnet-version: 10.x.x
+    name: Build and test
+    uses: ./.github/workflows/build-and-test.yml
+
   release-docker-image:
-    name: "Release Docker image"
-    needs: [setup, build-and-test]
-    if: needs.setup.outputs.trigger-release-docker == 'true'
+    name: Publish Docker image
+    needs: build-and-test
     runs-on: ubuntu-latest
     env:
       REGISTRY: ghcr.io
@@ -119,6 +40,10 @@ jobs:
         uses: docker/metadata-action@v5.6.1
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          flavor: latest=false
+          tags: |
+            type=ref,event=branch
+            type=sha
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5.1.0
