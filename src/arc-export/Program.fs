@@ -11,6 +11,11 @@ try
     printfn "Start arc-export"
     let args = CLIArgs.cliArgParser.ParseCommandLine()
 
+    let outputFormats = args.GetResults(CLIArgs.Output_Format)
+    let includeLfsHashes = args.Contains(CLIArgs.Include_LFS_Hashes)
+    if includeLfsHashes && not (List.contains CLIArgs.OutputFormat.ROCrate_Bundle outputFormats) then
+        args.Raise("--include-lfs-hashes requires -f rocrate-bundle.")
+
     let arcPath = args.GetResult(CLIArgs.ARC_Directory)
 
     let outDir = 
@@ -57,13 +62,14 @@ try
     arc.CleanPersons()
     arc.MakeDataFilesAbsolute()
 
-    let outputFormats = args.GetResults(CLIArgs.Output_Format)
-
     if outputFormats |> List.contains CLIArgs.OutputFormat.ROCrate_Metadata then
         Writers.write_ro_crate_metadata outDir arc
 
     if outputFormats |> List.contains CLIArgs.OutputFormat.ROCrate_Metadata_LFS then
         Writers.write_ro_crate_metadata_LFSHashes arcPath outDir arc
+
+    if outputFormats |> List.contains CLIArgs.OutputFormat.ROCrate_Bundle then
+        Writers.write_ro_crate_bundle arcPath outDir includeLfsHashes arc
 
     if outputFormats |> List.contains CLIArgs.OutputFormat.Summary_Markdown || outputFormats |> List.contains CLIArgs.OutputFormat.ISA_Json || List.isEmpty outputFormats then
         arc.RegisterAssays()

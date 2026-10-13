@@ -17,6 +17,8 @@
     <Compile Include="LFSPointerTests.fs" />
     <Compile Include="GitSubmoduleTests.fs" />
     <Compile Include="CLITests.fs" />
+    <Compile Include="DataHubContextTests.fs" />
+    <Compile Include="BundleTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

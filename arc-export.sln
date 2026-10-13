@@ -19,6 +19,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".ci", ".ci", "{100F8D7F-ECF1-4E1F-BDDF-180E10F8752F}"
 	ProjectSection(SolutionItems) = preProject
 		.github\dependabot.yml = .github\dependabot.yml
+		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
 		.github\workflows\manage-issues.yml = .github\workflows\manage-issues.yml
 		.github\workflows\manage-prs.yml = .github\workflows\manage-prs.yml
 		.github\workflows\pipeline.yml = .github\workflows\pipeline.yml
