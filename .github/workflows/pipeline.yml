@@ -50,7 +50,7 @@ jobs:
             type=sha,prefix={{branch}}-sha-
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v5.1.0
+        uses: docker/build-push-action@v7.3.0
         with:
           context: .
           file: ./Dockerfile
