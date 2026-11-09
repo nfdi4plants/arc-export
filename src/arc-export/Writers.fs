@@ -55,7 +55,8 @@ let create_ro_crate_metadata_LFSHashes (repoDir: string) (arc: ARC) =
     let isa = arc.ToROCrateInvestigation(fs = arc.FileSystem, ignoreBrokenWR = true)
     LDDataset.setSDDatePublishedAsDateTime(isa, System.DateTime.Now)
     if projectID.IsSome then isa.SetProperty("http://schema.org/mainEntityOfPage", projectID.Value)
-    let graph = isa.Flatten()
+    // The regular RO-Crate writer normalizes ids the same way, so both outputs use "./" ids.
+    let graph = isa.Flatten() |> LDGraph.normalizeDataEntityIds
     let customContextPart = Context.initBioschemasContext()
     customContextPart.AddMapping("sha256", sha256)
     let context = LDContext(baseContexts=ResizeArray[Context.initV1_1();customContextPart])

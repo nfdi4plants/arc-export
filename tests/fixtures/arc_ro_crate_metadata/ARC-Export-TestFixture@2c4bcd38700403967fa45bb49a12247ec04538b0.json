@@ -16,9 +16,9 @@
   ],
   "@graph": [
     {
-      "@id": "assays/SharedSampleWithStudy/dataset/MyData",
+      "@id": "./assays/SharedSampleWithStudy/dataset/MyData",
       "@type": "File",
-      "name": "assays/SharedSampleWithStudy/dataset/MyData"
+      "name": "./assays/SharedSampleWithStudy/dataset/MyData"
     },
     {
       "@id": "#Sample_MySample",
@@ -33,31 +33,31 @@
     {
       "@id": "#Process_A_SharedSampleWithStudy_SharedSample_0",
       "@type": "LabProcess",
-      "name": "SharedSample",
+      "name": "SharedSample_0",
       "object": {
         "@id": "#Sample_MySample"
       },
       "result": {
-        "@id": "assays/SharedSampleWithStudy/dataset/MyData"
+        "@id": "./assays/SharedSampleWithStudy/dataset/MyData"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_SharedSample"
       }
     },
     {
-      "@id": "assays/SharedSampleWithStudy/",
+      "@id": "./assays/SharedSampleWithStudy/",
       "@type": "Dataset",
       "additionalType": "Assay",
       "identifier": "SharedSampleWithStudy",
       "hasPart": {
-        "@id": "assays/SharedSampleWithStudy/dataset/MyData"
+        "@id": "./assays/SharedSampleWithStudy/dataset/MyData"
       },
       "about": {
         "@id": "#Process_A_SharedSampleWithStudy_SharedSample_0"
       }
     },
     {
-      "@id": "assays/UnrelatedAssay/",
+      "@id": "./assays/UnrelatedAssay/",
       "@type": "Dataset",
       "additionalType": "Assay",
       "identifier": "UnrelatedAssay"
@@ -75,7 +75,7 @@
     {
       "@id": "#Process_S_Study1_SimpleTable_0",
       "@type": "LabProcess",
-      "name": "SimpleTable",
+      "name": "SimpleTable_0",
       "object": {
         "@id": "#Source_MySource"
       },
@@ -87,12 +87,10 @@
       }
     },
     {
-      "@id": "studies/Study1/",
+      "@id": "./studies/Study1/",
       "@type": "Dataset",
       "additionalType": "Study",
       "identifier": "Study1",
-      "dateModified": "2026-03-12T14:15:45.7654329",
-      "hasPart": [],
       "about": {
         "@id": "#Process_S_Study1_SimpleTable_0"
       }
@@ -107,20 +105,20 @@
       "@type": "Dataset",
       "additionalType": "Investigation",
       "identifier": "ARC-Export-TestFixture",
-      "datePublished": "2026-03-12T14:15:45.7488140",
+      "datePublished": "2026-11-09T13:23:22.3723116",
       "hasPart": [
         {
-          "@id": "assays/SharedSampleWithStudy/"
+          "@id": "./assays/SharedSampleWithStudy/"
         },
         {
-          "@id": "assays/UnrelatedAssay/"
+          "@id": "./assays/UnrelatedAssay/"
         },
         {
-          "@id": "studies/Study1/"
+          "@id": "./studies/Study1/"
         }
       ],
       "name": "Test Fixture for testing ARC-Export containing all assays (even unregistered)",
-      "sdDatePublished": "2026-03-12T14:15:45.7663373",
+      "sdDatePublished": "2026-11-09T13:23:22.3972250",
       "license": {
         "@id": "#LICENSE"
       }
