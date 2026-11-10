@@ -90,34 +90,34 @@
       "disambiguatingDescription": "Comment {Name = \"Worksheet\"}"
     },
     {
-      "@id": "assays/measurement1/dataset/sample1.raw",
+      "@id": "./assays/measurement1/dataset/sample1.raw",
       "@type": "File",
-      "name": "assays/measurement1/dataset/sample1.raw"
+      "name": "./assays/measurement1/dataset/sample1.raw"
     },
     {
-      "@id": "assays/measurement1/dataset/sample2.raw",
+      "@id": "./assays/measurement1/dataset/sample2.raw",
       "@type": "File",
-      "name": "assays/measurement1/dataset/sample2.raw"
+      "name": "./assays/measurement1/dataset/sample2.raw"
     },
     {
-      "@id": "assays/measurement1/dataset/sample3.raw",
+      "@id": "./assays/measurement1/dataset/sample3.raw",
       "@type": "File",
-      "name": "assays/measurement1/dataset/sample3.raw"
+      "name": "./assays/measurement1/dataset/sample3.raw"
     },
     {
-      "@id": "assays/measurement1/dataset/sample4.raw",
+      "@id": "./assays/measurement1/dataset/sample4.raw",
       "@type": "File",
-      "name": "assays/measurement1/dataset/sample4.raw"
+      "name": "./assays/measurement1/dataset/sample4.raw"
     },
     {
-      "@id": "assays/measurement1/dataset/sample5.raw",
+      "@id": "./assays/measurement1/dataset/sample5.raw",
       "@type": "File",
-      "name": "assays/measurement1/dataset/sample5.raw"
+      "name": "./assays/measurement1/dataset/sample5.raw"
     },
     {
-      "@id": "assays/measurement1/dataset/sample6.raw",
+      "@id": "./assays/measurement1/dataset/sample6.raw",
       "@type": "File",
-      "name": "assays/measurement1/dataset/sample6.raw"
+      "name": "./assays/measurement1/dataset/sample6.raw"
     },
     {
       "@id": "http://purl.obolibrary.org/obo/xsd_double",
@@ -126,9 +126,9 @@
       "termCode": "http://purl.obolibrary.org/obo/xsd_double"
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=1",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=1",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=1",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=1",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -139,9 +139,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=2",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=2",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=2",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=2",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -152,9 +152,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=3",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=3",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=3",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=3",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -165,9 +165,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=4",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=4",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=4",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=4",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -178,9 +178,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=5",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=5",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=5",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=5",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -191,9 +191,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=6",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=6",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=6",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=6",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -204,9 +204,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=7",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=7",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=7",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=7",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -217,9 +217,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=8",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=8",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=8",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=8",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -230,9 +230,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=9",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=9",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=9",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=9",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -243,9 +243,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=10",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=10",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=10",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=10",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -256,9 +256,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=11",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=11",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=11",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=11",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -269,9 +269,9 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv#col=12",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=12",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv#col=12",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv#col=12",
       "encodingFormat": "text/csv",
       "usageInfo": "https://datatracker.ietf.org/doc/html/rfc7111",
       "about": {
@@ -282,82 +282,46 @@
       }
     },
     {
-      "@id": "assays/measurement1/dataset/proteomics_result.csv",
+      "@id": "./assays/measurement1/dataset/proteomics_result.csv",
       "@type": "File",
-      "name": "assays/measurement1/dataset/proteomics_result.csv",
+      "name": "./assays/measurement1/dataset/proteomics_result.csv",
       "encodingFormat": "text/csv",
       "hasPart": [
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=1"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=1"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=2"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=2"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=3"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=3"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=4"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=4"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=5"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=5"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=6"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=6"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=7"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=7"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=8"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=8"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=9"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=9"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=10"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=10"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=11"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=11"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=12"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=1"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=2"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=3"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=4"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=5"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=6"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=7"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=8"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=9"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=10"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=11"
-        },
-        {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv#col=12"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=12"
         }
       ],
       "exampleOfWork": {
@@ -751,7 +715,7 @@
       "additionalType": "Component",
       "name": "cleavage agent name",
       "value": "Trypsin",
-      "propertyID": "https://www.ebi.ac.uk/ols4/ontologies/ms/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMS_1001045",
+      "propertyID": "http://purl.obolibrary.org/obo/MS_1001045",
       "valueReference": "https://www.ebi.ac.uk/ols4/ontologies/ms/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMS_1001251",
       "columnIndex": "0"
     },
@@ -761,7 +725,7 @@
       "additionalType": "Component",
       "name": "instrument model",
       "value": "TripleTOF 5600+",
-      "propertyID": "https://www.ebi.ac.uk/ols4/ontologies/ms/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMS_1000031",
+      "propertyID": "http://purl.obolibrary.org/obo/MS_1000031",
       "valueReference": "https://www.ebi.ac.uk/ols4/ontologies/ms/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMS_1002584",
       "columnIndex": "1"
     },
@@ -785,7 +749,7 @@
         "@id": "#Sample_sample_eppi_extracted_1"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/sample1.raw"
+        "@id": "./assays/measurement1/dataset/sample1.raw"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Protein_Measurement"
@@ -799,7 +763,7 @@
         "@id": "#Sample_sample_eppi_extracted_2"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/sample2.raw"
+        "@id": "./assays/measurement1/dataset/sample2.raw"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Protein_Measurement"
@@ -813,7 +777,7 @@
         "@id": "#Sample_sample_eppi_extracted_3"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/sample3.raw"
+        "@id": "./assays/measurement1/dataset/sample3.raw"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Protein_Measurement"
@@ -827,7 +791,7 @@
         "@id": "#Sample_sample_eppi_extracted_4"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/sample4.raw"
+        "@id": "./assays/measurement1/dataset/sample4.raw"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Protein_Measurement"
@@ -841,7 +805,7 @@
         "@id": "#Sample_sample_eppi_extracted_5"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/sample5.raw"
+        "@id": "./assays/measurement1/dataset/sample5.raw"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Protein_Measurement"
@@ -855,7 +819,7 @@
         "@id": "#Sample_sample_eppi_extracted_6"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/sample6.raw"
+        "@id": "./assays/measurement1/dataset/sample6.raw"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Protein_Measurement"
@@ -871,7 +835,7 @@
       "additionalType": "ParameterValue",
       "name": "software",
       "value": "ProteomIqon",
-      "propertyID": "https://www.ebi.ac.uk/ols4/ontologies/ms/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FMS_1000531",
+      "propertyID": "http://purl.obolibrary.org/obo/MS_1000531",
       "columnIndex": "0"
     },
     {
@@ -879,10 +843,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_0",
       "object": {
-        "@id": "assays/measurement1/dataset/sample1.raw"
+        "@id": "./assays/measurement1/dataset/sample1.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=1"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=1"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -896,10 +860,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_1",
       "object": {
-        "@id": "assays/measurement1/dataset/sample1.raw"
+        "@id": "./assays/measurement1/dataset/sample1.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=2"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=2"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -913,10 +877,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_2",
       "object": {
-        "@id": "assays/measurement1/dataset/sample2.raw"
+        "@id": "./assays/measurement1/dataset/sample2.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=3"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=3"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -930,10 +894,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_3",
       "object": {
-        "@id": "assays/measurement1/dataset/sample2.raw"
+        "@id": "./assays/measurement1/dataset/sample2.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=4"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=4"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -947,10 +911,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_4",
       "object": {
-        "@id": "assays/measurement1/dataset/sample3.raw"
+        "@id": "./assays/measurement1/dataset/sample3.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=5"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=5"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -964,10 +928,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_5",
       "object": {
-        "@id": "assays/measurement1/dataset/sample3.raw"
+        "@id": "./assays/measurement1/dataset/sample3.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=6"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=6"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -981,10 +945,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_6",
       "object": {
-        "@id": "assays/measurement1/dataset/sample4.raw"
+        "@id": "./assays/measurement1/dataset/sample4.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=7"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=7"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -998,10 +962,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_7",
       "object": {
-        "@id": "assays/measurement1/dataset/sample4.raw"
+        "@id": "./assays/measurement1/dataset/sample4.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=8"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=8"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -1015,10 +979,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_8",
       "object": {
-        "@id": "assays/measurement1/dataset/sample5.raw"
+        "@id": "./assays/measurement1/dataset/sample5.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=9"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=9"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -1032,10 +996,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_9",
       "object": {
-        "@id": "assays/measurement1/dataset/sample5.raw"
+        "@id": "./assays/measurement1/dataset/sample5.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=10"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=10"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -1049,10 +1013,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_10",
       "object": {
-        "@id": "assays/measurement1/dataset/sample6.raw"
+        "@id": "./assays/measurement1/dataset/sample6.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=11"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=11"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -1066,10 +1030,10 @@
       "@type": "LabProcess",
       "name": "Computational Proteome Analysis_11",
       "object": {
-        "@id": "assays/measurement1/dataset/sample6.raw"
+        "@id": "./assays/measurement1/dataset/sample6.raw"
       },
       "result": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=12"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=12"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_Computational_Proteome_Analysis"
@@ -1089,7 +1053,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=1"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=1"
       }
     },
     {
@@ -1103,7 +1067,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=2"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=2"
       }
     },
     {
@@ -1117,7 +1081,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=3"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=3"
       }
     },
     {
@@ -1131,7 +1095,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=4"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=4"
       }
     },
     {
@@ -1145,7 +1109,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=5"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=5"
       }
     },
     {
@@ -1159,7 +1123,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=6"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=6"
       }
     },
     {
@@ -1173,7 +1137,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=7"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=7"
       }
     },
     {
@@ -1187,7 +1151,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=8"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=8"
       }
     },
     {
@@ -1201,7 +1165,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=9"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=9"
       }
     },
     {
@@ -1215,7 +1179,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=10"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=10"
       }
     },
     {
@@ -1229,7 +1193,7 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=11"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=11"
       }
     },
     {
@@ -1243,11 +1207,11 @@
       "valueReference": "http://purl.obolibrary.org/obo/OBA_VT0010120",
       "disambiguatingDescription": "Comment {Name = \"GeneratedBy\", Value = \"\"}",
       "subjectOf": {
-        "@id": "assays/measurement1/dataset/proteomics_result.csv#col=12"
+        "@id": "./assays/measurement1/dataset/proteomics_result.csv#col=12"
       }
     },
     {
-      "@id": "assays/measurement1/",
+      "@id": "./assays/measurement1/",
       "@type": "Dataset",
       "additionalType": "Assay",
       "identifier": "measurement1",
@@ -1256,25 +1220,25 @@
       },
       "hasPart": [
         {
-          "@id": "assays/measurement1/dataset/sample1.raw"
+          "@id": "./assays/measurement1/dataset/sample1.raw"
         },
         {
-          "@id": "assays/measurement1/dataset/sample2.raw"
+          "@id": "./assays/measurement1/dataset/sample2.raw"
         },
         {
-          "@id": "assays/measurement1/dataset/sample3.raw"
+          "@id": "./assays/measurement1/dataset/sample3.raw"
         },
         {
-          "@id": "assays/measurement1/dataset/sample4.raw"
+          "@id": "./assays/measurement1/dataset/sample4.raw"
         },
         {
-          "@id": "assays/measurement1/dataset/sample5.raw"
+          "@id": "./assays/measurement1/dataset/sample5.raw"
         },
         {
-          "@id": "assays/measurement1/dataset/sample6.raw"
+          "@id": "./assays/measurement1/dataset/sample6.raw"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv"
         }
       ],
       "about": [
@@ -1409,40 +1373,40 @@
       ]
     },
     {
-      "@id": "assays/measurement2/",
+      "@id": "./assays/measurement2/",
       "@type": "Dataset",
       "additionalType": "Assay",
       "identifier": "measurement2"
     },
     {
-      "@id": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
+      "@id": "./studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png",
       "@type": "File",
-      "name": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
+      "name": "./studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
     },
     {
-      "@id": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
+      "@id": "./studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png",
       "@type": "File",
-      "name": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
+      "name": "./studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
     },
     {
-      "@id": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
+      "@id": "./studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png",
       "@type": "File",
-      "name": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
+      "name": "./studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
     },
     {
-      "@id": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
+      "@id": "./studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png",
       "@type": "File",
-      "name": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
+      "name": "./studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
     },
     {
-      "@id": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
+      "@id": "./studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png",
       "@type": "File",
-      "name": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
+      "name": "./studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
     },
     {
-      "@id": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
+      "@id": "./studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png",
       "@type": "File",
-      "name": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
+      "name": "./studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
     },
     {
       "@id": "#CharacteristicValue_organism_Arabidopsis_thaliana",
@@ -1683,7 +1647,7 @@
         "@id": "#Sample_Sample1"
       },
       "result": {
-        "@id": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
+        "@id": "./studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_AccessoryDataRetrieval"
@@ -1715,7 +1679,7 @@
         "@id": "#Sample_Sample2"
       },
       "result": {
-        "@id": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
+        "@id": "./studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_AccessoryDataRetrieval"
@@ -1747,7 +1711,7 @@
         "@id": "#Sample_Sample3"
       },
       "result": {
-        "@id": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
+        "@id": "./studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_AccessoryDataRetrieval"
@@ -1779,7 +1743,7 @@
         "@id": "#Sample_Sample4"
       },
       "result": {
-        "@id": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
+        "@id": "./studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_AccessoryDataRetrieval"
@@ -1811,7 +1775,7 @@
         "@id": "#Sample_Sample5"
       },
       "result": {
-        "@id": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
+        "@id": "./studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_AccessoryDataRetrieval"
@@ -1843,37 +1807,42 @@
         "@id": "#Sample_Sample6"
       },
       "result": {
-        "@id": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
+        "@id": "./studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_AccessoryDataRetrieval"
       }
     },
     {
-      "@id": "studies/MaterialPreparation/",
+      "@id": "./studies/MaterialPreparation/",
       "@type": "Dataset",
       "additionalType": "Study",
       "identifier": "MaterialPreparation",
-      "dateModified": "2026-05-22T16:41:39.5648593",
       "description": "In this a devised study to have an exemplary experimental material description.",
       "hasPart": [
         {
-          "@id": "studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
+          "@id": "./studies/MaterialPreparation/resources/Sample1_e36ca6b8-19ba-4504-aa82-d4781765873d.png"
         },
         {
-          "@id": "studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
+          "@id": "./studies/MaterialPreparation/resources/Sample2_714ca2b7-22b7-4f69-b83d-9165f624da25.png"
         },
         {
-          "@id": "studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
+          "@id": "./studies/MaterialPreparation/resources/Sample3_66fac760-acc7-4ed4-ba21-2cb67fa36e4d.png"
         },
         {
-          "@id": "studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
+          "@id": "./studies/MaterialPreparation/resources/Sample4_cba5f40c-fc05-44d6-a589-b0e3dafaeefe.png"
         },
         {
-          "@id": "studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
+          "@id": "./studies/MaterialPreparation/resources/Sample5_84c37b60-2342-4226-a36c-4b8dfe84ebe9.png"
         },
         {
-          "@id": "studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
+          "@id": "./studies/MaterialPreparation/resources/Sample6_208df064-4b1c-4da0-a1f8-6412e1fb2284.png"
+        },
+        {
+          "@id": "./assays/measurement1/"
+        },
+        {
+          "@id": "./assays/measurement2/"
         }
       ],
       "name": "Prototype for experimental data",
@@ -1945,7 +1914,7 @@
     {
       "@id": "#Process_S_experiment2_experiment2_0",
       "@type": "LabProcess",
-      "name": "experiment2",
+      "name": "experiment2_0",
       "object": {
         "@id": "#Source_Input_[MyStudyObject]"
       },
@@ -1960,12 +1929,10 @@
       }
     },
     {
-      "@id": "studies/experiment2/",
+      "@id": "./studies/experiment2/",
       "@type": "Dataset",
       "additionalType": "Study",
       "identifier": "experiment2",
-      "dateModified": "2026-05-22T16:41:39.5704354",
-      "hasPart": [],
       "about": {
         "@id": "#Process_S_experiment2_experiment2_0"
       }
@@ -2066,7 +2033,7 @@
       "name": "CWL"
     },
     {
-      "@id": "workflows/FixedScript/workflow.cwl",
+      "@id": "./workflows/FixedScript/workflow.cwl",
       "@type": [
         "File",
         "https://bioschemas.org/ComputationalWorkflow",
@@ -2085,7 +2052,7 @@
       "https://bioschemas.org/properties/output": {
         "@id": "#FormalParameter_W_FixedScript_output"
       },
-      "name": "workflows/FixedScript/workflow.cwl",
+      "name": "./workflows/FixedScript/workflow.cwl",
       "programmingLanguage": {
         "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
       },
@@ -2095,25 +2062,35 @@
       "sdPublisher": {
         "@id": "#Organization_DataPLANT"
       },
-      "dateCreated": "2026-05-22T14:41:39.5909838Z",
+      "dateCreated": "2026-11-09T12:23:17.5340572Z",
       "intendedUse": {
         "@id": "#OA_CWL"
       }
     },
     {
-      "@id": "workflows/FixedScript/",
+      "@id": "./workflows/FixedScript/script.fsx",
+      "@type": "File",
+      "name": "./workflows/FixedScript/script.fsx"
+    },
+    {
+      "@id": "./workflows/FixedScript/",
       "@type": "Dataset",
       "additionalType": "Workflow",
       "identifier": "FixedScript",
       "creator": {
         "@id": "#Person_Timo_Mühlhaus"
       },
-      "hasPart": {
-        "@id": "workflows/FixedScript/workflow.cwl"
-      },
+      "hasPart": [
+        {
+          "@id": "./workflows/FixedScript/workflow.cwl"
+        },
+        {
+          "@id": "./workflows/FixedScript/script.fsx"
+        }
+      ],
       "name": "Column addition workflow",
       "mainEntity": {
-        "@id": "workflows/FixedScript/workflow.cwl"
+        "@id": "./workflows/FixedScript/workflow.cwl"
       }
     },
     {
@@ -2127,13 +2104,6 @@
       "familyName": "Ott",
       "additionalName": "J. V.",
       "address": "Erwin-Schrödinger-Straße 56, Kaiserslautern, DE"
-    },
-    {
-      "@id": "./assays/measurement1/dataset/proteomics_result.csv",
-      "@type": "File",
-      "name": "./assays/measurement1/dataset/proteomics_result.csv",
-      "sha256": "01bb750bd981905d7065d48943567869570597745c4478bde4f7dbee16be8e3d",
-      "contentSize": "95710b"
     },
     {
       "@id": "./runs/FixedScriptResult/result.csv",
@@ -2165,10 +2135,10 @@
       "@id": "WorkflowStep_runs/FixedScriptResult/run.cwl_FixedScript",
       "@type": "https://bioschemas.org/ComputationalWorkflow",
       "name": "FixedScript",
-      "identifier": "inline:CommandLineTool"
+      "identifier": "./workflows/FixedScript/workflow.cwl"
     },
     {
-      "@id": "runs/FixedScriptResult/run.cwl",
+      "@id": "./runs/FixedScriptResult/run.cwl",
       "@type": [
         "File",
         "https://bioschemas.org/ComputationalWorkflow",
@@ -2187,7 +2157,7 @@
       "https://bioschemas.org/properties/output": {
         "@id": "#FormalParameter_R_FixedScriptResult_FixedScriptResult"
       },
-      "name": "runs/FixedScriptResult/run.cwl",
+      "name": "./runs/FixedScriptResult/run.cwl",
       "programmingLanguage": {
         "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
       },
@@ -2200,7 +2170,7 @@
       "sdPublisher": {
         "@id": "#Organization_DataPLANT"
       },
-      "dateCreated": "2026-05-22T14:41:39.7098097Z"
+      "dateCreated": "2026-11-09T12:23:17.5623771Z"
     },
     {
       "@id": "#Protocol_ColumnAddition",
@@ -2223,7 +2193,7 @@
         "LabProcess"
       ],
       "additionalType": "WorkflowInvocation",
-      "name": "ColumnAddition",
+      "name": "ColumnAddition_0",
       "object": {
         "@id": "./assays/measurement1/dataset/proteomics_result.csv"
       },
@@ -2231,7 +2201,7 @@
         "@id": "./runs/FixedScriptResult/result.csv"
       },
       "instrument": {
-        "@id": "runs/FixedScriptResult/run.cwl"
+        "@id": "./runs/FixedScriptResult/run.cwl"
       },
       "executesLabProtocol": {
         "@id": "#Protocol_ColumnAddition"
@@ -2241,14 +2211,14 @@
       }
     },
     {
-      "@id": "#WorkflowParameter_secondArg_./result.csv",
+      "@id": "#WorkflowParameter_R_FixedScriptResult_secondArg",
       "@type": "PropertyValue",
       "additionalType": "WorkflowInput",
       "name": "secondArg",
-      "value": "./result.csv",
       "exampleOfWork": {
         "@id": "#FormalParameter_R_FixedScriptResult_secondArg"
-      }
+      },
+      "value": "./result.csv"
     },
     {
       "@id": "#WorkflowInvocation_FixedScriptResult",
@@ -2260,17 +2230,17 @@
       "name": "FixedScriptResult",
       "object": [
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv"
+          "@id": "./assays/measurement1/dataset/proteomics_result.csv"
         },
         {
-          "@id": "#WorkflowParameter_secondArg_./result.csv"
+          "@id": "#WorkflowParameter_R_FixedScriptResult_secondArg"
         }
       ],
       "instrument": {
-        "@id": "runs/FixedScriptResult/run.cwl"
+        "@id": "./runs/FixedScriptResult/run.cwl"
       },
       "executesLabProtocol": {
-        "@id": "runs/FixedScriptResult/run.cwl"
+        "@id": "./runs/FixedScriptResult/run.cwl"
       }
     },
     {
@@ -2284,7 +2254,25 @@
       "name": ".NET"
     },
     {
-      "@id": "runs/FixedScriptResult/",
+      "@id": "https://w3id.org/ro/wfrun/process/0.5",
+      "@type": "CreativeWork",
+      "name": "Process Run Crate",
+      "version": "0.5"
+    },
+    {
+      "@id": "https://w3id.org/ro/wfrun/workflow/0.5",
+      "@type": "CreativeWork",
+      "name": "Workflow Run Crate",
+      "version": "0.5"
+    },
+    {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+      "@type": "CreativeWork",
+      "name": "Workflow RO-Crate",
+      "version": "1.0"
+    },
+    {
+      "@id": "./runs/FixedScriptResult/",
       "@type": "Dataset",
       "additionalType": "Run",
       "identifier": "FixedScriptResult",
@@ -2300,10 +2288,13 @@
           "@id": "./runs/FixedScriptResult/result.csv"
         },
         {
-          "@id": "assays/measurement1/dataset/proteomics_result.csv"
+          "@id": "./runs/FixedScriptResult/run.cwl"
         },
         {
-          "@id": "runs/FixedScriptResult/run.cwl"
+          "@id": "./workflows/FixedScript/workflow.cwl"
+        },
+        {
+          "@id": "./workflows/FixedScript/script.fsx"
         }
       ],
       "name": "Column Addition",
@@ -2330,7 +2321,7 @@
         "@id": "#OA_.NET"
       },
       "mainEntity": {
-        "@id": "runs/FixedScriptResult/run.cwl"
+        "@id": "./runs/FixedScriptResult/run.cwl"
       },
       "conformsTo": [
         {
@@ -2360,30 +2351,30 @@
           "@id": "http://orcid.org/0000-0002-8241-5300"
         }
       ],
-      "datePublished": "2026-05-22T16:41:39.4319868",
+      "datePublished": "2026-11-09T13:23:17.3240381",
       "description": "A prototypic ARC that implements all specification standards accordingly",
       "hasPart": [
         {
-          "@id": "assays/measurement1/"
+          "@id": "./assays/measurement1/"
         },
         {
-          "@id": "assays/measurement2/"
+          "@id": "./assays/measurement2/"
         },
         {
-          "@id": "studies/MaterialPreparation/"
+          "@id": "./studies/MaterialPreparation/"
         },
         {
-          "@id": "studies/experiment2/"
+          "@id": "./studies/experiment2/"
         },
         {
-          "@id": "workflows/FixedScript/"
+          "@id": "./workflows/FixedScript/"
         },
         {
-          "@id": "runs/FixedScriptResult/"
+          "@id": "./runs/FixedScriptResult/"
         }
       ],
       "name": "ArcPrototype",
-      "sdDatePublished": "2026-05-22T16:41:39.7116844"
+      "sdDatePublished": "2026-11-09T13:23:17.5694308"
     },
     {
       "@id": "ro-crate-metadata.json",

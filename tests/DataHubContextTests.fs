@@ -7,6 +7,8 @@ open Xunit
 open ARCtrl.ROCrate
 open ARCtrl.Json
 
+let private rootId = "./" + DataHubContext.filename
+
 let private build values =
     let environment = Map.ofList values
     DataHubContext.build (fun name -> Map.tryFind name environment)
@@ -24,7 +26,7 @@ let private nodes (graph : LDGraph) (node : LDNode) property =
 [<Fact>]
 let ``empty environment emits an independent context document`` () =
     let graph = build [] |> roundTrip
-    let root = graph.GetNode(DataHubContext.filename)
+    let root = graph.GetNode(rootId)
     Assert.True(root.HasType(LDDataset.schemaType, ?context = graph.TryGetContext()))
     Assert.Equal(Some "1", value graph root "version")
     Assert.Equal(2, graph.Nodes.Count)
@@ -45,7 +47,7 @@ let ``zero one and multiple values survive ARCtrl compaction and roundtrip`` cou
           "CI_JOB_MANUAL", "false" ]
         |> List.take count
     let graph = build input |> roundTrip
-    let root = graph.GetNode(DataHubContext.filename)
+    let root = graph.GetNode(rootId)
     let properties = nodes graph root "variableMeasured"
     Assert.Equal(count, properties.Count)
     for name, expected in input do
@@ -55,7 +57,7 @@ let ``zero one and multiple values survive ARCtrl compaction and roundtrip`` cou
         Assert.Equal(Some expected, value graph property "value")
     // Compact again to catch singleton/array handling regressions in graph output.
     let again = graph |> roundTrip
-    Assert.Equal(count, (nodes again (again.GetNode(DataHubContext.filename)) "variableMeasured").Count)
+    Assert.Equal(count, (nodes again (again.GetNode(rootId)) "variableMeasured").Count)
 
 [<Fact>]
 let ``allowlist captures all specified families and never reads credential variables`` () =
@@ -88,7 +90,7 @@ let ``allowlist captures all specified families and never reads credential varia
             "CI_DEFAULT_BRANCH"; "CI_RELEASE_DESCRIPTION"
         ]
     Assert.True(requested.SetEquals(expected), "Read exactly the documented metadata allowlist.")
-    let properties = nodes graph (graph.GetNode(DataHubContext.filename)) "variableMeasured"
+    let properties = nodes graph (graph.GetNode(rootId)) "variableMeasured"
     Assert.Equal(expected.Length, properties.Count)
     for name in expected do
         let property = properties |> Seq.find (fun node -> value graph node "propertyID" = Some name)
@@ -108,7 +110,7 @@ let ``blank and unlisted values are excluded without trimming present values`` (
                 "CI_JOB_TOKEN", "secret"
                 "CUSTOM_VARIABLE", "secret" ]
         |> roundTrip
-    let root = graph.GetNode(DataHubContext.filename)
+    let root = graph.GetNode(rootId)
     let property = Assert.Single(nodes graph root "variableMeasured")
     Assert.Equal(Some " keep these spaces ", value graph property "value")
     Assert.False(graph.ContainsNode("#revision"))
@@ -135,7 +137,7 @@ let ``repository revision and separate people retain their provenance`` () =
                 "GITLAB_USER_NAME", "Pat Pipeline"
                 "GITLAB_USER_EMAIL", "triggerer@example.org" ]
         |> roundTrip
-    let root = graph.GetNode(DataHubContext.filename)
+    let root = graph.GetNode(rootId)
     let repository = Assert.Single(nodes graph root "about")
     Assert.True(repository.HasType(LDCreativeWork.schemaType, ?context = graph.TryGetContext()))
     Assert.Equal("https://datahub.example.org/team/arc", repository.Id)
@@ -214,7 +216,7 @@ let ``context graphs share no nodes or contexts with other exports`` () =
     let first = build [ "CI_PROJECT_ID", "1" ]
     let second = build [ "CI_PROJECT_ID", "2" ]
     Assert.False(Object.ReferenceEquals(first.TryGetContext().Value, second.TryGetContext().Value))
-    Assert.False(Object.ReferenceEquals(first.GetNode(DataHubContext.filename), second.GetNode(DataHubContext.filename)))
+    Assert.False(Object.ReferenceEquals(first.GetNode(rootId), second.GetNode(rootId)))
     first.TryGetContext().Value.AddMapping("unexpected", "http://example.org/unexpected")
     first.GetNode("#repository").SetProperty(LDCreativeWork.name, "Changed")
     first |> DataHubContext.serialize |> ignore
