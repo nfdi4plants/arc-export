@@ -134,7 +134,8 @@ let build (lookup : string -> string option) : LDGraph =
         contextNode.SetProperty(LDDataset.variableMeasured, measurements)
     contextNode.SetProperty(LDDataset.mentions, mentions)
     graph.AddNode(contextNode)
-    graph
+    // DataHub reads and writes this file with ARCtrl, which uses "./" data entity ids.
+    graph |> LDGraph.normalizeDataEntityIds
 
 /// Compact and serialize with ARCtrl's JSON-LD implementation, as for the
 /// scientific RO-Crate graph. This graph has no scientific crate descriptor.

@@ -129,7 +129,7 @@ dotnet run --project ./src/arc-export/arc-export.fsproj -- -p ./tests/fixtures/A
 
 The graph contains:
 
-- A `Dataset` identified by `datahub-context.json`, with `version` set to `"1"`, a `mentions` reference to `ro-crate-metadata.json`, and an `about` reference to the repository.
+- A `Dataset` identified by `./datahub-context.json`, with `version` set to `"1"`, a `mentions` reference to `ro-crate-metadata.json`, and an `about` reference to the repository.
 - A `PropertyValue` for each available allowlisted variable, linked through `variableMeasured`. Both `name` and `propertyID` preserve the exact variable name, and `value` preserves its original string.
 - A repository `CreativeWork` projecting the project ID, title/name, description, and URL. Its identity is the project URL when available, or `#repository` otherwise.
 - An optional revision `CreativeWork` projecting the commit SHA, title, and timestamp, linked to the repository through `isPartOf`.
